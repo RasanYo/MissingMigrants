@@ -87,7 +87,7 @@ export default function Page() {
             {message && <p className="text-dark">{message}</p>}
             {modifiedValue && <p className="text-dark">Modified: {modifiedValue}</p>}
 
-            <div>
+            <div className="mt-50">
                 <ListContainer
                     items={items}
                     searchPressed={buttonClicked}
