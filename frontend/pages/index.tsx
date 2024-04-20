@@ -62,7 +62,7 @@ export default function Page() {
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
-    setProgressState('2');
+    setProgressState('1');
 
     fetch('/api/search', {
       method: 'POST',
@@ -78,6 +78,8 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
+      console.log(data)
+      setProgressState('2');
       let items = [];  // This will hold arrays of items from each category.
 
       for (let category in data) {
@@ -85,7 +87,9 @@ export default function Page() {
     
         for (let article in data[category]) {
           let item = data[category][article];  // Reference the article item directly.
-    
+          console.log(category)
+          console.log(article)
+          console.log(item.publisher)
           categoryItems.push({  // Push each item object into the current category's array.
             title: item.title,
             description: item.description,
@@ -117,6 +121,7 @@ export default function Page() {
     })
    .catch((error) => {
      console.error('Error:', error);
+     setProgressState('0');
      setLoading(false); // Set loading to false even in case of error
      setOpacity('0.9');
    });
