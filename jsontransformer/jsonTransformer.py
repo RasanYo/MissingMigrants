@@ -1,5 +1,6 @@
 import json
 
+
 def group_by_criteria(queries):
     # Dictionary to hold the categories based on 'published date' and 'Country of Incident'
     categories = {}
@@ -15,16 +16,16 @@ def group_by_criteria(queries):
 
             # Create a unique key for each category
             category_key = (published_date, country_of_incident)
-            
+
             if category_key not in categories:
                 categories[category_key] = {
                     'query': []
                 }
-            
+
             # Modify entry to include the language key
             data_with_language = article
             data_with_language['language'] = language
-            
+
             # Append the item to the correct category
             categories[category_key]['query'].append(data_with_language)
 
@@ -32,7 +33,7 @@ def group_by_criteria(queries):
     output = {
         'category': {}
     }
-    
+
     # Assign each category to output with a key or to unknown/mixed
     unknown_mixed = {'query': []}
     for key, value in categories.items():
@@ -40,13 +41,12 @@ def group_by_criteria(queries):
             output['category'][f'{key[0]}_{key[1]}'] = value
         else:
             unknown_mixed['query'].extend(value['query'])
-    
+
     # Include unknown/mixed category if there are any such items
     if unknown_mixed['query']:
         output['category']['unknown/mixed'] = unknown_mixed
-    
-    return output
 
+    return output
 
 
 # Example usage:
