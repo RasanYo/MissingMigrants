@@ -1,4 +1,5 @@
 from datetime import datetime
+import time
 from flask import Flask, jsonify, request
 import json
 from main import run
@@ -16,9 +17,9 @@ def search():
     data = request.json  # This will contain the data sent from the frontend
     search_keywords = data.get('keywords')  # Assuming 'keywords' is what you're sending
     date_format = "%Y-%m-%d"
-    start_date = datetime.strptime(data.get('startDate'), date_format)
-    end_date = datetime.strptime(data.get('endDate'), date_format)
-    languages = [data.get('language')]
+    #start_date = datetime.strptime(data.get('startDate'), date_format)
+    #end_date = datetime.strptime(data.get('endDate'), date_format)
+    #languages = [data.get('language')]
 
     # Simulating a delay of 2 seconds
     time.sleep(2)
@@ -41,7 +42,6 @@ def search():
     # Return the loaded JSON data
     return migrants_data
 
-    return output
 
 
 @app.route("/api/healthchecker", methods=["GET"])

@@ -12,7 +12,7 @@ export default function AccordionArticle({ articles }) {
   return (
     <div>
       {articles.map((article, index) => (
-      <Accordion sx={{ backgroundColor: '#374151', color: '#fff' }}>
+      <Accordion key={index} sx={{ backgroundColor: '#374151', color: '#fff' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
           aria-controls="panel-content"

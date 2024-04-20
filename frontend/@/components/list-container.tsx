@@ -13,7 +13,8 @@ export default function ListContainer({ items, searchPressed }) {
         // Generate overview for each item
         const overview =
           item.length > 0
-            ? `${new Date(item[0].publishedDate).toLocaleDateString()} - ${item[0].country}`
+            ? item[0].country == null ? `${new Date(item[0].publishedDate).toLocaleDateString()} - Uncertain`:
+            `${new Date(item[0].publishedDate).toLocaleDateString()} - ${item[0].country}`
             : "No Data Available";
 
         return (

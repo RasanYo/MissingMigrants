@@ -52,7 +52,11 @@ export default function Page() {
             title: item.article.title,
             text: item.article.text
           },
-          country: item.vector["Country of Incident"]
+          country: item.vector["Country of Incident"],
+          deads:item.vector["Number of Dead"],
+          missing: item.vector["Minimum Estimated Number of Missing"],
+          cause_death: item.vector["Cause of Death"],
+          country_origin: item.vector["Country of Origin"]
         });
       }
   
