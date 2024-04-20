@@ -27,13 +27,17 @@ class Scraper:
     
     def get_articles(self, resps):
         articles = []
-        for resp in resps:
+        print("Reading articles:")
+        for i, resp in enumerate(resps):
+            print(f"{i+1}) {resp["title"]}")
             article = self.get_article(resp)
             if article: articles.append(article)
         return articles
     
     def scrape_for_query(self, query):
+        print(f"Looking up articles relating [ {query} ] ...")
         resps = self.get_query_response(query)
+        print(f"{len(resps)} matches")
         return self.get_articles(resps)
         
 
@@ -48,11 +52,11 @@ def write_json_to_file(data, filename):
 
 if __name__ == '__main__':
     print("Launching...")
-    scraper = Scraper(max_results=5, start_date=(2022, 5, 1), end_date=(2022, 5, 20))
-    print(scraper.google_news.period)
-    query = "Several migrants feared dead off coast of Spain's Canary Islands"
+    scraper = Scraper(max_results=10, start_date=(2022, 5, 1), end_date=(2022, 5, 20))
+    query = "migrant canary islands missing"
     res = scraper.scrape_for_query(query)
-    write_json_to_file(res, "../data/test2.json")
+    write_json_to_file(res, f"../data/{query}.json")
+    print(f"Saved query results in data/{query}.json")
     print("DONE")
 
 
