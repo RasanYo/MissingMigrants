@@ -2,13 +2,13 @@ import * as React from 'react';
 import { Box, TextField } from '@mui/material';
 
 interface TextfieldProps extends React.ComponentPropsWithoutRef<typeof TextField> {
-  // Explicitly declare the types for value and onChange to override any from TextField if needed
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  opacity: number; // Add opacity prop
+  opacity: number;
+  disabled?: boolean; // Add disabled prop
 }
 
-const Textfield: React.FC<TextfieldProps> = ({ value, onChange, opacity, ...otherProps }) => {
+const Textfield: React.FC<TextfieldProps> = ({ value, onChange, opacity, disabled, ...otherProps }) => {
   return (
     <Box
       component="form"
@@ -21,7 +21,9 @@ const Textfield: React.FC<TextfieldProps> = ({ value, onChange, opacity, ...othe
         },
         '& .MuiFilledInput-underline:before': { borderBottom: 'none' },
         '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' },
-        '& .MuiFormLabel-root': { color: '#fff' }
+        '& .MuiFormLabel-root': {
+          color: disabled ? 'rgb(31 41 55)' : '#fff' // Adjust label color based on disabled prop
+        }
       }}
       noValidate
       autoComplete="on"
@@ -38,6 +40,7 @@ const Textfield: React.FC<TextfieldProps> = ({ value, onChange, opacity, ...othe
           variant="filled"
           value={value}
           onChange={onChange}
+          disabled={disabled} // Pass the disabled prop to TextField
           {...otherProps}
         />
       </div>
