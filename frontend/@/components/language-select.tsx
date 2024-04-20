@@ -9,7 +9,7 @@ interface LanguageSelectorProps {
 
 class LanguageSelector extends React.Component<LanguageSelectorProps> {
   render() {
-    const { value, onChange } = this.props;
+    const { value, onChange, ...otherProps } = this.props;
 
     return (
       <Box>
@@ -22,6 +22,7 @@ class LanguageSelector extends React.Component<LanguageSelectorProps> {
             onChange={onChange}
             label="Select Language"
             style={{ backgroundColor: 'rgba(31, 41, 55, 0.9)', color: '#fff' }}
+            {...otherProps}
             MenuProps={{
               PaperProps: {
                 style: {
