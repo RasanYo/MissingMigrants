@@ -1,0 +1,623 @@
+{
+    "english": {
+        "queries": [
+            {
+                "query": "Migrants found dead off Tunisia coast",
+                "data": [
+                    {
+                        "title": "Five migrants found dead off the coast of Tunisia - InfoMigrants",
+                        "description": "Five migrants found dead off the coast of Tunisia  InfoMigrants",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiXGh0dHBzOi8vd3d3LmluZm9taWdyYW50cy5uZXQvZW4vcG9zdC81NjAzMC9maXZlLW1pZ3JhbnRzLWZvdW5kLWRlYWQtb2ZmLXRoZS1jb2FzdC1vZi10dW5pc2lh0gEA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.infomigrants.net",
+                            "title": "InfoMigrants"
+                        },
+                        "article": {
+                            "title": "Five migrants found dead off the coast of Tunisia",
+                            "text": "On Monday, Tunisia's coastguard retrieved the bodies of five migrants, raising the week's death toll to 11. They also rescued a total of 663 migrants, reflecting a surge in crossings from North Africa to Italy due to improved weather.\n\nThe coastguard reported on Monday that five bodies were recovered near the coastal city of Sfax. In the past four days, a total of 11 migrants have been found dead in the area.\n\nTunisian security forces have also prevented 3,058 migrants from crossing to Europe by boat since Friday. The majority of them are said to have come from sub-Sahara Africa.\n\nOn Monday alone, 633 people were stopped from setting off by boat from Tunisia towards Europe following a rescue mission. Security forces also reportedly arrested 120 smugglers.\n\nAdditionally, a shipwreck off the Italian coast over the weekend likely resulted in the death of a 15-month-old girl.\n\nAlso read: 17 Tunisian migrants missing at sea as reported deaths reach record high\n\nOil tanker rescues refugees\n\nIn the early hours of Monday, an oil tanker in the Mediterranean Sea picked up 139 people from an unseaworthy vessel on their way to Europe from Libya, Italian authorities reported.\n\nDuring the rescue operation, three migrants fell into the water and remain missing at sea. The initial search for them was unsuccessful, according to reports.\n\nThe rest of the rescued migrants were taken by the Italian coastguard to the Italian Mediterranean island of Lampedusa. The migrants were said to have originated from various African countries, as well as from Syria, Pakistan, and Bangladesh.\n\nLampedusa, situated between Sicily and Tunisia, has long been a focal point of the smuggling trade. Reports indicate that passengers paid between $3,000 and $7,000 for the dangerous journey on the 12-meter boat.\n\nAlso read: EU-Tunisia migration deal: Encouraging the people smugglers?\n\nNew agreements on migration and labor\n\nUnder a recent agreement signed between the Italian and Albanian governments, rescued migrants from the Mediterranean could soon increasingly be taken to Albania for processing -- instead of remaining at a reception center in Lampedusa before being transferred to the Italian mainland. Two reception centers and a repatriation center are scheduled to open in Albania in May to facilitate this process.\n\nThis comes after the EU reached a controversial agreement with Tunisia late last year: in exchange for millions of euros in financial aid, the North African country is expected to take stronger action against traffickers and illegal crossings. However, there have been doubts about the sustainability of this agreement.\n\nEarlier this year, Italy and Tunisia also signed a deal to bring 12,000 Tunisian workers to Italy over the next three years. Under the deal, Italian and Tunisian labor organizations, Sviluppo Lavoro Italia and Aneti, will collaborate to identify the workforce requirements of the Italian market and the Tunisian workers who could meet those demands.\n\nAlso read: EU criticized over migration deal with Egypt\n\nFewer crossings compared to last year\n\nAccording to the Tunisian Forum for Economic and Social Rights (FTDES), over 1,300 migrants attempting to cross to Europe from the coast of Tunisia were killed in 2023.\n\nCompared to last year, the number of migrants arriving in Italy via the central Mediterranean route, mostly from Tunisia and Libya, has meanwhile decreased.\n\nThe Italian Interior Ministry counted nearly 9500 people reaching Italy by sea so far this year, compared to over 20,000 in the same period last year.\n\nAlso read: Italy: Two migrants saved by Ocean Viking detained in Ancona\n\nWith dpa and Reuters"
+                        },
+                        "vector": {
+                            "Country of Incident": "Italy",
+                            "Region of Inciden": "North Africa",
+                            "City of Incident": "Sfax",
+                            "Incident Date": null,
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 11,
+                            "Number of Survivors\tNumber of Females": 663,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Sahara Africa",
+                            "Cause of Death": null,
+                            "Migration Route": "North Africa to Italy",
+                            "Location of Incident": "Mediterranean Sea"
+                        }
+                    },
+                    {
+                        "title": "More than 63,000 people dead or missing while migrating over last decade, IOM says - Kathimerini English Edition",
+                        "description": "More than 63,000 people dead or missing while migrating over last decade, IOM says  Kathimerini English Edition",
+                        "published date": "2024-03-27",
+                        "url": "https://news.google.com/rss/articles/CBMie2h0dHBzOi8vd3d3LmVrYXRoaW1lcmluaS5jb20vbmV3cy8xMjM0ODg4L21vcmUtdGhhbi02MzAwMC1wZW9wbGUtZGVhZC1vci1taXNzaW5nLXdoaWxlLW1pZ3JhdGluZy1vdmVyLWxhc3QtZGVjYWRlLWlvbS1zYXlzL9IBAA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.ekathimerini.com",
+                            "title": "Kathimerini English Edition"
+                        },
+                        "article": {
+                            "title": "More than 63,000 people dead or missing while migrating over last decade, IOM says",
+                            "text": "At least 63,285 people have perished or disappeared on migration routes around the world between 2014 and 2023, with most deaths caused by drowning, the UN migration agency said on Tuesday.\n\nA report published by the International Organization for Migration (IOM) on its Missing Migrants Project showed that the majority of deaths and disappearances \u2013 28,854 \u2013 occurred in the Mediterranean, followed by Africa and Asia.\n\nNearly 60% of deaths documented were linked to drowning, and more than one third of those identified were from countries in conflict, including Afghanistan, Myanmar, Syria and Ethiopia.\n\nIOM\u2019s data showed that the deadliest year for migrants in the last decade was 2023, when it recorded 8,541 deaths in part due to a sharp increase of fatalities in the Mediterranean.\n\n\u201cThe increase in deaths is likely linked to the increase in departures and, correspondingly, shipwrecks, off the coast of Tunisia,\u201d the report said, adding that at least 729 people died off the Tunisian coast in 2023, compared to 462 in 2022.\n\n\u201cIn all prior years, most deaths in the Central Mediterranean were documented off the coast of Libya.\u201d\n\nWith anti-immigration parties steadily gaining influence across Europe for years, governments have attempted to curb migration flows to their countries by pledging funds to countries across the Mediterranean such as Tunisia and Egypt.\n\nEarlier this month, the EU pledged a 7.4 billion euro ($8 billion) funding package to Egypt that Italian Prime Minister Giorgia Meloni described as \u201cthe best way to address migratory flows.\u201d\n\nThe governments of several European countries, including Italy, Hungary and Britain, have made curbing immigration a top priority, while elsewhere far-right parties like France\u2019s National Rally, led by Marine Le Pen, have gained popularity.\n\nReligious leaders are among those who have called for greater compassion towards migrants. Pope Francis has called for a pan-European response to migration to stop the Mediterranean from becoming \u201ca sea of death.\u201d [Reuters]"
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Incident": "Mediterranean",
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": "63,285",
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": "Afghanistan, Myanmar, Syria, Ethiopia",
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Mediterranean",
+                            "Location of Incident": null
+                        }
+                    },
+                    {
+                        "title": "Several migrants found dead off Tunisia's coastal city of Sfax - Ghana News Agency",
+                        "description": "Several migrants found dead off Tunisia's coastal city of Sfax  Ghana News Agency",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiWWh0dHBzOi8vZ25hLm9yZy5naC8yMDI0LzAzL3NldmVyYWwtbWlncmFudHMtZm91bmQtZGVhZC1vZmYtdHVuaXNpYXMtY29hc3RhbC1jaXR5LW9mLXNmYXgv0gEA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://gna.org.gh",
+                            "title": "Ghana News Agency"
+                        },
+                        "article": {
+                            "title": "Several migrants found dead off Tunisia\u2019s coastal city of Sfax",
+                            "text": "\n\nCairo, Mar.26, (dpa/GNA) \u2013 The Tunisian coastguard said they recovered the bodies of five migrants off the coast of Sfax in the Mediterranean Sea on Monday, which brings the number of bodies recovered in the last four days to 11.\n\nTunisian security forces have also prevented 3,058 migrants from travelling to Europe by boat since Friday. The majority of them are said to come from countries in sub-Saharan Africa.\n\nOn Monday, 633 people were prevented from travelling by boat from Tunisia to Europe. Security forces also reportedly arrested 120 smugglers and confiscated 46 boats.\n\nThe crossing to Europe is considered extremely dangerous. A 15-month-old girl is also believed to have died in a shipwreck off the Italian coast at the weekend.\n\nAccording to the non-governmental organization Tunisian Forum for Economic and Social Rights (FTDES), more than 1,300 migrants were killed off the coast of Tunisia last year while trying to cross over to Europe.\n\nThe European Union reached a controversial agreement with Tunisia last year, in which the North African country is to take stronger action against people smugglers and illegal crossings in exchange for millions in financial aid.\n\nRecently, however, there have been doubts as to whether the agreement will last.\n\nCompared to the previous year, the number of migrants crossing the central Mediterranean to Italy, mostly from Tunisia and Libya, has decreased.\n\nThe Ministry of the Interior in Rome said just under 9,500 people reached Italy by sea this year.\n\nAt the weekend, however, more than 1,700 migrants from Libya and Tunisia arrived by boat on the Italian Mediterranean island of Lampedusa.\n\nLampedusa, which lies between Sicily and Tunisia, has for years been a main destination for boat crossings due to its proximity to the African coast.\n\nGNA\n\nShare this:\n\nWhatsApp\n\nPost\n\n\n\nEmail\n\n"
+                        },
+                        "vector": {
+                            "Country of Incident": "Italy",
+                            "Region of Inciden": "Mediterranean Sea",
+                            "City of Incident": "Sfax",
+                            "Incident Date": "2019-03-26",
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Saharan Africa",
+                            "Cause of Death": "Shipwreck",
+                            "Migration Route": "Central Mediterranean",
+                            "Location of Incident": "Lampedusa"
+                        }
+                    },
+                    {
+                        "title": "UN report charts lethal cost of migration over past decade - Al Jazeera English",
+                        "description": "UN report charts lethal cost of migration over past decade  Al Jazeera English",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiY2h0dHBzOi8vd3d3LmFsamF6ZWVyYS5jb20vbmV3cy8yMDI0LzMvMjYvdW4tcmVwb3J0LWNoYXJ0cy1sZXRoYWwtY29zdC1vZi1taWdyYXRpb24tb3Zlci1wYXN0LWRlY2FkZdIBZ2h0dHBzOi8vd3d3LmFsamF6ZWVyYS5jb20vYW1wL25ld3MvMjAyNC8zLzI2L3VuLXJlcG9ydC1jaGFydHMtbGV0aGFsLWNvc3Qtb2YtbWlncmF0aW9uLW92ZXItcGFzdC1kZWNhZGU?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.aljazeera.com",
+                            "title": "Al Jazeera English"
+                        },
+                        "article": {
+                            "title": "UN report charts lethal cost of migration over past decade",
+                            "text": "More than 63,000 people died or disappeared on migration routes over the past decade, with more than a third fleeing conflict.\n\nMore than 63,000 people died or disappeared on migration routes around the world over the last decade, with drowning the biggest cause of death, according to the United Nations migration agency.\n\nThe International Organization for Migration (IOM) published the alarming death toll on Tuesday in a report on its Missing Migrants Project, which has been investigating the disappearances of people fleeing conflict, persecution and poverty since 2014.\n\nSince tracking began, at least 63,285 people have died or are missing and presumed dead, according to the project, with over 8,500 losing their lives in 2023, the deadliest year yet. Nearly 60 percent of deaths documented were linked to drowning, with the number of victims surpassing 36,000.\n\nOf those deaths at sea, more than 27,000 occurred in the Mediterranean, a route followed over the years by many migrants trying to reach southern Europe from northern Africa.\n\nMost deaths in the Central Mediterranean were documented off the coast of Libya. But the IOM had recorded an \u201cincrease in departures and, correspondingly, shipwrecks\u201d off the coast of Tunisia. At least 729 people died off the Tunisian coast in 2023, compared to 462 the previous year.\n\n\u201cThe figures are quite alarming,\u201d Jorge Galindo, a spokesperson at IOM\u2019s Global Data Institute, told The Associated Press news agency. \u201cWe see that 10 years on, people continue to lose their lives in search of a better one.\u201d\n\n\u2018Invisible shipwrecks\u2019\n\nThe IOM stressed the figures published in the report were incomplete, \u201clikely only a fraction of the actual number of lives lost worldwide\u201d because of the difficulty in obtaining and verifying information.\n\nOn the Atlantic route from Africa\u2019s west coast to Spain\u2019s Canary Islands, entire boats have reportedly vanished in what are known as \u201cinvisible shipwrecks\u201d. Similarly, many deaths in the Sahara Desert are believed to go unreported.\n\nEven when deaths are recorded, more than two-thirds of the victims remain unidentified. In more than half of all cases, the IOM was unable to even establish the sex or age of the migrant.\n\nIn cases that could be identified, just over one-third came from \u201ccountries in conflict or with large refugee populations\u201d.\n\nDespite the limits in the data, the IOM had recorded the deaths of \u201calmost 5,500 females\u201d on migration routes and \u201cnearly 3,500\u201d children.\n\nThe IOM said there was an \u201curgent need for strengthened search and rescue capacities\u201d, as well as \u201csafe, regular migration pathways\u201d to prevent further deaths.\n\nAt sea, greater assistance was needed for migrants in distress \u201cin line with international law and the principle of humanity\u201d, the IOM said.\n\nCurrently on the Mediterranean Sea, \u201cthe large majority of search and rescue is done by nongovernmental organisations\u201d, Galindo said.\n\nAnti-immigration sentiment\n\nWhen the IOM\u2019s project began in 2014, European sentiment was more sympathetic to the plight of migrants, and the Italian government had launched \u201cMare Nostrum,\u201d a major search-and-rescue mission that saved thousands of lives.\n\nBut, with anti-immigration political parties steadily gaining influence across Europe, governments have attempted to curb migration flows to their countries by pledging funds to countries across the Mediterranean such as Tunisia and Egypt.\n\nEarlier this month, the European Union pledged a 7.4-billion euro ($8bn) funding package to Egypt that Italian Prime Minister Giorgia Meloni described as \u201cthe best way to address migratory flows\u201d.\n\nTauhid Pasha, acting Chief of Mission for IOM Libya, told Al Jazeera that the narrative around immigration needs to change.\n\nHe said that countries that are gripped by anti-immigration sentiment need to acknowledge the positives around migration better.\n\nMigration contributes to the development of the migrant\u2019s origin and the countries as well as the countries they are heading to, he said.\n\n\u201cMany countries have shown that there are distinct labour shortages, demographic deficits, and migrants can help fulfil some of those shortages\u201d, Pasha said."
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Inciden": null,
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": "63,000",
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": "63,285",
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Mediterranean Sea",
+                            "Location of Incident": "Southern Europe and Northern Africa"
+                        }
+                    },
+                    {
+                        "title": "Over 63,000 dead or missing in migration in last decade, IOM reports - Amu TV",
+                        "description": "Over 63,000 dead or missing in migration in last decade, IOM reports  Amu TV",
+                        "published date": "2024-03-27",
+                        "url": "https://news.google.com/rss/articles/CBMiFWh0dHBzOi8vYW11LnR2Lzg4OTg4L9IBAA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://amu.tv",
+                            "title": "Amu TV"
+                        },
+                        "article": {
+                            "title": "Over 63,000 dead or missing in migration in last decade, IOM reports",
+                            "text": "GENEVA \u2014 The U.N. migration agency reported Tuesday that at least 63,285 people have died or gone missing on migration routes worldwide between 2014 and 2023, with the majority of deaths due to drowning.\n\nThe International Organization for Migration (IOM) published a report indicating that the Mediterranean saw the highest number of deaths and disappearances, totaling 28,854, followed by Africa and Asia.\n\nDrowning was linked to nearly 60% of documented deaths, and over a third of those identified came from conflict-ridden countries, including Afghanistan, Myanmar, Syria, and Ethiopia.\n\n2023 was the deadliest year for migrants in the past decade, with 8,541 deaths recorded, partly because of an increase in fatalities in the Mediterranean. \u201cThe increase in deaths is likely linked to the increase in departures and, correspondingly, shipwrecks, off the coast of Tunisia,\u201d the report stated. It noted that at least 729 people died off the Tunisian coast in 2023, up from 462 in 2022, marking a shift from previous years where most Central Mediterranean deaths were off Libya\u2019s coast.\n\nAs anti-immigration parties gain influence in Europe, governments have sought to reduce migration flows by offering financial support to North African nations like Tunisia and Egypt. This month, the European Union announced a \u20ac7.4 billion ($8 billion) funding package for Egypt, which Italian Prime Minister Giorgia Meloni described as \u201cthe best way to address migratory flows.\u201d\n\nCountries including Italy, Hungary, and Britain have prioritized immigration reduction, while far-right parties, such as France\u2019s National Rally led by Marine Le Pen, have risen in popularity.\n\nReligious leaders, including Pope Francis, have advocated for greater compassion towards migrants, with the Pope calling for a pan-European migration response to prevent the Mediterranean from becoming \u201ca sea of death.\u201d"
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Inciden": null,
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": "63,285",
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": "63,285",
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Mediterranean, Africa, Asia",
+                            "Location of Incident": "Tunisia, Libya, Egypt"
+                        }
+                    },
+                    {
+                        "title": "A decade of documenting more than 63000 migrant deaths shows that fleeing is more lethal than ever: UN ... - Ahram Online",
+                        "description": "A decade of documenting more than 63000 migrant deaths shows that fleeing is more lethal than ever: UN ...  Ahram Online",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiLWh0dHBzOi8vZW5nbGlzaC5haHJhbS5vcmcuZWcvTmV3cy81MjAwMTEuYXNweNIBAA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://english.ahram.org.eg",
+                            "title": "Ahram Online"
+                        },
+                        "article": {
+                            "title": "A decade of documenting more than 63,000 migrant deaths shows that fleeing is more lethal than ever: UN - International - World",
+                            "text": "More than a decade ago, the death of 600 migrants and refugees in two Mediterranean shipwrecks near Italian shores shocked the world and prompted the UN migration agency to start recording the number of people who died or went missing as they fled conflict, persecution or poverty to other countries.\n\nGovernments around the world have repeatedly pledged to save migrants' lives and fight smugglers while tightening borders.\n\nYet 10 years on, a report by the International Organization for Migration's Missing Migrants Project published Tuesday shows the world is no safer for people on the move.\n\nOn the contrary, migrant deaths have soared.\n\nSince tracking began in 2014, more than 63,000 have died or are missing and presumed dead, according to the Missing Migrants Project, with 2023 being the deadliest year yet.\n\n\u201cThe figures are quite alarming,\u201d Jorge Galindo, a spokesperson at IOM's Global Data Institute, told The Associated Press. \"We see that 10 years on, people continue to lose their lives in search of a better one.\u201d\n\nThe report says the deaths are \"likely only a fraction of the actual number of lives lost worldwide\u201d because of the difficulty in obtaining and verifying information.\n\nFor example, on the Atlantic route from Africa's west coast to Spain's Canary Islands, entire boats have reportedly vanished in what are known as \u201cinvisible shipwrecks.\u201d Similarly, countless deaths in the Sahara desert are believed to go unreported.\n\nEven when deaths are recorded, more than two-thirds of the victims remain unidentified. That can be due to a lack of information and resources, or simply because identifying dead migrants is not considered a priority.\n\nExperts have called the growing number of unidentified migrants around the world a crisis comparable to mass casualties seen in wartime.\n\nBehind each nameless death is a family facing \u201cthe psychological, social, economic and legal impacts of unresolved disappearances,\u201d a painful phenomenon known as \u201cambiguous loss,\u201d the report says.\n\n\u201cGovernments need to work together with civil society to make sure that the families that are left behind, not knowing the whereabouts of their loved ones, can have better access to the remains of people who have died,\u201d Galindo said.\n\nOf the victims whose nationalities were known to IOM, one in three died while fleeing countries in conflict.\n\nNearly 60% of the deaths recorded by the IOM in the last decade were related to drowning. The Mediterranean Sea is the world's largest migrant grave with more than 28,000 deaths recorded in the last decade.\n\nThousands of drownings have also been recorded on the U.S.-Mexico border, in the Atlantic Ocean, in the Gulf of Aden, and increasingly in the Bay of Bengal and Andaman Sea where desperate Rohingya refugees are embarking on overcrowded boats.\n\n\u201cSearch and rescue capacities to assist migrants at sea must be strengthened, in line with international law and the principle of humanity,\u201d the report says.\n\nCurrently in the Mediterranean \"the large majority of search and rescue is done by nongovernmental organizations,\u201d Galindo said.\n\nWhen the Missing Migrants Project began in 2014, European sentiment was more sympathetic to the plight of migrants, and the Italian government had launched \u201cMare Nostrum,\u201d a major search-and-rescue mission that saved thousands of lives.\n\nBut the solidarity didn't last, and European search and rescue missions were progressively cut back after fears that they would encourage smugglers to launch even more people on cheaper and deadlier boats. That's when NGOs stepped in.\n\nTheir help has not always been welcomed. Italy and Greece, have faced increasing bureaucratic and legal obstacles.\n\nFollowing the 2015-2016 migration crisis, the European Union began outsourcing border control and sea rescues to North African countries to \u201csave lives\u201d while also keeping migrants from reaching European shores.\n\nThe controversial partnerships have been criticized by human rights advocates, particularly the one with Libya. EU-trained and funded Libyan coast guards have been linked to human traffickers exploiting migrants who are intercepted and brought back to squalid detention centers.\n\nA U.N.-backed group of experts has found that the abuses committed against migrants on the Mediterranean and in Libya may amount to crimes against humanity.\n\nDespite the rise of border walls and heightened surveillance worldwide, smugglers always seem to find lucrative alternatives, leading migrants and refugees on longer and more perilous routes.\n\n\u201cThere\u2019s an absence of safe migration options,\u201d Galindo said. \"And this needs to change.\u201d\n\nSearch Keywords:\n\nShort link:\n\n"
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Inciden": null,
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": 63000,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": null,
+                            "Migration Route": null,
+                            "Location of Incident": null
+                        }
+                    },
+                    {
+                        "title": "Three migrants missing in international waters after tanker rescue - InfoMigrants",
+                        "description": "Three migrants missing in international waters after tanker rescue  InfoMigrants",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMibWh0dHBzOi8vd3d3LmluZm9taWdyYW50cy5uZXQvZW4vcG9zdC81NjA1My90aHJlZS1taWdyYW50cy1taXNzaW5nLWluLWludGVybmF0aW9uYWwtd2F0ZXJzLWFmdGVyLXRhbmtlci1yZXNjdWXSAQA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.infomigrants.net",
+                            "title": "InfoMigrants"
+                        },
+                        "article": {
+                            "title": "Three migrants missing in international waters after tanker rescue",
+                            "text": "Three migrants were missing on Monday (March 25) after the oil tanker Vault had to rescue a group of 139 people in distress in international waters off the Libyan coast during the night.\n\nThe three missing individuals were reported to be men from Bangladesh, Ethiopia and Syria, who fell into the sea while being transferred from their 12-meter boat to the larger oil tanker.\n\nThe tanker rescued the small migrant boat with a reported 139 people on board, including one woman. The group includes people from Pakistan, Bangladesh, Syria, Mali, Guinea, Ethiopia and Eritrea and had reportedly had departed from Sabratha in Libya.\n\nThe 139 saved migrants were transferred to the coast guard's Cp319 cutter which took them to the island of Lampedusa.\n\nThey are currently at the hotspot in the Imbriacola district, which is currently hosting a total of 717 migrants at present.\n\nMore missing person cases in Med\n\nThe incident brings the tally of people reported as missing in the past three days to five, including a 15-month-old girl from Cameroon and a 15-year-old boy from Guinea.\n\nIn this most recent case, police said that they will question the travel companions of the three men reported missing to try and understand how they ended up in the water during the rescue operation.\n\nThe 12-meter boat on which the migrants had departed from Sabratha, Libya, on Saturday was left adrift in the Mediterranean."
+                        },
+                        "vector": {
+                            "Country of Incident": "Libya",
+                            "Region of Inciden": "Mediterranean",
+                            "City of Incident": null,
+                            "Incident Date": "2019-03-25",
+                            "Number of Dead": null,
+                            "Minimum Estimated Number of Missing": 3,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": 1,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": "[Pakistan, Bangladesh, Syria, Mali, Guinea, Ethiopia, Eritrea]",
+                            "Region of Origin (of the people)": "[South Asia, Middle East, West Africa, East Africa]",
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Sabratha, Libya to Lampedusa, Italy",
+                            "Location of Incident": "International waters off the Libyan coast"
+                        }
+                    },
+                    {
+                        "title": "Tunisia rescues 175 undocumented immigrants off central coast - New Vision",
+                        "description": "Tunisia rescues 175 undocumented immigrants off central coast  New Vision",
+                        "published date": "2024-03-23",
+                        "url": "https://news.google.com/rss/articles/CBMiY2h0dHBzOi8vd3d3Lm5ld3Zpc2lvbi5jby51Zy9jYXRlZ29yeS9wZW9wbGUvdHVuaXNpYS1yZXNjdWVzLTE3NS11bmRvY3VtZW50ZWQtaW1taWdyYW50cy1vLU5WXzE4NDIwNdIBAA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.newvision.co.ug",
+                            "title": "New Vision"
+                        },
+                        "article": {
+                            "title": "Tunisia rescues 175 undocumented immigrants off central coast",
+                            "text": "______________\n\n\n\nTUNIS - Tunisia's maritime guards have rescued 175 undocumented immigrants from sinking boats after they foiled several illegal immigration attempts off its central coast, the Tunisian National Guard announced in a statement on Friday.\n\n\n\nThe maritime guards intercepted boats involved in illegal immigration attempts to cross the Mediterranean to Italy on Thursday, rescuing 172 immigrants from sub-Saharan African countries and three Tunisian nationals off the coast of Sfax province, according to the statement.\n\n\n\n\"Three boats were seized, and five wanted persons were arrested,\" added the statement.\n\nLocated in the central Mediterranean, Tunisia is one of the main points of access to Europe used by undocumented immigrants.\n\n\n\nDespite the stringent measures implemented by Tunisian authorities, the number of undocumented immigrants attempting to reach Italy from the Tunisian coast continues to rise."
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Inciden": "Central Mediterranean",
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": null,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": 173,
+                            "Number of Males\tNumber of Children": 2,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Saharan Africa",
+                            "Cause of Death": null,
+                            "Migration Route": "Tunisia to Italy",
+                            "Location of Incident": "Sfax province, Tunisia"
+                        }
+                    }
+                ]
+            },
+            {
+                "query": "Fatal incident involving migrants near Tunisia",
+                "data": [
+                    {
+                        "title": "Project documents more than 63,000 migrant deaths a decade, immense danger of fleeing home - PBS NewsHour",
+                        "description": "Project documents more than 63,000 migrant deaths a decade, immense danger of fleeing home  PBS NewsHour",
+                        "published date": "2024-03-27",
+                        "url": "https://news.google.com/rss/articles/CBMie2h0dHBzOi8vd3d3LnBicy5vcmcvbmV3c2hvdXIvd29ybGQvcHJvamVjdC1kb2N1bWVudHMtbW9yZS10aGFuLTYzMDAwLW1pZ3JhbnQtZGVhdGhzLWEtZGVjYWRlLWltbWVuc2UtZGFuZ2VyLW9mLWZsZWVpbmctaG9tZdIBf2h0dHBzOi8vd3d3LnBicy5vcmcvbmV3c2hvdXIvYW1wL3dvcmxkL3Byb2plY3QtZG9jdW1lbnRzLW1vcmUtdGhhbi02MzAwMC1taWdyYW50LWRlYXRocy1hLWRlY2FkZS1pbW1lbnNlLWRhbmdlci1vZi1mbGVlaW5nLWhvbWU?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.pbs.org",
+                            "title": "PBS NewsHour"
+                        },
+                        "article": {
+                            "title": "Project documents more than 63,000 migrant deaths a decade, immense danger of fleeing home",
+                            "text": "BERLIN (AP) \u2014 More than a decade ago, the death of 600 migrants and refugees in two Mediterranean shipwrecks near Italian shores shocked the world and prompted the U.N. migration agency to start recording the number of people who died or went missing as they fled conflict, persecution or poverty to other countries.\n\nGovernments around the world have repeatedly pledged to save migrants\u2019 lives and fight smugglers while tightening borders. Yet 10 years on, a report by the International Organization for Migration\u2019s Missing Migrants Project published Tuesday shows the world is no safer for people on the move.\n\nREAD MORE: How climate change is contributing to migration out of North Africa\n\nOn the contrary, migrant deaths have soared.\n\nSince tracking began in 2014, more than 63,000 have died or are missing and presumed dead, according to the Missing Migrants Project, with 2023 the deadliest year yet.\n\n\u201cThe figures are quite alarming,\u201d Jorge Galindo, a spokesperson at IOM\u2019s Global Data Institute, told The Associated Press. \u201cWe see that 10 years on, people continue to lose their lives in search of a better one.\u201d\n\nThe report says the deaths are \u201clikely only a fraction of the actual number of lives lost worldwide\u201d because of the difficulty in obtaining and verifying information. For example, on the Atlantic route from Africa\u2019s west coast to Spain\u2019s Canary Islands, entire boats have reportedly vanished in what are known as \u201cinvisible shipwrecks.\u201d Similarly, countless deaths in the Sahara desert are believed to go unreported.\n\nEven when deaths are recorded, more than two-thirds of the victims remain unidentified. That can be due to lack of information and resources, or simply because identifying dead migrants is not considered a priority.\n\nExperts have called the growing number of unidentified migrants around the world a crisis comparable to mass casualties seen in wartime.\n\nBehind each nameless death is a family facing \u201cthe psychological, social, economic and legal impacts of unresolved disappearances,\u201d a painful phenomenon known as \u201cambiguous loss,\u201d the report says.\n\nREAD MORE: Texas blocked border agents attempting to save 3 migrants who drowned, U.S. officials say\n\n\u201cGovernments need to work together with civil society to make sure that the families that are left behind, not knowing the whereabouts of their loved ones, can have better access to the remains of people who have died,\u201d Galindo said.\n\nOf the victims whose nationalities were known to IOM, one in three died while fleeing countries in conflict.\n\nNearly 60% of the deaths recorded by the IOM in the last decade were related to drowning. The Mediterranean Sea is the world\u2019s largest migrant grave with more than 28,000 deaths recorded in the last decade. Thousands of drownings have also been recorded on the U.S.-Mexico border, in the Atlantic Ocean, in the Gulf of Aden and increasingly in the Bay of Bengal and Andaman Sea where desperate Rohingya refugees are embarking on overcrowded boats.\n\n\u201cSearch and rescue capacities to assist migrants at sea must be strengthened, in line with international law and the principle of humanity,\u201d the report says.\n\nCurrently on the Mediterranean \u201cthe large majority of search and rescue is done by nongovernmental organizations,\u201d Galindo said.\n\nWhen the Missing Migrants Project began in 2014, European sentiment was more sympathetic to the plight of migrants, and the Italian government had launched \u201cMare Nostrum,\u201d a major search-and-rescue mission that saved thousands of lives.\n\nBut the solidarity didn\u2019t last, and European search and rescue missions were progressively cut back after fears that they would encourage smugglers to launch even more people on cheaper and deadlier boats. That\u2019s when NGOs stepped in.\n\nTheir help has not always been welcomed. In Italy and Greece, they have faced increasing bureaucratic and legal obstacles.\n\nREAD MORE: Boat with dozens of Rohingya Muslim refugees on board capsizes off Indonesia\u2019s coast\n\nFollowing the 2015-2016 migration crisis, the European Union began outsourcing border control and sea rescues to North African countries to \u201csave lives\u201d while also keeping migrants from reaching European shores.\n\nThe controversial partnerships have been criticized by human rights advocates, particularly the one with Libya. EU-trained and funded Libyan coast guards have been linked to human traffickers exploiting migrants who are intercepted and brought back to squalid detention centers. A U.N.-backed group of experts has found that the abuses committed against migrants on the Mediterranean and in Libya may amount to crimes against humanity.\n\nDespite the rise of border walls and heightened surveillance worldwide, smugglers always seem to find lucrative alternatives, leading migrants and refugees on longer and more perilous routes.\n\n\u201cThere\u2019s an absence of safe migration options,\u201d Galindo said. \u201cAnd this needs to change.\u201d\n\nBrito reported from Barcelona, Spain."
+                        },
+                        "vector": {
+                            "Country of Incident": "Multiple countries",
+                            "Region of Inciden": "Europe",
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": "63,000",
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": "63,000",
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Africa",
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Mediterranean Sea, U.S.-Mexico border, Atlantic Ocean, Gulf of Aden, Bay of Bengal, Andaman Sea",
+                            "Location of Incident": null
+                        }
+                    },
+                    {
+                        "title": "EU to Provide $178 mln for Tunisian Security Forces to Curb Migration - Asharq Al-awsat - English",
+                        "description": "EU to Provide $178 mln for Tunisian Security Forces to Curb Migration  Asharq Al-awsat - English",
+                        "published date": "2024-03-25",
+                        "url": "https://news.google.com/rss/articles/CBMiaGh0dHBzOi8vZW5nbGlzaC5hYXdzYXQuY29tL2FyYWItd29ybGQvNDkzMDczNi1ldS1wcm92aWRlLTE3OC1tbG4tdHVuaXNpYW4tc2VjdXJpdHktZm9yY2VzLWN1cmItbWlncmF0aW9u0gEA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://english.aawsat.com",
+                            "title": "Asharq Al-awsat - English"
+                        },
+                        "article": {
+                            "title": "EU to Provide $178 mln for Tunisian Security Forces to Curb Migration",
+                            "text": "Israeli Airstrike in Gaza's Rafah Kills at Least 9 Palestinians, Including 6 Children\n\nPalestinians perform Friday noon prayer on April 19, 2024, next to the ruins of Al-Farouq Mosque, destroyed during Israeli bombardment in Rafah in the southern Gaza Strip, amid ongoing battles between Israel and the Hamas group. (Photo by MOHAMMED ABED / AFP)\n\nAn Israeli airstrike on a house in Gaza\u2019s southernmost city killed at least nine people, six of them children, hospital authorities said Saturday, as Israel pursued its nearly seven-month offensive in the besieged Palestinian territory.\n\nIsrael's war against the armed group Hamas has led to a dramatic escalation of tensions in an already volatile Middle East.\n\nThe strike late Friday hit a residential building in the western Tel Sultan neighborhood of the city of Rafah, according to Gaza\u2019s civil defense. The bodies of the six children, two women and a man were taken to Rafah's Abu Yousef al-Najjar hospital, the hospital\u2019s records showed.\n\nAt the hospital, relatives cried and hugged the bodies of the children, wrapped in white shrouds, as others comforted them.\n\nThe fatalities included Abdel-Fattah Sobhi Radwan, his wife Najlaa Ahmed Aweidah and their three children, his brother-in-law Ahmed Barhoum said. Barhoum also lost his wife, Rawan Radwan, and their 5-year-old daughter Alaa.\n\n\"This is a world devoid of all human values and morals,\u201d Barhoum told The Associated Press Saturday morning, crying as he cradled and gently rocked the body of Alaa in his arms. \u201cThey bombed a house full of displaced people, women and children. There were no martyrs but women and children.\u201d\n\nNo victims were registered from a second overnight strike in the city.\n\nRafah, which lies on the border with Egypt, currently hosts more than half of Gaza\u2019s total population of about 2.3 million people, the vast majority of whom have been displaced by fighting further north in the territory.\n\nDespite calls for restraint from the international community, including Israel\u2019s staunchest ally, the United States, the Israeli government has insisted for months that it intends to push a ground offensive into the city, where it says many of the remaining Hamas fighters are holed up.\n\nSuch a ground operation has not materialized so far, but the Israeli military has repeatedly carried out airstrikes on and around the city.\n\nThe war was sparked by an unprecedented raid into southern Israel by Hamas and other armed groups on Oct. 7 that left about 1,200 people dead, the vast majority of them civilians, and saw about 250 people kidnapped and taken into Gaza. Israel says about 130 hostages remain in Gaza, although more than 30 have been confirmed to now be dead, either killed on Oct. 7 or having died in captivity.\n\nThe Gaza Health Ministry said Saturday the bodies of 37 people killed by Israeli strikes were brought to hospitals in Gaza over the past 24 hours. Hospitals also received 68 wounded, it said. The latest figures bring the overall Palestinian death toll from the Israel-Hamas war to at least 34,049, and the number of wounded to 76,901, the ministry said. Although the Hamas-run health authorities do not differentiate between combatants and civilians in their count, they say at least two thirds have been children and women.\n\nThe war has sent regional tensions spiraling, leading to a dramatic eruption of violence between Israel and its archenemy Iran that threatened to escalate into a full-blown war.\n\nOn Friday, both Iran and Israel played down an apparent Israeli airstrike near a major air base and nuclear site in central Iran, indicating the two sides were pulling back from what could have become an all-out conflict. Over the past several weeks, an alleged Israeli strike killed two Iranian generals at an Iranian consulate in Syria and was followed by an unprecedented Iranian missile barrage on Israel.\n\nIsrael has also faced off with the Hezbollah party, an Iranian proxy operating from Lebanon, with the two sides there frequently trading rocket and drone attacks across the Lebanese-Israeli border. Yemen\u2019s Iran-backed Houthi militias have also joined the fray, launching strikes against merchant ships in the Red Sea and the Gulf of Aden in what they say is a campaign of solidarity with the Palestinians in Gaza.\n\nTension has also been high in the occupied West Bank, where an Israeli military raid Friday in the Nur Shams refugee camp killed at least four Palestinians, including three militants, according to the Israeli military, Palestinian health officials and a militant group.\n\nPalestinian health authorities said one of those killed was a 15-year-old boy shot dead by Israeli fire. The Islamic Jihad group confirmed the deaths of three members, including one who it said was a local military commander. The Israeli military said four Israeli soldiers were slightly wounded in the operation.\n\nSaraya al-Quds, the military arm of Islamic Jihad, said its fighters had engaged in heavy gun battles Saturday morning with Israeli forces in the town of Tulkarem, adjacent to Nur Shams. No further details were immediately available. Residents in Tulkarem went on a general strike Saturday to protest the attack on Nur Shams, with shops, restaurants and government offices all closed.\n\nSince the Oct. 7 Hamas attack on southern Israel, more than 460 Palestinians have been killed by Israeli fire in the West Bank, Palestinian health officials say. Israel stages frequent raids into towns and cities in the volatile territory. The dead have included militants, but also stone-throwers and bystanders. Some have also been killed in attacks by Israeli settlers."
+                        },
+                        "vector": {
+                            "Country of Incident": "Palestine",
+                            "Region of Incident": "Middle East",
+                            "City of Incident": "Rafah",
+                            "Incident Date": "2024-04-19",
+                            "Number of Dead": 9,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 9,
+                            "Number of Survivors": null,
+                            "Number of Females": 2,
+                            "Number of Males": 2,
+                            "Number of Children": 5,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Airstrike",
+                            "Migration Route": null,
+                            "Location of Incident": "Al-Farouq Mosque, Rafah, Gaza Strip"
+                        }
+                    },
+                    {
+                        "title": "Four Tunisians sentenced to death for 2013 murder of politician Chokri Belaid - Yahoo News UK",
+                        "description": "Four Tunisians sentenced to death for 2013 murder of politician Chokri Belaid  Yahoo News UK",
+                        "published date": "2024-03-27",
+                        "url": "https://news.google.com/rss/articles/CBMiTGh0dHBzOi8vdWsubmV3cy55YWhvby5jb20vZm91ci1wZW9wbGUtc2VudGVuY2VkLWRlYXRoLXR1bmlzaWEtMTY1MzU4MTA4Lmh0bWzSAQA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://uk.news.yahoo.com",
+                            "title": "Yahoo News UK"
+                        },
+                        "article": {
+                            "title": "Four Tunisians sentenced to death for 2013 murder of politician Chokri Belaid",
+                            "text": "Four people were sentenced to death and two to life in prison on Wednesday after a decade-long investigation into the 2013 killing of Tunisian secular opposition leader Chokri Belaid.\n\nTunisia still hands down death sentences, particularly in \"terrorism\" cases, even though a de facto moratorium in effect since 1991 means they are effectively commuted to life terms.\n\nBelaid's assassination, which was claimed by jihadists loyal to the Islamic State group, dealt a heavy blow to the fledgling democracy established after the overthrow of longtime dictator Zine El Abidine Ben Ali in the first of the Arab Spring uprisings of 2011.\n\nThe slow pace of the investigation triggered accusations of obstructionism against the then ruling Islamist party Ennahdha that have been used by secular President Kais Saied to justify his 2021 power grab that has seen the party outlawed.\n\nThe court's judgement was announced on national television early Wednesday after 15 hours of deliberation.\n\nIn total, 23 people received sentences ranging from two to 120 years while five defendants were acquitted.\n\nProsecutor Aymen Chtiba welcomed the sentences, saying: \"Justice has been done\".\n\nFierce opponent\n\nA fierce critic of Ennahdha, Belaid was killed on 6 February 2013, in his car outside his home.\n\nLast year, the justice ministry set up a special commission to carry out an \"in-depth\" study of the police and judicial investigations.\n\n\n\nRead more on RFI English\n\n\n\nRead also:\n\nEU president and EU leaders to travel to Egypt for Tunisia-style migration deal\n\nFrance expels Tunisian imam accused of hate speech\n\nLibya closes border crossing with Tunisia following clashes"
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Inciden": "Africa",
+                            "City of Incident": "Tunis",
+                            "Incident Date": "2013-02-06",
+                            "Number of Dead": 1,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 1,
+                            "Number of Survivors Number of Females": null,
+                            "Number of Males Number of Children": null,
+                            "Country of Origin (of the people)": "[Tunisia]",
+                            "Region of Origin (of the people)": "[Africa]",
+                            "Cause of Death": "Murder",
+                            "Migration Route": null,
+                            "Location of Incident": "Tunis, Tunisia"
+                        }
+                    },
+                    {
+                        "title": "Over 63,000 people dead or missing on migration routes - DAWN.com",
+                        "description": "Over 63,000 people dead or missing on migration routes  DAWN.com",
+                        "published date": "2024-03-27",
+                        "url": "https://news.google.com/rss/articles/CBMiIWh0dHBzOi8vd3d3LmRhd24uY29tL25ld3MvMTgyMzk4MtIBJWh0dHBzOi8vd3d3LmRhd24uY29tL25ld3MvYW1wLzE4MjM5ODI?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.dawn.com",
+                            "title": "DAWN.com"
+                        },
+                        "article": {
+                            "title": "Over 63,000 people dead or missing on migration routes",
+                            "text": "GENEVA: At least 63,285 people have perished or disappeared on migration routes around the world between 2014 and 2023, with most deaths caused by drowning, the UN migration agency said on Tuesday.\n\nA report published by the International Organi\u00adsation for Migration (IOM) on its Missing Migrants Project showed that the majority of deaths and disappearances \u2014 28,854 \u2014 occurred in the Mediter\u00adranean, followed by Africa and Asia.\n\nNearly 60 per cent of deaths documented were linked to drowning, and more than one third of those identified were from countries in conflict, including Afghanistan, Myanmar, Syria and Ethiopia.\n\nIOM\u2019s data showed that the deadliest year for migrants in the last decade was 2023, when it recorded 8,541 deaths in part due to a sharp increase of fatalities in the Mediterranean.\n\n\u201cThe increase in deaths is likely linked to the increase in departures and, correspondingly, shipwrecks, off the coast of Tunisia,\u201d the report said, adding that at least 729 people died off the Tunisian coast in 2023, compared to 462 in 2022.\n\n\u201cIn all prior years, most deaths in the Central Mediterranean were documented off the coast of Libya.\u201d With anti-immigration parties steadily gaining influence across Europe for years, governments have attempted to curb migration flows to their countries by pledging funds to countries across the Mediterranean such as Tunisia and Egypt.\n\nEarlier this month, the EU pledged a 7.4 billion euro ($8 billion) funding package to Egypt that Italian Prime Minister Giorgia Meloni described as \u201cthe best way to address migratory flows.\u201d The governments of several European countries, including Italy, Hungary and Britain, have made curbing immigration a top priority, while elsewhere far-right parties like France\u2019s National Rally, led by Marine Le Pen, have gained popularity.\n\nReligious leaders are among those who have called for greater compassion towards migrants. Pope Francis has called for a pan-European response to migration to stop the Mediterranean from becoming \u201ca sea of death\u201d.\n\nPublished in Dawn, March 27th, 2024"
+                        },
+                        "vector": {
+                            "Country of Incident": null,
+                            "Region of Incident": null,
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": "63,000",
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": "63,000",
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Mediterranean",
+                            "Location of Incident": null
+                        }
+                    }
+                ]
+            },
+            {
+                "query": "Tragedy at sea: Five migrants' bodies discovered off Tunisia",
+                "data": [
+                    {
+                        "title": "Five migrants found dead off the coast of Tunisia - InfoMigrants",
+                        "description": "Five migrants found dead off the coast of Tunisia  InfoMigrants",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiXGh0dHBzOi8vd3d3LmluZm9taWdyYW50cy5uZXQvZW4vcG9zdC81NjAzMC9maXZlLW1pZ3JhbnRzLWZvdW5kLWRlYWQtb2ZmLXRoZS1jb2FzdC1vZi10dW5pc2lh0gEA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.infomigrants.net",
+                            "title": "InfoMigrants"
+                        },
+                        "article": {
+                            "title": "Five migrants found dead off the coast of Tunisia",
+                            "text": "On Monday, Tunisia's coastguard retrieved the bodies of five migrants, raising the week's death toll to 11. They also rescued a total of 663 migrants, reflecting a surge in crossings from North Africa to Italy due to improved weather.\n\nThe coastguard reported on Monday that five bodies were recovered near the coastal city of Sfax. In the past four days, a total of 11 migrants have been found dead in the area.\n\nTunisian security forces have also prevented 3,058 migrants from crossing to Europe by boat since Friday. The majority of them are said to have come from sub-Sahara Africa.\n\nOn Monday alone, 633 people were stopped from setting off by boat from Tunisia towards Europe following a rescue mission. Security forces also reportedly arrested 120 smugglers.\n\nAdditionally, a shipwreck off the Italian coast over the weekend likely resulted in the death of a 15-month-old girl.\n\nAlso read: 17 Tunisian migrants missing at sea as reported deaths reach record high\n\nOil tanker rescues refugees\n\nIn the early hours of Monday, an oil tanker in the Mediterranean Sea picked up 139 people from an unseaworthy vessel on their way to Europe from Libya, Italian authorities reported.\n\nDuring the rescue operation, three migrants fell into the water and remain missing at sea. The initial search for them was unsuccessful, according to reports.\n\nThe rest of the rescued migrants were taken by the Italian coastguard to the Italian Mediterranean island of Lampedusa. The migrants were said to have originated from various African countries, as well as from Syria, Pakistan, and Bangladesh.\n\nLampedusa, situated between Sicily and Tunisia, has long been a focal point of the smuggling trade. Reports indicate that passengers paid between $3,000 and $7,000 for the dangerous journey on the 12-meter boat.\n\nAlso read: EU-Tunisia migration deal: Encouraging the people smugglers?\n\nNew agreements on migration and labor\n\nUnder a recent agreement signed between the Italian and Albanian governments, rescued migrants from the Mediterranean could soon increasingly be taken to Albania for processing -- instead of remaining at a reception center in Lampedusa before being transferred to the Italian mainland. Two reception centers and a repatriation center are scheduled to open in Albania in May to facilitate this process.\n\nThis comes after the EU reached a controversial agreement with Tunisia late last year: in exchange for millions of euros in financial aid, the North African country is expected to take stronger action against traffickers and illegal crossings. However, there have been doubts about the sustainability of this agreement.\n\nEarlier this year, Italy and Tunisia also signed a deal to bring 12,000 Tunisian workers to Italy over the next three years. Under the deal, Italian and Tunisian labor organizations, Sviluppo Lavoro Italia and Aneti, will collaborate to identify the workforce requirements of the Italian market and the Tunisian workers who could meet those demands.\n\nAlso read: EU criticized over migration deal with Egypt\n\nFewer crossings compared to last year\n\nAccording to the Tunisian Forum for Economic and Social Rights (FTDES), over 1,300 migrants attempting to cross to Europe from the coast of Tunisia were killed in 2023.\n\nCompared to last year, the number of migrants arriving in Italy via the central Mediterranean route, mostly from Tunisia and Libya, has meanwhile decreased.\n\nThe Italian Interior Ministry counted nearly 9500 people reaching Italy by sea so far this year, compared to over 20,000 in the same period last year.\n\nAlso read: Italy: Two migrants saved by Ocean Viking detained in Ancona\n\nWith dpa and Reuters"
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Incident": "North Africa",
+                            "City of Incident": "Sfax",
+                            "Incident Date": null,
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 11,
+                            "Number of Survivors": 633,
+                            "Number of Females": null,
+                            "Number of Males": null,
+                            "Number of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Sahara Africa",
+                            "Cause of Death": null,
+                            "Migration Route": "North Africa to Italy",
+                            "Location of Incident": "Off the coast of Tunisia"
+                        }
+                    },
+                    {
+                        "title": "Migrants: five bodies recovered off the coast of Tunisia - Agenzia Nova",
+                        "description": "Migrants: five bodies recovered off the coast of Tunisia  Agenzia Nova",
+                        "published date": "2024-03-25",
+                        "url": "https://news.google.com/rss/articles/CBMiXGh0dHBzOi8vd3d3LmFnZW56aWFub3ZhLmNvbS9lbi9uZXdzL01pZ3JhbnRzLXJlY292ZXJlZC1maXZlLWJvZGllcy1vZmYtdGhlLWNvYXN0LW9mLVR1bmlzaWEv0gFgaHR0cHM6Ly93d3cuYWdlbnppYW5vdmEuY29tL2VuL25ld3MvTWlncmFudHMtcmVjb3ZlcmVkLWZpdmUtYm9kaWVzLW9mZi10aGUtY29hc3Qtb2YtVHVuaXNpYS9hbXAv?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.agenzianova.com",
+                            "title": "Agenzia Nova"
+                        },
+                        "article": {
+                            "title": "Migrants: five bodies recovered off the coast of Tunisia",
+                            "text": "The bodies of five migrants were recovered today by Tunisian Coast Guard units in the central region of the country. This was announced by the General Management of Tunisian National Guard, specifying that it had intercepted 663 migrants of sub-Saharan origin at sea. Meanwhile, the units of Sfax they arrested twelve people suspected of being traffickers and mediators of illegal departures towards Europe. During these operations, two boats, fifteen engines and fuel presumably intended for sea crossings were confiscated.\n\n\n\n\n\nYesterday, the maritime units of the National Guard Tunisia had intercepted another 614 migrants, again off the coast of the central region of the country, all sub-Saharans with the exception of two Tunisians, foiling 30 illegal crossings of the Mediterranean. At the same time, security units in Sfax, in south-central Tunisia, arrested another 22 people yesterday, accused of being organizers and mediators.\n\nLast Thursday, March 21, the maritime units of the same National Guard stopped 175 people, foiling another eight departures from the coasts of Sfax. According to the latest update from the International Organization for Migration (IOM), 115 people have died on the central Mediterranean route while 253 are missing, for a total of 368 victims.\n\nThe office in Libya of the International Organization for Migration (IOM) in the latest update published on its social channels reported that in the week from 17 to 23 March 2024, 579 migrants were intercepted and returned to Libya, a decrease of 29,13 percent compared to the 817 people recovered at sea in the previous week from 10 to 16 March.\n\nAll the migrants intercepted last week were brought back to land in Tripolitania, in particular in Zawiya (159 migrants on March 17, 107 on March 21 and 86 on March 23) and in Tripoli (159 migrants on March 17 and 100 migrants on March 23 ). IOM also reports that, since the beginning of the year, 3.311 migrants have been returned to Libya, including 2.953 men, 241 women and 117 minors. In the week of March 10th to 16th.\n\nRead also other news on Nova News\n\nClick here and receive updates on WhatsApp\n\nFollow us on the social channels of Nova News on Twitter, LinkedIn, Instagram, Telegram"
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Inciden": "Central Region",
+                            "City of Incident": null,
+                            "Incident Date": null,
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors\tNumber of Females": null,
+                            "Number of Males\tNumber of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Saharan Africa",
+                            "Cause of Death": null,
+                            "Migration Route": "Central Mediterranean",
+                            "Location of Incident": "Off the coast of Tunisia"
+                        }
+                    },
+                    {
+                        "title": "Several migrants found dead off Tunisia's coastal city of Sfax - Ghana News Agency",
+                        "description": "Several migrants found dead off Tunisia's coastal city of Sfax  Ghana News Agency",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMiWWh0dHBzOi8vZ25hLm9yZy5naC8yMDI0LzAzL3NldmVyYWwtbWlncmFudHMtZm91bmQtZGVhZC1vZmYtdHVuaXNpYXMtY29hc3RhbC1jaXR5LW9mLXNmYXgv0gEA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://gna.org.gh",
+                            "title": "Ghana News Agency"
+                        },
+                        "article": {
+                            "title": "Several migrants found dead off Tunisia\u2019s coastal city of Sfax",
+                            "text": "\n\nCairo, Mar.26, (dpa/GNA) \u2013 The Tunisian coastguard said they recovered the bodies of five migrants off the coast of Sfax in the Mediterranean Sea on Monday, which brings the number of bodies recovered in the last four days to 11.\n\nTunisian security forces have also prevented 3,058 migrants from travelling to Europe by boat since Friday. The majority of them are said to come from countries in sub-Saharan Africa.\n\nOn Monday, 633 people were prevented from travelling by boat from Tunisia to Europe. Security forces also reportedly arrested 120 smugglers and confiscated 46 boats.\n\nThe crossing to Europe is considered extremely dangerous. A 15-month-old girl is also believed to have died in a shipwreck off the Italian coast at the weekend.\n\nAccording to the non-governmental organization Tunisian Forum for Economic and Social Rights (FTDES), more than 1,300 migrants were killed off the coast of Tunisia last year while trying to cross over to Europe.\n\nThe European Union reached a controversial agreement with Tunisia last year, in which the North African country is to take stronger action against people smugglers and illegal crossings in exchange for millions in financial aid.\n\nRecently, however, there have been doubts as to whether the agreement will last.\n\nCompared to the previous year, the number of migrants crossing the central Mediterranean to Italy, mostly from Tunisia and Libya, has decreased.\n\nThe Ministry of the Interior in Rome said just under 9,500 people reached Italy by sea this year.\n\nAt the weekend, however, more than 1,700 migrants from Libya and Tunisia arrived by boat on the Italian Mediterranean island of Lampedusa.\n\nLampedusa, which lies between Sicily and Tunisia, has for years been a main destination for boat crossings due to its proximity to the African coast.\n\nGNA\n\nShare this:\n\nWhatsApp\n\nPost\n\n\n\nEmail\n\n"
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Inciden": "North Africa",
+                            "City of Incident": "Sfax",
+                            "Incident Date": "2019-03-26",
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 11,
+                            "Number of Survivors": null,
+                            "Number of Females": null,
+                            "Number of Males": null,
+                            "Number of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Saharan Africa",
+                            "Cause of Death": "Shipwreck",
+                            "Migration Route": "Tunisia to Europe",
+                            "Location of Incident": "Mediterranean Sea, off the coast of Sfax, Tunisia"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "spanish": {
+        "queries": [
+            {
+                "query": "Hallan muertos a cinco migrantes en la costa de T\u00fanez",
+                "data": []
+            },
+            {
+                "query": "Tragedia mar\u00edtima: Cinco migrantes fallecidos en T\u00fanez",
+                "data": []
+            },
+            {
+                "query": "Encuentran cuerpos de migrantes en aguas pr\u00f3ximas a T\u00fanez",
+                "data": []
+            }
+        ]
+    },
+    "french": {
+        "queries": [
+            {
+                "query": "Cinq migrants retrouv\u00e9s morts au large de la Tunisie",
+                "data": [
+                    {
+                        "title": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie - InfoMigrants",
+                        "description": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie  InfoMigrants",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMicGh0dHBzOi8vd3d3LmluZm9taWdyYW50cy5uZXQvZnIvcG9zdC81NjAzNC9tZWRpdGVycmFuZWUtLWNpbnEtY29ycHMtZGUtbWlncmFudHMtcmV0cm91dmVzLWF1LWxhcmdlLWRlLWxhLXR1bmlzaWXSAQA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.infomigrants.net",
+                            "title": "InfoMigrants"
+                        },
+                        "article": {
+                            "title": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie",
+                            "text": "Cinq cadavres d'exil\u00e9s ont \u00e9t\u00e9 rep\u00each\u00e9s par les autorit\u00e9s tunisiennes, le 25 mars. Le drame fait suite \u00e0 deux naufrages survenus au large de Lampedusa, dans lesquels une fillette de 15 mois et un adolescent guin\u00e9en de 15 ans notamment ont p\u00e9ri.\n\nDrames en s\u00e9ries en mer M\u00e9diterran\u00e9e. Lundi 25 mars, cinq corps de migrants ont \u00e9t\u00e9 retrouv\u00e9s par les garde-c\u00f4tes tunisiens. Aucune information sur l\u2019identit\u00e9 des exil\u00e9s n\u2019a en revanche \u00e9t\u00e9 communiqu\u00e9e.\n\nLes autorit\u00e9s tunisiennes ont dans le m\u00eame temps intercept\u00e9 en mer 663 personnes \"d\u2019origine subsaharienne\". Douze personnes soup\u00e7onn\u00e9es d'\u00eatre trafiquants et m\u00e9diateurs de d\u00e9parts ill\u00e9gaux vers l'Europe ont par ailleurs \u00e9t\u00e9 arr\u00eat\u00e9es. Lors de ces op\u00e9rations, deux bateaux, quinze moteurs et du carburant destin\u00e9 aux travers\u00e9es maritimes ont \u00e9t\u00e9 confisqu\u00e9s.\n\n#Tunisia: The bodies of five migrants were recovered by coastguard units in the centre, which also rescued 663 sub-Saharan migrants involved in sixteen irregular migration attempts, the Directorate General of the National Guard said on Monday. https://t.co/rez056zroE pic.twitter.com/6z1EHq3uBc \u2014 TAP news agency (@TapNewsAgency) March 25, 2024\n\nLa d\u00e9couverte des cinq corps fait suite \u00e0 deux naufrages survenus au large de Lampedusa. Trois exil\u00e9s - un Syrien, un Bangladais et un Ethiopien - sont port\u00e9s disparus depuis la nuit du dimanche 24 au lundi 25 mars. D\u2019apr\u00e8s Rai News, ils sont tomb\u00e9s \u00e0 l\u2019eau pendant le transfert des passagers de leur embarcation \u00e0 un cargo p\u00e9trolier. L\u2019\u00e9quipage a pu accueillir 139 exil\u00e9s, dont une femme, jusqu\u2019\u00e0 Lampedusa.\n\nL\u2019embarcation \u00e9tait partie de Sabratha, en Libye.\n\nUne petite fille de 15 mois d\u00e9c\u00e9d\u00e9e\n\nQuelques heures plus t\u00f4t, un autre naufrage a provoqu\u00e9 la mort d\u2019une fillette de 15 mois et d\u2019un gar\u00e7on guin\u00e9en de 15 ans. D\u2019apr\u00e8s la presse italienne, \u00e0 l\u2019arriv\u00e9e des garde-c\u00f4tes pr\u00e8s du bateau en fer de sept m\u00e8tres, la majorit\u00e9 des passagers se sont d\u00e9plac\u00e9s du c\u00f4t\u00e9 des secours faisant tanguer le bateau, qui a fini par se renverser.\n\nCinquante personnes ont pu \u00eatre secourues. C\u2019est \u00e0 l\u2019arriv\u00e9e au port de Favarolo, \u00e0 Lampedusa, que le fr\u00e8re de l\u2019adolescent disparu a signal\u00e9 son absence. La petite fille de 15 mois manquait aussi \u00e0 l\u2019appel. Des recherches ont alors \u00e9t\u00e9 lanc\u00e9es sur le lieu du naufrage, sans succ\u00e8s.\n\nLes passagers \u00e9taient partis vendredi soir de Sfax, dans le centre de la Tunisie.\n\nLe m\u00eame jour, les autorit\u00e9s tunisiennes ont intercept\u00e9 614 autres migrants au large de leurs c\u00f4tes. Tous sont subsahariens, et deux sont tunisiens. Deux corps ont par ailleurs \u00e9t\u00e9 rep\u00each\u00e9s, d'apr\u00e8s un communiqu\u00e9 de TAP News, l'agence de presse tunisienne.\n\nA lire aussi\n\nLa Tunisie retrouve cinq migrants morts dans un canot, parti de la Libye voisine\n\nLe 15 mars d\u00e9j\u00e0, 34 migrants ont disparus et deux ont \u00e9t\u00e9 retrouv\u00e9s morts au large de Zarzis, dans le sud de la Tunisie. Au total, 70 personnes avaient pris place dans l\u2019embarcation, partie d\u2019un \"pays voisin\", terme g\u00e9n\u00e9ralement utilis\u00e9 par les autorit\u00e9s tunisiennes pour qualifier la Libye.\n\nSelon le dernier bilan de l'Organisation internationale pour les migrations (OIM), depuis le d\u00e9but de l\u2019ann\u00e9e, 115 personnes au total sont mortes sur la route de la M\u00e9diterran\u00e9e centrale et 253 sont port\u00e9es disparues.\n\nDe plus en plus de d\u00e9parts depuis la Tunisie\n\nL'an dernier, pas moins de 1 313 personnes parties des c\u00f4tes tunisiennes ont disparu ou sont mortes en mer M\u00e9diterran\u00e9e, selon les chiffres du Forum tunisien des droits \u00e9conomiques et sociaux. Un nombre jamais atteint jusqu'ici. Et au moins deux tiers d'entre eux \u00e9taient originaires d\u2019Afrique subsaharienne. Ce funeste bilan \"\u00e9quivaut \u00e0 peu pr\u00e8s \u00e0 la moiti\u00e9 des morts ou disparus en M\u00e9diterran\u00e9e\" de 2023, a pr\u00e9cis\u00e9 Islem Ghaarbi de l'ONG tunisienne.\n\n\n\n\n\nDe nombreux bateaux quittent les c\u00f4tes tunisiennes \u00e0 destination de Lampedusa. Cr\u00e9dit : InfoMigrants\n\n\n\n\n\nAuparavant cantonn\u00e9es en Libye, les d\u00e9parts d\u2019embarcations sont d\u00e9sormais tr\u00e8s nombreux en Tunisie. Les exil\u00e9s embarquent dans de fr\u00eales bateaux en fer compl\u00e8tement inadapt\u00e9s aux travers\u00e9es en mer, pouss\u00e9s par des conditions de vie tr\u00e8s difficiles dans le pays. Le racisme anti-Noirs, attis\u00e9 par des propos du pr\u00e9sident Ka\u00efs Sa\u00efed, est l\u00e9gion dans la r\u00e9gion de Sfax notamment. Forc\u00e9s de quitter la ville, des centaines de migrants survivent depuis plusieurs mois dans des camps d\u00e9labr\u00e9s, le long d\u2019une route, sous des oliviers.\n\nPlusieurs associations et ONG de d\u00e9fense des droits humains ont d\u00e9nonc\u00e9 lundi 18 mars dans un communiqu\u00e9 une \"normalisation des violations des droits humains des personnes migrantes en Tunisie\". D\u2019apr\u00e8s elles, \"alors que la coop\u00e9ration en mati\u00e8re de migration avec l\u2019UE ne cesse de se renforcer, les autorit\u00e9s tunisiennes continuent de violer de mani\u00e8re flagrante leurs obligations en mati\u00e8re de respect des droits humains\"."
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Inciden": "North Africa",
+                            "City of Incident": "Tunis and Lampedusa",
+                            "Incident Date": "2019-03-25",
+                            "Number of Dead": 7,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": 7,
+                            "Number of Survivors": 50,
+                            "Number of Females": null,
+                            "Number of Males": null,
+                            "Number of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": null,
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "From Tunisia to Lampedusa",
+                            "Location of Incident": "Mediterranean Sea"
+                        }
+                    }
+                ]
+            },
+            {
+                "query": "Drame en mer: D\u00e9couverte de cinq migrants d\u00e9c\u00e9d\u00e9s pr\u00e8s de la Tunisie",
+                "data": [
+                    {
+                        "title": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie - InfoMigrants",
+                        "description": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie  InfoMigrants",
+                        "published date": "2024-03-26",
+                        "url": "https://news.google.com/rss/articles/CBMicGh0dHBzOi8vd3d3LmluZm9taWdyYW50cy5uZXQvZnIvcG9zdC81NjAzNC9tZWRpdGVycmFuZWUtLWNpbnEtY29ycHMtZGUtbWlncmFudHMtcmV0cm91dmVzLWF1LWxhcmdlLWRlLWxhLXR1bmlzaWXSAQA?oc=5&hl=en-US&gl=US&ceid=US:en",
+                        "publisher": {
+                            "href": "https://www.infomigrants.net",
+                            "title": "InfoMigrants"
+                        },
+                        "article": {
+                            "title": "M\u00e9diterran\u00e9e : cinq corps de migrants retrouv\u00e9s au large de la Tunisie",
+                            "text": "Cinq cadavres d'exil\u00e9s ont \u00e9t\u00e9 rep\u00each\u00e9s par les autorit\u00e9s tunisiennes, le 25 mars. Le drame fait suite \u00e0 deux naufrages survenus au large de Lampedusa, dans lesquels une fillette de 15 mois et un adolescent guin\u00e9en de 15 ans notamment ont p\u00e9ri.\n\nDrames en s\u00e9ries en mer M\u00e9diterran\u00e9e. Lundi 25 mars, cinq corps de migrants ont \u00e9t\u00e9 retrouv\u00e9s par les garde-c\u00f4tes tunisiens. Aucune information sur l\u2019identit\u00e9 des exil\u00e9s n\u2019a en revanche \u00e9t\u00e9 communiqu\u00e9e.\n\nLes autorit\u00e9s tunisiennes ont dans le m\u00eame temps intercept\u00e9 en mer 663 personnes \"d\u2019origine subsaharienne\". Douze personnes soup\u00e7onn\u00e9es d'\u00eatre trafiquants et m\u00e9diateurs de d\u00e9parts ill\u00e9gaux vers l'Europe ont par ailleurs \u00e9t\u00e9 arr\u00eat\u00e9es. Lors de ces op\u00e9rations, deux bateaux, quinze moteurs et du carburant destin\u00e9 aux travers\u00e9es maritimes ont \u00e9t\u00e9 confisqu\u00e9s.\n\n#Tunisia: The bodies of five migrants were recovered by coastguard units in the centre, which also rescued 663 sub-Saharan migrants involved in sixteen irregular migration attempts, the Directorate General of the National Guard said on Monday. https://t.co/rez056zroE pic.twitter.com/6z1EHq3uBc \u2014 TAP news agency (@TapNewsAgency) March 25, 2024\n\nLa d\u00e9couverte des cinq corps fait suite \u00e0 deux naufrages survenus au large de Lampedusa. Trois exil\u00e9s - un Syrien, un Bangladais et un Ethiopien - sont port\u00e9s disparus depuis la nuit du dimanche 24 au lundi 25 mars. D\u2019apr\u00e8s Rai News, ils sont tomb\u00e9s \u00e0 l\u2019eau pendant le transfert des passagers de leur embarcation \u00e0 un cargo p\u00e9trolier. L\u2019\u00e9quipage a pu accueillir 139 exil\u00e9s, dont une femme, jusqu\u2019\u00e0 Lampedusa.\n\nL\u2019embarcation \u00e9tait partie de Sabratha, en Libye.\n\nUne petite fille de 15 mois d\u00e9c\u00e9d\u00e9e\n\nQuelques heures plus t\u00f4t, un autre naufrage a provoqu\u00e9 la mort d\u2019une fillette de 15 mois et d\u2019un gar\u00e7on guin\u00e9en de 15 ans. D\u2019apr\u00e8s la presse italienne, \u00e0 l\u2019arriv\u00e9e des garde-c\u00f4tes pr\u00e8s du bateau en fer de sept m\u00e8tres, la majorit\u00e9 des passagers se sont d\u00e9plac\u00e9s du c\u00f4t\u00e9 des secours faisant tanguer le bateau, qui a fini par se renverser.\n\nCinquante personnes ont pu \u00eatre secourues. C\u2019est \u00e0 l\u2019arriv\u00e9e au port de Favarolo, \u00e0 Lampedusa, que le fr\u00e8re de l\u2019adolescent disparu a signal\u00e9 son absence. La petite fille de 15 mois manquait aussi \u00e0 l\u2019appel. Des recherches ont alors \u00e9t\u00e9 lanc\u00e9es sur le lieu du naufrage, sans succ\u00e8s.\n\nLes passagers \u00e9taient partis vendredi soir de Sfax, dans le centre de la Tunisie.\n\nLe m\u00eame jour, les autorit\u00e9s tunisiennes ont intercept\u00e9 614 autres migrants au large de leurs c\u00f4tes. Tous sont subsahariens, et deux sont tunisiens. Deux corps ont par ailleurs \u00e9t\u00e9 rep\u00each\u00e9s, d'apr\u00e8s un communiqu\u00e9 de TAP News, l'agence de presse tunisienne.\n\nA lire aussi\n\nLa Tunisie retrouve cinq migrants morts dans un canot, parti de la Libye voisine\n\nLe 15 mars d\u00e9j\u00e0, 34 migrants ont disparus et deux ont \u00e9t\u00e9 retrouv\u00e9s morts au large de Zarzis, dans le sud de la Tunisie. Au total, 70 personnes avaient pris place dans l\u2019embarcation, partie d\u2019un \"pays voisin\", terme g\u00e9n\u00e9ralement utilis\u00e9 par les autorit\u00e9s tunisiennes pour qualifier la Libye.\n\nSelon le dernier bilan de l'Organisation internationale pour les migrations (OIM), depuis le d\u00e9but de l\u2019ann\u00e9e, 115 personnes au total sont mortes sur la route de la M\u00e9diterran\u00e9e centrale et 253 sont port\u00e9es disparues.\n\nDe plus en plus de d\u00e9parts depuis la Tunisie\n\nL'an dernier, pas moins de 1 313 personnes parties des c\u00f4tes tunisiennes ont disparu ou sont mortes en mer M\u00e9diterran\u00e9e, selon les chiffres du Forum tunisien des droits \u00e9conomiques et sociaux. Un nombre jamais atteint jusqu'ici. Et au moins deux tiers d'entre eux \u00e9taient originaires d\u2019Afrique subsaharienne. Ce funeste bilan \"\u00e9quivaut \u00e0 peu pr\u00e8s \u00e0 la moiti\u00e9 des morts ou disparus en M\u00e9diterran\u00e9e\" de 2023, a pr\u00e9cis\u00e9 Islem Ghaarbi de l'ONG tunisienne.\n\n\n\n\n\nDe nombreux bateaux quittent les c\u00f4tes tunisiennes \u00e0 destination de Lampedusa. Cr\u00e9dit : InfoMigrants\n\n\n\n\n\nAuparavant cantonn\u00e9es en Libye, les d\u00e9parts d\u2019embarcations sont d\u00e9sormais tr\u00e8s nombreux en Tunisie. Les exil\u00e9s embarquent dans de fr\u00eales bateaux en fer compl\u00e8tement inadapt\u00e9s aux travers\u00e9es en mer, pouss\u00e9s par des conditions de vie tr\u00e8s difficiles dans le pays. Le racisme anti-Noirs, attis\u00e9 par des propos du pr\u00e9sident Ka\u00efs Sa\u00efed, est l\u00e9gion dans la r\u00e9gion de Sfax notamment. Forc\u00e9s de quitter la ville, des centaines de migrants survivent depuis plusieurs mois dans des camps d\u00e9labr\u00e9s, le long d\u2019une route, sous des oliviers.\n\nPlusieurs associations et ONG de d\u00e9fense des droits humains ont d\u00e9nonc\u00e9 lundi 18 mars dans un communiqu\u00e9 une \"normalisation des violations des droits humains des personnes migrantes en Tunisie\". D\u2019apr\u00e8s elles, \"alors que la coop\u00e9ration en mati\u00e8re de migration avec l\u2019UE ne cesse de se renforcer, les autorit\u00e9s tunisiennes continuent de violer de mani\u00e8re flagrante leurs obligations en mati\u00e8re de respect des droits humains\"."
+                        },
+                        "vector": {
+                            "Country of Incident": "Tunisia",
+                            "Region of Incident": "Mediterranean",
+                            "City of Incident": null,
+                            "Incident Date": "2019-03-25",
+                            "Number of Dead": 5,
+                            "Minimum Estimated Number of Missing": null,
+                            "Total Number of Dead and Missing": null,
+                            "Number of Survivors": 663,
+                            "Number of Females": null,
+                            "Number of Males": null,
+                            "Number of Children": null,
+                            "Country of Origin (of the people)": null,
+                            "Region of Origin (of the people)": "Sub-Saharan Africa",
+                            "Cause of Death": "Drowning",
+                            "Migration Route": "Libya to Italy",
+                            "Location of Incident": "Mediterranean Sea"
+                        }
+                    }
+                ]
+            },
+            {
+                "query": "Triste nouvelle: Cinq corps de migrants d\u00e9couverts pr\u00e8s des c\u00f4tes tunisiennes",
+                "data": []
+            }
+        ]
+    },
+    "arabic": {
+        "queries": [
+            {
+                "query": "\u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u062e\u0645\u0633\u0629 \u0645\u0647\u0627\u062c\u0631\u064a\u0646 \u0645\u064a\u062a\u064a\u0646 \u0642\u0628\u0627\u0644\u0629 \u0633\u0648\u0627\u062d\u0644 \u062a\u0648\u0646\u0633",
+                "data": []
+            },
+            {
+                "query": "\u062d\u0627\u062f\u062b \u0645\u0624\u0644\u0645: \u0648\u0641\u0627\u0629 \u062e\u0645\u0633\u0629 \u0645\u0647\u0627\u062c\u0631\u064a\u0646 \u0628\u0627\u0644\u0642\u0631\u0628 \u0645\u0646 \u062a\u0648\u0646\u0633",
+                "data": []
+            },
+            {
+                "query": "\u0643\u0627\u0631\u062b\u0629 \u0628\u062d\u0631\u064a\u0629: \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u062c\u062b\u062b \u062e\u0645\u0633\u0629 \u0645\u0647\u0627\u062c\u0631\u064a\u0646 \u0642\u0628\u0627\u0644\u0629 \u062a\u0648\u0646\u0633",
+                "data": []
+            }
+        ]
+    },
+    "italian": {
+        "queries": [
+            {
+                "query": "Ritrovati morti cinque migranti al largo della Tunisia",
+                "data": []
+            },
+            {
+                "query": "Tragedia nel mare: Cinque migranti trovati morti vicino alla Tunisia",
+                "data": []
+            },
+            {
+                "query": "Scoperti i corpi di cinque migranti al largo della Tunisia",
+                "data": []
+            }
+        ]
+    },
+    "greek": {
+        "queries": [
+            {
+                "query": "\u03a0\u03ad\u03bd\u03c4\u03b5 \u03bc\u03b5\u03c4\u03b1\u03bd\u03ac\u03c3\u03c4\u03b5\u03c2 \u03b2\u03c1\u03ad\u03b8\u03b7\u03ba\u03b1\u03bd \u03bd\u03b5\u03ba\u03c1\u03bf\u03af \u03b1\u03bd\u03bf\u03b9\u03ba\u03c4\u03ac \u03c4\u03c9\u03bd \u03b1\u03ba\u03c4\u03ce\u03bd \u03c4\u03b7\u03c2 \u03a4\u03c5\u03bd\u03b7\u03c3\u03af\u03b1\u03c2",
+                "data": []
+            },
+            {
+                "query": "\u03a4\u03c1\u03b1\u03b3\u03c9\u03b4\u03af\u03b1 \u03c3\u03c4\u03b7 \u03b8\u03ac\u03bb\u03b1\u03c3\u03c3\u03b1: \u03a0\u03ad\u03bd\u03c4\u03b5 \u03bd\u03b5\u03ba\u03c1\u03bf\u03af \u03bc\u03b5\u03c4\u03b1\u03bd\u03ac\u03c3\u03c4\u03b5\u03c2 \u03ba\u03bf\u03bd\u03c4\u03ac \u03c3\u03c4\u03b7\u03bd \u03a4\u03c5\u03bd\u03b7\u03c3\u03af\u03b1",
+                "data": []
+            },
+            {
+                "query": "\u0391\u03bd\u03b1\u03ba\u03b1\u03bb\u03cd\u03c6\u03b8\u03b7\u03ba\u03b1\u03bd \u03c0\u03c4\u03ce\u03bc\u03b1\u03c4\u03b1 \u03c0\u03ad\u03bd\u03c4\u03b5 \u03bc\u03b5\u03c4\u03b1\u03bd\u03b1\u03c3\u03c4\u03ce\u03bd \u03b1\u03bd\u03bf\u03b9\u03ba\u03c4\u03ac \u03c4\u03b7\u03c2 \u03a4\u03c5\u03bd\u03b7\u03c3\u03af\u03b1\u03c2",
+                "data": []
+            }
+        ]
+    }
+}
