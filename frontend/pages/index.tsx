@@ -14,7 +14,7 @@ export default function Page() {
   const [language, setLanguage] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const [items, setItems] = useState('');
+  const [items, setItems] = useState([])
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
 
@@ -25,6 +25,33 @@ export default function Page() {
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
   };
+
+  const transformData = (data) => {
+    const transformedItems = [];
+    Object.keys(data).forEach(language => {
+      Object.keys(data[language]).forEach(category => {
+        data[language][category].forEach(item => {
+          transformedItems.push({
+            title: item.title,
+            description: item.description,
+            publishedDate: item['published date'],
+            url: item.url,
+            language,
+            publisher: {
+              href: item.publisher.href,
+              title: item.publisher.title
+            },
+            article: {
+              title: item.article.title,
+              text: item.article.text
+            }
+          });
+        });
+      });
+    });
+    return transformedItems;
+  };
+
 
   const handleSearchClick = () => {
     console.log('data');
@@ -45,13 +72,15 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      setMessage(data.message);
-      setModifiedValue(data.modified);
+      //console.log(data);
+
+      const transformedItems = transformData(data);
+      
+      console.log(transformedItems)
+      //setMessage(data.message);
+      //setModifiedValue(data.modified);
       setProgressState('2');
-      setItems([{
-              'id' : '2'
-      }]);
+      setItems(items);
 
     })
     .catch(error => console.error('Error:', error));
