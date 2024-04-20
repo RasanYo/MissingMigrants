@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Progress from '@/components/progress';
 import ListContainer from '@/components/list-container'
 import CircularProgress from '@mui/material/CircularProgress'; // Import CircularProgress
+import Head from 'next/head'
 
 export default function Page() {
   const [message, setMessage] = useState('');
@@ -20,7 +21,6 @@ export default function Page() {
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
   const [loading, setLoading] = useState(false); // State to track loading state
-
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -68,7 +68,7 @@ export default function Page() {
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
-    setProgressState('2');
+    setProgressState('1');
 
     fetch('/api/search', {
       method: 'POST',
@@ -85,7 +85,7 @@ export default function Page() {
     .then(response => response.json())
     .then(data => {
 
-     
+      
     
       const transformedItems = transformDataToItems(data);
 
@@ -100,13 +100,19 @@ export default function Page() {
     })
    .catch((error) => {
      console.error('Error:', error);
+     setProgressState('0');
      setLoading(false); // Set loading to false even in case of error
+     setOpacity('0.9');
    });
   };
 
   return (
-    <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/bg-1.png)' }}>
-      <div className="flex flex-col justify-center items-center ">
+    <div>
+      <Head>
+        <link rel="icon" href="/images/logo.ico" />
+      </Head>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/bg-1.png)' }}>
+        <div className="flex flex-col justify-center items-center ">
           <div className="max-w-3xl w-full">
             <Progress state={progressState} />
             <div className="flex flex-col md:flex-row md:space-x-4">
@@ -148,6 +154,7 @@ export default function Page() {
                 />
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
