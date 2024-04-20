@@ -9,10 +9,10 @@ export default function ListContainer({ items, searchPressed }) {
 
   return (
     <ul role="list" className="space-y-3">
-      {items.map((item) => (
-        <li key={item.id} className="overflow-hidden rounded-xl bg-gray-900 px-6 py-4 shadow-md">
+      {items.map((item,index) => (
+        <li key={index} className="overflow-hidden rounded-xl bg-gray-900 px-6 py-4 shadow-md">
           <AccordionArticle
-            item={item}
+            articles={item}
           />
         </li>
       ))}
