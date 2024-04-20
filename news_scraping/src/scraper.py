@@ -1,6 +1,7 @@
 from gnews import GNews
 import json
 import sys
+from datetime import datetime
 
 from info_extractor.src.info_extracter import OpenAIInfoExtractor
 
@@ -19,7 +20,8 @@ class Scraper:
     def get_article(self, resp):
         try:
             article = self.google_news.get_full_article(resp['url']) 
-            vector = self.extractor.run(article.text)
+            vector = self.extractor.run(f"{article.title}\n{article.text}")
+            resp["published_date"] = self._convert_date_format(resp["published_date"])
             resp["article"] = {
                 'title': article.title,
                 'text': article.text
@@ -50,6 +52,14 @@ class Scraper:
         resps = self.get_query_response(query)
         # print(f"{len(resps)} matches")
         return self.get_articles(resps)
+    
+    def _convert_date_format(self, date_str):
+        # Parse the date string into a datetime object
+        dt = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S %Z")
+        # Format the datetime object into the desired format, excluding time
+        formatted_date = dt.strftime("%Y-%m-%d")
+        return formatted_date
+
         
 
 
