@@ -17,7 +17,7 @@ def categorize_entries(data):
             for existing_key in list(categories.keys()):
                 existing_date, existing_country = existing_key
                 # Check if the country matches and the date is within the specified range
-                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], ):
+                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], date_range_days):
                     categories[existing_key].append(i)
                     found = True
                     break
@@ -40,6 +40,13 @@ def categorize_entries(data):
     
     return new_data
 
+def convert_date_format(date_str):
+        # Parse the date string into a datetime object
+        dt = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S %Z")
+        # Format the datetime object into the desired format, excluding time
+        formatted_date = dt.strftime("%Y-%m-%d")
+        return formatted_date
+
 def date_in_range(original_date, new_date, num_days):
     """
     Check if the 'new_date' is within 'num_days' of 'original_date'
@@ -50,7 +57,7 @@ def date_in_range(original_date, new_date, num_days):
     return: bool
     """
     # Format for parsing the dates
-    date_format = "%d/%m/%Y"
+    date_format = "%Y-%m-%d"
 
     try:
         # Convert the string dates to datetime objects
@@ -69,10 +76,17 @@ def date_in_range(original_date, new_date, num_days):
 # Example usage:
 # Assuming `input_json` is your JSON string read from a file or other source
 if __name__ == "__main__":
-    with open('../data/Five migrants found dead off the coast of Tunisia_all_languages.json') as f:
+    with open('./Five migrants found dead off the coast of Tunisia_all_languages.json') as f:
         input_json = json.load(f)
 
-    # print(input_json)
+    # for lang,item in input_json.items():
+    #     for i,elem in enumerate(item['data']):
+    #         input_json[lang]['data'][i]['published date'] = convert_date_format(elem['published date'])
+    
+    # with open('./Five migrants found dead off the coast of Tunisia_all_languages.json', 'w') as f:
+    #     json.dump(input_json, f, indent=4)
+
     transformed_json = categorize_entries(input_json)
+    print(transformed_json)
     with open('./transformed.json', 'w') as f:
         json.dump(transformed_json, f, indent=4)
