@@ -6,6 +6,7 @@ import DateSelector from '@/components/date-select';
 import Button from '@mui/material/Button';
 import Progress from '@/components/progress';
 import ListContainer from '@/components/list-container'
+import CircularProgress from '@mui/material/CircularProgress'; // Import CircularProgress
 
 export default function Page() {
   const [message, setMessage] = useState('');
@@ -18,6 +19,8 @@ export default function Page() {
   const [items, setItems] = useState('');
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
+  const [loading, setLoading] = useState(false); // State to track loading state
+
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -29,9 +32,9 @@ export default function Page() {
 
   const handleSearchClick = () => {
     console.log('data');
-    setButtonClicked(true); // Set button clicked to true
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
+    setLoading(true); // Set loading to true
 
     fetch('/api/search', {
       method: 'POST',
@@ -48,15 +51,17 @@ export default function Page() {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      setMessage(data.message);
-      setModifiedValue(data.modified);
+      setButtonClicked(true); // Set button clicked to true
       setProgressState('2');
       setItems([{
               'id' : '2'
       }]);
-
+      setLoading(false); // Set loading to false
     })
-    .catch(error => console.error('Error:', error));
+   .catch((error) => {
+     console.error('Error:', error);
+     setLoading(false); // Set loading to false even in case of error
+   });
   };
 
   return (
@@ -84,13 +89,19 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            {!buttonClicked && ( // Render button only if it's not clicked
-              <Button variant="contained" className="mt-4 bg-gray-800 hover:bg-gray-700 text-white opacity-90" onClick={handleSearchClick}>Search</Button>
+            {!buttonClicked && (
+              loading ? ( // Render loading indicator if loading is true
+                <div className="p-3 mt-4 bg-gray-800 text-white opacity-90 inline-block rounded-2xl">
+                    <CircularProgress size={12} />
+                </div>
+              ) : (
+                // Render button only if it's not clicked and not loading
+                <Button variant="contained" className="mt-4 bg-gray-800 hover:bg-gray-700 text-white opacity-90" onClick={handleSearchClick} disabled={buttonClicked || loading}>
+                  Search
+                </Button>
+              )
             )}
-            {message && <p className="text-dark">{message}</p>}
-            {modifiedValue && <p className="text-dark">Modified: {modifiedValue}</p>}
-
-            <div className="mt-50">
+            <div className="mt-5">
                 <ListContainer
                     items={items}
                     searchPressed={buttonClicked}
