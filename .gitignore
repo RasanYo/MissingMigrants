@@ -5,3 +5,4 @@ news_scraping/data/*
 frontend/node_modules
 frontend/.next
 backend/__pycache__/
+**/__pycache__
