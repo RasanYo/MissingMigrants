@@ -20,6 +20,38 @@ def check_document_coherence(doc1, doc2, api_key):
     )
     return response.choices[0].message.content
 
+
+
+def check_list_documents(doc, docs,api_key):
+
+    client = OpenAI(
+    # This is the default and can be omitted
+    api_key=api_key,
+    )
+
+    list_y_docs=[]
+    list_n_docs=[]
+    for d in docs:
+        response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": "You are to analyze the coherence between two documents."},
+            {"role": "user", "content": f"Document 1: {doc}"},
+            {"role": "user", "content": f"Document 2: {d}"},
+            {"role": "user", "content": "Are these two documents discussing the same specific event related to migrant disappearances or deaths? Please analyze and describe any similarities or differences in the events, dates, locations, and involved parties mentioned in each document. If the answer is Yes say only yes otw say only No"}
+        ]
+    )
+        if response.choices[0].message.content == "Yes":
+            list_y_docs.append(d)
+        else:
+            list_n_docs.append(d)
+    
+    return list_y_docs, list_n_docs
+
+
+
+
+    
 # Example usage
 doc1 = """
 Register
@@ -148,58 +180,153 @@ Contact technical support
 Copyright 2024 BBC. All rights reserved.  The BBC is not responsible for the content of external sites. Read about our approach to external linking.
 """
 doc2 = """
-Exclusive news, data and analytics for financial market professionals
-Reuters home
-World
-Business
-Markets
-Sustainability
-Legal
-Breakingviews
-More
-My View
-Sign In
-Register
-Europe
-Migrant shipwreck in Italy kills at least 59, including 12 children
-By Gianni, Daniele and Alvise Armellini
-February 27, 20237:02 AM GMT+1Updated a year ago
-ROME, Feb 26 (Reuters) - At least 59 people died, including 12 children, when a wooden sailing boat carrying migrants to Europe crashed against rocks near the southern Italian coast early on Sunday, authorities said.
-The vessel, which sailed from Turkey and was carrying people from Afghanistan, Iran and several other countries, sank in rough seas before dawn near Steccato di Cutro, a seaside resort on the eastern coast of Calabria.
-Advertisement · Scroll to continue
-The incident reopened a debate on migration in Europe and Italy, where the recently-elected right-wing government's tough new laws for migrant rescue charities have drawn criticism from the United Nations and others.
-Manuela Curra, a provincial government official, told Reuters that 81 people had survived the shipwreck. Twenty of them were hospitalized, including one person in intensive care.
-Interior Minister Matteo Piantedosi, who travelled to the scene, said 20-30 people might still be missing, amid reports from survivors that the boat had been carrying between 150 to 200 migrants.
-Advertisement · Scroll to continue
-The vessel set sail from the western Turkish port of Izmir about four days ago and was spotted about 74 km (46 miles) off the Italian coast late on Saturday by a plane operated by European Union border agency Frontex, Italian police said.
-Patrol boats were sent to intercept it, but severe weather forced them to return to port, police said, adding that authorities then mobilized search units along the coastline.
-Advertisement · Scroll to continue
-A baby aged only a few months was among those found washed up on the beach, ANSA news agency said.
-Emergency doctor Laura De Paoli described finding another dead child, aged seven.
-'When we got to the point of the shipwreck we saw corpses floating everywhere and we rescued two men who were holding up a child. Sadly, the little one was dead,' she told ANSA.
-His voice cracking with emotion, Cutro's mayor, Antonio Ceraso, told the SkyTG24 news channel that he had seen 'a spectacle that you would never want to see in your life ... a gruesome sight ... that stays with you for all your life'.
-Wreckage from the wooden gulet, a Turkish sailing boat, was strewn across a large stretch of coast.
-One survivor was arrested on migrant trafficking charges, the Guardia di Finanza customs police said.
-Bodies wash ashore in a suspected migrant shipwreck, in Cutro
-Item 1 of 14 Rescuers recover a body after a suspected migrant boat is wrecked and bodies believed to be of refugees were found in Cutro, the eastern coast of Italy's Calabria region, Italy, February 26, 2023. REUTERS/Giuseppe Pipita
-[1/14]Rescuers recover a body after a suspected migrant boat is wrecked and bodies believed to be of refugees were found in Cutro, the eastern coast of Italy's Calabria region, Italy, February 26, 2023. REUTERS/Giuseppe Pipita Purchase Licensing Rights, opens new tab
-'FALSE PROSPECT' OF SAFETY
-Italian Prime Minister Giorgia Meloni expressed deep sorrow for the deaths, and blamed human traffickers who profit while offering migrants 'the false prospect of a safe journey'.
-'The government is committed to preventing departures, and with them the unfolding of these tragedies, and will continue to do so, first of all by calling for maximum cooperation from the countries of departure and of origin,' she said.
-Meloni's administration has said migrant rescue charities are encouraging migrants to make the dangerous sea journey to Italy, and sometimes work in partnership with traffickers.
-Charities strongly reject both accusations.
-'Stopping, blocking and hindering the work of NGOs (non-governmental organisations) will have only one effect: the death of vulnerable people left without help,' Spanish migrant rescue charity Open Arms tweeted in reaction to Sunday's shipwreck.
-However, the coast off Calabria has not been patrolled by NGO ships, which operate in the waters south of Sicily. That suggests they would have been unlikely to intercept the shipwrecked migrants regardless of Meloni's crackdown.
-The head of the Italian Catholic Church, Cardinal Matteo Zuppi, called for the resumption of an EU search and rescue mission in the Mediterranean, as part of a 'structural, shared and humanitarian response' to the migration crisis.
-A spokesman for the United Nations' International Organization for Migration (IOM), in the same vein, appealed on Twitter for the strengthening of rescue operations in the Mediterranean.
-Flavio Di Giacomo also called for the opening of 'more regular migration channels' to Europe, and action to address what he said were the multiple causes pushing people to try the sea crossings.
-Earlier on Sunday, Pope Francis, the son of Italian migrants to Argentina and long a vocal advocate for migrants' rights, said he was praying for the shipwreck's victims.
-Italy is one of the main landing points for migrants trying to enter Europe by sea, with many seeking to travel on to richer northern European nations. But to do so, they must brave the world's most dangerous migration route.
-The United Nations Missing Migrants Project, opens new tab has registered more than 20,000 deaths and disappearances in the central Mediterranean since 2014. More than 220 have died or disappeared this year, it estimates.
-Coming soon: Get the latest news and expert analysis about the state of the global economy with Reuters Econ World. Sign up here.
-Reporting from Rome by Alvise Armellini, Giselda Vagnoni, Angelo Amante, Crispian Balmer; Writing by Alvise Armellini Editing by Tomasz Janowski, Crispian Balmer, Barbara Lewis and Frances Kerry
-Our Standards: The Thomson Reuters Trust Principles., opens new tab
+تخطي الروابط
+انتقل الى المحتوى
+Navigation menu
+أخبار
+الآن
+اعرض المزيد
+اقتصاد
+ثقافة
+رياضة
+تكنولوجيا
+مقالات
+صحة
+فيديو
+المزيد
+اعرض المزيد
+البث الحي
+اضغط هنا للبحث
+تسجيل الدخول
+أخبار
+ارتفاع قتلى غرق قارب قبالة سواحل إيطاليا وروما تطالب بوقف قوارب الهجرة
+
+Rescuers recover a body at a beach near Cutro, southern Italy, after a migrant boat broke apart in rough seas, Sunday, Feb. 26, 2023. Rescue officials say an undetermined number of migrants have died and dozens have been rescued after their boat broke apart off southern Italy. (AP Photo/Giuseppe Pipita)
+مدة الفيديو 02 minutes 47 seconds
+02:47
+28/2/2023
+احفظ المقالات لقراءتها لاحقا وأنشئ قائمة قراءتك
+
+انتشل رجال الإنقاذ 4 جثث أخرى بعد يوم من غرق قارب خشبي كان يقل مهاجرين غير نظاميين إلى أوروبا إثر اصطدامه بالصخور، وسط طقس عاصف قبالة شاطئ إيطاليا فجر الأحد الماضي، ليرتفع عدد القتلى إلى 63، بينهم 14 طفلا. من جانبها، قالت رئيسة الوزراء الإيطالية جورجيا ميلوني -في مقابلة تلفزيونية- إنها بعثت رسالة إلى قادة الاتحاد الأوروبي تدعو فيها التكتل إلى اتخاذ إجراء فوري لوقف رحلات المهاجرين بالقوارب إلى أوروبا لمنع المزيد من الوفيات.
+
+وأجرى خفر السواحل الإيطالي أمس الاثنين عملية بحث في البحر والشواطئ عن جثث خلفها تحطّم مركب قبالة كالابريا، في حين تحاول السلطات تحديد هويات القتلى، في ظل انتقادات لسياسة الحكومة الإيطالية بشأن الهجرة.
+
+وقال منقذون إن معظم المهاجرين قدموا من أفغانستان، إضافة إلى إيران والصومال وسوريا وأماكن أخرى. وقالت وزارة الخارجية في إسلام آباد إن 20 باكستانيا كانوا على متن القارب، وفقد منهم 4 ونجا 16 آخرون.
+
+وجرفت المياه كثيرا من الضحايا إلى الشاطئ قبالة موقع غرق القارب قرب منتجع ستيكاتو دي كوترو على الساحل الشرقي لكالابريا، وانتشلت بعض الجثث من البحر الذي بدأت أمواجه تهدأ مع تراجع قوة الرياح العاصفة.
+
+People pray for the shipwreck victims in Italy People pray for the shipwreck victims in Italy- - CROTONE, ITALY - FEBRUARY 27: People pray outside PalaMilone Sports Hall, where victims' coffins are kept in the aftermath of a migrant shipwreck occurred in Steccato di Cutro, in Crotone, Italy on February 27, 2023. Some 200 people were on board vessel that sank off southern Calabria region's coast. DATE 28/02/2023 SIZE x SOURCE Anadolu/Valeria Ferraro
+بعض السكان وضعوا الزهور والشموع عند سور معدني خارج قاعة جمعت فيها النعوش لتأبين الضحايا (الأناضول)
+تأبين الضحايا
+ووُضعت عشرات النعوش في قاعة رياضية ببلدة كروتوني المجاورة استعدادا لإقامة جنازة، في حين وضع بعض السكان الزهور والشموع عند سور معدني بالخارج لتأبين الضحايا.
+
+وأمَّ الصلاة على الضحايا إمام مسلم، كما جاء أسقف كاثوليكي للصلاة وتقديم التعازي، في حين جلس بعض الناجين يبكون خارج الصالة الرياضية وسط جو بارد.
+
+وقالت السلطات المحلية إن 81 شخصا نجوا من الحادث، لكن يُعتقد أن القارب كان يقل ما يتراوح بين 180 و200 شخص عندما أبحر من إزمير (غربي تركيا)، مما يرجح أن كثيرين ربما لقوا حتفهم أو ما زالوا مفقودين.
+
+وأشار سرجيو دي داتو -الذي يقود فريقا من منظمة أطباء بلا حدود يقدّم الدعم النفسي للناجين- إلى وجود حالات لأطفال يتّمتهم الكارثة. وقال إن "طفلا أفغانيا يبلغ 12 عاما فقد عائلته بأكملها المكوّنة من 9 أفراد؛ هم أشقاؤه الأربعة ووالداه وأقارب مقرّبون جدا".
+
+وذكرت تقارير إعلامية أمس الاثنين أنه تم توقيف 3 بشبهة تهريب البشر، وتبحث الشرطة عن شخص رابع.
+
+وأجج الحادث مرة أخرى الجدل حول الهجرة في أوروبا، وكذلك في إيطاليا، حيث أثارت القوانين الجديدة الصارمة لحكومتها اليمينية حديثا بشأن عمل المنظمات الخيرية المعنية بإنقاذ المهاجرين انتقادات من الأمم المتحدة وجهات أخرى.
+
+وقال مدير برامج أطباء بلا حدود في إيطاليا ماركو بيرتوتو "هذه الحوادث المفجعة تأتي نتيجة التبعات المأسوية للسياسات الإيطالية والأوروبية وحماية الحدود والحد من المرور الآمن والمنتظم إلى أوروبا".
+
+Italian Prime Minister Meloni Visits Berlin
+جورجيا ميلوني بعثت رسالة لقادة الاتحاد الأوروبي تدعوهم إلى اتخاذ إجراء فوري لوقف رحلات المهاجرين بالقوارب (غيتي)
+موقف إيطالي
+وفي حديثها مع تلفزيون "آر إيه آي" (RAI) العام، قالت رئيسة الوزراء الإيطالية "كلما غادر عدد أكبر من الناس زاد خطر الموت. الطريقة الوحيدة لمعالجة هذه القضية بجدية وبإنسانية هي وقف المغادرة".
+
+وتعهدت ميلوني -التي انتُخبت في سبتمبر/أيلول الماضي- بوضع حد لوصول المهاجرين، وأكدت أن الحكومة "ملتزمة بمنع مغادرة (قوارب الهجرة) وما يترافق مع ذلك من المآسي".
+
+في غضون ذلك، أثار وزير الداخلية ماتيو بيانتيدوزي انتقادات واسعة النطاق بعد أن ألقى اللوم على مهربي البشر والمهاجرين في الشروع في رحلات بحرية خطيرة مع عائلاتهم.
+
+وقال للصحفيين "اليأس لا يمكن أبدا أن يكون سببا للسفر في ظروف تعرض حياة أطفالهم للخطر".
+
+ووصل مئات الآلاف من المهاجرين إلى إيطاليا بالقوارب خلال العقد الماضي فارين من الصراعات وشظف العيش في بلادهم.
+
+وسجل مشروع المهاجرين المفقودين التابع للأمم المتحدة أكثر من 20 ألف وفاة واختفاء في عرض البحر المتوسط منذ عام 2014، بما في ذلك أكثر من 220 هذا العام، مما يجعله أخطر طريق للهجرة في العالم.
+
+المصدر : الجزيرة + وكالات
+حول هذه القصة
+تسلسل زمني منذ 2015.. البحر المتوسط يلتهم آلاف المهاجرين
+بعد غرق عشرات المهاجرين قبالة سواحل جنوب إيطاليا أمس الأحد، يكون البحر المتوسط قد تسبب في وفاة واختفاء أكثر من 20 ألف مهاجر منذ عام 2015، ونسرد هنا تسلسلا زمنيا لبعض أسوأ حوادث تحطم القوارب بالمنطقة.
+
+
+مدة الفيديو 02 minutes 47 seconds
+02:47
+مصرع عشرات المهاجرين بعد غرق مركبهم قبالة سواحل إيطاليا ومشاهد مأساوية على الشاطئ
+ارتفع عدد غرقى مركب يحمل مهاجرين غير نظاميين قبالة سواحل إيطاليا إلى 59 بمنطقة كالابريا، وإثر الحادثة تعهدت رئيسة الوزراء الإيطالية جورجيا مليوني بالتصدي للهجرة غير النظامية.
+
+Rescuers recover a body after a migrant boat broke apart in rough seas, at a beach near Cutro, southern Italy, Sunday, Feb. 26, 2023. Rescue officials say an undetermined number of migrants have died and dozens have been rescued after their boat broke apart off southern Italy. (AP Photo/Giuseppe Pipita)
+شاهد.. تحقيق للجزيرة يكشف أدلة على عمليات إعادة قسرية غير قانونية لطالبي لجوء من إيطاليا إلى اليونان
+كشف تحقيق أجرته الجزيرة بالتعاون مع منظمة لايت هاوس ريبورتس وشركاء إعلاميين، عن أدلة على عمليات إعادة القسرية غير قانونية لطالبي اللجوء، بمن فيهم القصّر، في ظروف غير إنسانية من إيطاليا إلى اليونان.
+
+
+مدة الفيديو 04 minutes 43 seconds
+04:43
+اجتماع للاتحاد الأوروبي بشأن الهجرة بعد خلاف بين فرنسا وإيطاليا.. وبالصدفة صربيا تكتشف 600 مهاجر قرب حدودها
+عقد وزراء داخلية الاتحاد الأوروبي الجمعة اجتماعا طارئا في محاولة لتخفيف التوتر المتصاعد بشأن الهجرة غير النظامية، خاصة بين فرنسا وإيطاليا، في حين اكتشفت صربيا بالصدفة 600 مهاجر قرب حدودها مع المجر.
+
+Serbian police find migrants after shootout near Hungarian border
+المزيد من أخبار العالم
+الأمم المتحدة تحذر من خطر ظهور جبهة جديدة في دارفور
+آثار الدمار جراء معارك بين مليشيات متصارعة في ريف الفاشر شمالي دارفور (مواقع التواصل-أرشيف)
+مقتل مراسل صحفي روسي وأضرار بمنشآت تخزين الحبوب بميناء أوكراني
+نيران جراء قصف روسي سابق على منطقة خاركيف الأوكرانية (أسوشيتد برس)
+قتيل وأضرار بهجوم بابل والتحقيق يثبت غياب أي طائرات خلال الانفجار
+الانفجار الذي وقع في بابل تسبب في وقوع خسائر مادية وإصابات (الفرنسية)
+صورة بالأقمار الصناعية لقاعدة أصفهان الإيرانية بعد الهجوم الإسرائيلي
+الصورة تظهر الأضرار التي لحقت برادار بطارية الدفاع الجوي روسية الصنع (مواقع التواصل)
+يتصدر الآن
+الحرب على غزة.. غارات على مناطق بالقطاع والاحتلال يواصل اقتحام مخيم طولكرم لليوم الثاني
+البث الحي (الجزيرة)
+نيوزويك: بعد 6 أشهر حماس تسيطر على الوضع في غزة
+كاتز: السبب وراء تحدي حماس المذهل لكل معايير النصر والهزيمة هو ببساطة أنها المنتصرة حتى الآن (الجزيرة)
+هآرتس: دول عربية دعمت إسرائيل تواجه صعوبة في تبرير موقفها لشعوبها
+إيران أطلقت عشرات المسيّرات والصواريخ على إسرائيل (رويترز)
+عدد الخطوات وحده لا يكفي.. إليك الطريقة المثلى لتمرين المشي المفيد
+دراسة: تعزيز كثافة المشي تتعلق بتقوية القلب وتقليل معدلات انقطاع التنفس أثناء النوم والسكري وارتفاع ضغط الدم (بيكسلز)
+من نحن
+من نحن
+الأحكام والشروط
+سياسة الخصوصية
+سياسة ملفات تعريف الارتباط
+تفضيلات ملفات تعريف الارتباط
+خريطة الموقع
+تواصل معنا
+تواصل معنا
+احصل على المساعدة
+أعلن معنا
+رابط بديل
+ترددات البث
+بيانات صحفية
+شبكتنا
+مركز الجزيرة للدراسات
+معهد الجزيرة للإعلام
+تعلم العربية
+مركز الجزيرة للحريات العامة وحقوق الإنسان
+قنواتنا
+الجزيرة الإخبارية
+الجزيرة الإنجليزي
+الجزيرة مباشر
+الجزيرة الوثائقية
+الجزيرة البلقان
+عربي AJ+
+تابع الجزيرة نت على:
+
+شعار شبكة الجزيرة الإعلامية
+جميع الحقوق محفوظة © 2024 شبكة الجزيرة الاعلامية
+
+يمكنك الاعتماد على الجزيرة في مسألتي الحقيقة والشفافيةبحيث نضطلع نحن 823 وشركاؤنا بتخزين المعلومات والوصول إليها عبر جهازك، ومن ذلك على سبيل المثال المعرفات الفريدة في ملفات تعريف الارتباط لمعالجة البيانات الشخصية. يمكنك الموافقة على اختياراتك وإدارتها في أي وقت من خلال النقر على زر "إدارة التفضيلات"، ولا سيما الاحتفاظ بحقك في الاعتراض حيثما يتم الاستناد إلى المصلحة المشروعة. سيتم إبلاغ شركائنا على الصعيد العالمي باختياراتك، ولن يؤثر ذلك في عملية التصفح التي تجريها.لمعرفة مزيد من التفاصيل، يرجى الاطلاع على سياسة ملفات تعريف الارتباط الخاصة بنا.
+نعالج، نحن وشركاؤنا، البيانات من أجل:
+استخدام بيانات الموقع الجغرافي الدقيقة. فحص خصائص الجهاز بشكل فعال من أجل تحديد الهوية. تخزين المعلومات و/أو الوصول إليها على أحد الأجهزة. الإعلانات والمحتوى المخصصان وقياس أداء الإعلانات والمحتوى وأبحاث الجمهور وتطوير الخدمات.قائمة الشركاء (مقدّمو الخدمات)
+
+السماح للكلّ
+رفض الكلّ
+إدارة التفضيلات
 """
 
-api_key = "sk-proj-7kEwFmHZ1El2NHJp5lRwT3BlbkFJH7B0H2VTBMEoZ68Kmi7r"
+
+api_key = "sk-proj-lUvpZCOU4TV1QUYTolbvT3BlbkFJPhadzOExwwSAWylFMHKC"
 print(check_document_coherence(doc1, doc2, api_key))
