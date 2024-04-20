@@ -1,28 +1,29 @@
 import React from 'react';
 import { TextField } from '@mui/material';
 
-const inputStyle = {
-  backgroundColor: 'rgba(31, 41, 55, 0.9)', // Apply opacity here
-  color: '#fff',
-  borderRadius: '8px',
-  marginRight: '10px',
-};
-
 const DateSelector = ({
   startValue,
   onChangeStartValue,
   endValue,
   onChangeEndValue,
+  opacity,
   ...otherProps
 }) => {
+    const inputStyle = {
+      backgroundColor: `rgba(31, 41, 55, ${opacity})`, // Use template literals for dynamic opacity
+      color: '#fff',
+      borderRadius: '8px',
+      marginRight: '10px',
+    };
+
   return (
     <div>
       <TextField
         id="start-date"
         label="Select Start Date"
         type="date"
-        value={startValue}  // Use startValue passed from the parent
-        onChange={(e) => onChangeStartValue(e.target.value)}  // Use onChangeStartValue passed from the parent
+        value={startValue}
+        onChange={(e) => onChangeStartValue(e.target.value)}
         InputProps={{
           style: inputStyle,
         }}
@@ -38,13 +39,13 @@ const DateSelector = ({
         id="end-date"
         label="Select End Date"
         type="date"
-        value={endValue}  // Use endValue passed from the parent
-        onChange={(e) => onChangeEndValue(e.target.value)}  // Use onChangeEndValue passed from the parent
+        value={endValue}
+        onChange={(e) => onChangeEndValue(e.target.value)}
         InputProps={{
           style: {
             ...inputStyle,
             textAlign: 'right',
-            marginLeft: '10px', // Add margin to the left
+            marginLeft: '10px',
           },
         }}
         {...otherProps}

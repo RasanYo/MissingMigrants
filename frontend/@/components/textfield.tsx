@@ -5,21 +5,27 @@ interface TextfieldProps extends React.ComponentPropsWithoutRef<typeof TextField
   // Explicitly declare the types for value and onChange to override any from TextField if needed
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  opacity: number; // Add opacity prop
 }
 
-const Textfield: React.FC<TextfieldProps> = ({ value, onChange, ...otherProps }) => {
+const Textfield: React.FC<TextfieldProps> = ({ value, onChange, opacity, ...otherProps }) => {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { width: '100%', backgroundColor: 'rgba(31, 41, 55, 0.9)', color: '#fff', borderRadius: 2}, // Set width to 100% and adjust colors
-        '& .MuiFilledInput-underline:before': { borderBottom: 'none' }, // Remove underline
-        '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' }, // Adjust input padding and set text color to white
-        '& .MuiFormLabel-root': { color: '#fff' } // Set label color to white
+        '& .MuiTextField-root': {
+          width: '100%',
+          backgroundColor: `rgba(31, 41, 55, ${opacity})`, // Use template literal for dynamic opacity
+          color: '#fff',
+          borderRadius: 2
+        },
+        '& .MuiFilledInput-underline:before': { borderBottom: 'none' },
+        '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' },
+        '& .MuiFormLabel-root': { color: '#fff' }
       }}
       noValidate
       autoComplete="on"
-      {...otherProps} // Spread additional props to the Box component
+      {...otherProps}
     >
       <div>
         <TextField
@@ -32,7 +38,7 @@ const Textfield: React.FC<TextfieldProps> = ({ value, onChange, ...otherProps })
           variant="filled"
           value={value}
           onChange={onChange}
-          {...otherProps} // Spread otherProps to the TextField if needed
+          {...otherProps}
         />
       </div>
     </Box>

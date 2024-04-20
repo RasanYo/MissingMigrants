@@ -5,11 +5,12 @@ import { languages } from './languages'; // Import the languages array
 interface LanguageSelectorProps {
   value: string; // Current value for the select
   onChange: (event: SelectChangeEvent) => void; // Function to call on value change
+  opacity: number; // Add opacity prop
 }
 
 class LanguageSelector extends React.Component<LanguageSelectorProps> {
   render() {
-    const { value, onChange, ...otherProps } = this.props;
+    const { value, onChange, opacity, ...otherProps } = this.props;
 
     return (
       <Box>
@@ -21,7 +22,7 @@ class LanguageSelector extends React.Component<LanguageSelectorProps> {
             value={value}
             onChange={onChange}
             label="Select Language"
-            style={{ backgroundColor: 'rgba(31, 41, 55, 0.9)', color: '#fff' }}
+            style={{ backgroundColor: `rgba(31, 41, 55, ${opacity})`, color: '#fff' }} // Use template literal for dynamic opacity
             {...otherProps}
             MenuProps={{
               PaperProps: {
