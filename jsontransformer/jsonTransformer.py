@@ -38,6 +38,32 @@ def categorize_entries(data, date_range_days):
     
     return new_data
 
+def date_in_range(original_date, new_date, num_days):
+    """
+    Check if the 'new_date' is within 'num_days' of 'original_date'
+    - original_date: 'DD/MM/YYYY'
+    - new_date: 'DD/MM/YYYY'
+    - num_days: int 
+    
+    return: bool
+    """
+    # Format for parsing the dates
+    date_format = "%d/%m/%Y"
+
+    try:
+        # Convert the string dates to datetime objects
+        original_datetime = datetime.strptime(original_date, date_format)
+        new_datetime = datetime.strptime(new_date, date_format)
+    except ValueError:
+        # This exception handles cases where the date format is incorrect
+        raise ValueError("Incorrect date format, should be DD/MM/YYYY")
+
+    # Calculate the difference in days between the two dates
+    date_difference = abs((new_datetime - original_datetime).days)
+
+    # Check if the difference is within the allowed number of days
+    return date_difference <= num_days
+
 # Example usage:
 # Assuming `input_json` is your JSON string read from a file or other source
 if __name__ == "__main__":
