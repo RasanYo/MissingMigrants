@@ -4,6 +4,7 @@ import Textfield from '@/components/textfield';
 import LanguageSelector from '@/components/language-select';
 import DateSelector from '@/components/date-select';
 import Button from '@mui/material/Button';
+import LanguageArticles from '@/components/articles';
 
 export default function Page() {
   const [message, setMessage] = useState('');
