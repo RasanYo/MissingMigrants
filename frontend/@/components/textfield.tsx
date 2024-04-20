@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, TextField } from '@mui/material';
 
-const Textfield = () => {
+const Textfield = (value,onChange=()=>{}) => {
   return (
     <Box
       component="form"
@@ -23,6 +23,8 @@ const Textfield = () => {
           rows={4}
           placeholder="Give in the keywords you want to search on"
           variant="filled"
+          value={value}
+          onChange={onChange}
         />
       </div>
     </Box>
