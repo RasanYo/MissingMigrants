@@ -1,8 +1,7 @@
 .idea
-
-news_scraping/data/*
-
 frontend/node_modules
 frontend/.next
 backend/__pycache__/
 **/__pycache__
+node_modules/*
+.DS_Store*

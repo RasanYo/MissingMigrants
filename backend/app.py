@@ -1,5 +1,6 @@
-import time
+from datetime import datetime
 from flask import Flask, jsonify, request
+from main import run
 
 app = Flask(__name__)
 
@@ -13,15 +14,15 @@ def home():
 def search():
     data = request.json  # This will contain the data sent from the frontend
     search_keywords = data.get('keywords')  # Assuming 'keywords' is what you're sending
+    date_format = "%Y-%m-%d"
+    start_date = datetime.strptime(data.get('startDate'), date_format)
+    end_date = datetime.strptime(data.get('endDate'), date_format)
+    languages = [data.get('language')]
 
-    # Simulating a delay of 2 seconds
-    time.sleep(2)
+    output = run(search_keywords, start_date, end_date, interested_languages=languages)
+    print(output)
 
-    # Here, you can add logic to process these keywords
-    modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get(
-        'startDate') + "  end date:" + data.get('endDate')
-
-    return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
+    return jsonify({"status": "success", "output": output})
 
 
 @app.route("/api/healthchecker", methods=["GET"])
