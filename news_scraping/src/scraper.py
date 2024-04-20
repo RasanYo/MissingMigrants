@@ -14,6 +14,7 @@ class Scraper:
     def get_query_response(self, query):
         return self.google_news.get_news(query) 
 
+
     def get_article(self, resp):
         try:
             article = self.google_news.get_full_article(resp['url']) 
