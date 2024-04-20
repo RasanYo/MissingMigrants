@@ -16,7 +16,7 @@ export default function Page() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [opacity, setOpacity] = useState('0.9');
-  const [items, setItems] = useState('');
+  const [items, setItems] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
   const [loading, setLoading] = useState(false); // State to track loading state
@@ -79,10 +79,8 @@ export default function Page() {
     .then(data => {
       console.log(data);
       setButtonClicked(true); // Set button clicked to true
-      setProgressState('2');
-      setItems([{
-              'id' : '2'
-      }]);
+      //setProgressState('2');
+      setItems(transformData(data));
       setLoading(false); // Set loading to false
     })
    .catch((error) => {

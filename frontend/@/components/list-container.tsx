@@ -16,6 +16,6 @@ export default function ListContainer({ items, searchPressed }) {
           />
         </li>
       ))}
-    </div>
+    </ul>
   );
 }

@@ -1,12 +1,14 @@
 from gnews import GNews
 import json
+import sys
 
-APIFY_API_KEY = 'apify_api_SsXrbMedr8qm11DLb7394OISl7kFAz0oKzMw'
+from info_extractor.src.info_extracter import OpenAIInfoExtractor
 
 class Scraper:
     
     def __init__(self, **kargs):
         self.google_news = GNews(**kargs)
+        self.extractor = OpenAIInfoExtractor()
 
     def set_gnews(self, gnews):
         self.google_news = gnews
@@ -17,23 +19,36 @@ class Scraper:
     def get_article(self, resp):
         try:
             article = self.google_news.get_full_article(resp['url']) 
+            vector = self.extractor.run(article.text)
             resp["article"] = {
                 'title': article.title,
                 'text': article.text
             }
+            resp["vector"] = vector
             return resp
+        except:
+            return None
+        
+    def get_article_by_url(self, url):
+        try:
+            article = self.google_news.get_full_article(url) 
+            return article
         except:
             return None
     
     def get_articles(self, resps):
         articles = []
-        for resp in resps:
+        print("Reading articles:")
+        for i, resp in enumerate(resps):
+            # print(f"{i+1}) {resp["title"]}")
             article = self.get_article(resp)
             if article: articles.append(article)
         return articles
     
     def scrape_for_query(self, query):
+        # print(f"Looking up articles relating [ {query} ] ...")
         resps = self.get_query_response(query)
+        # print(f"{len(resps)} matches")
         return self.get_articles(resps)
         
 
@@ -48,11 +63,11 @@ def write_json_to_file(data, filename):
 
 if __name__ == '__main__':
     print("Launching...")
-    scraper = Scraper(max_results=5, start_date=(2022, 5, 1), end_date=(2022, 5, 20))
-    print(scraper.google_news.period)
-    query = "Several migrants feared dead off coast of Spain's Canary Islands"
+    scraper = Scraper(max_results=10, start_date=(2022, 5, 1), end_date=(2022, 5, 20))
+    query = "migrant canary islands missing"
     res = scraper.scrape_for_query(query)
-    write_json_to_file(res, "../data/test2.json")
+    write_json_to_file(res, f"../data/{query}.json")
+    print(f"Saved query results in data/{query}.json")
     print("DONE")
 
 
