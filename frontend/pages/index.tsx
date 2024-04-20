@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
-import Textfield from '@/components/textfield'; // Changed import statement
-import LanguageSelector from '@/components/language-select'; // Import the LanguageSelector component
-import DateSelector from '@/components/date-select'; // Import the DateSelector component
+import Textfield from '@/components/textfield';
+import LanguageSelector from '@/components/language-select';
+import DateSelector from '@/components/date-select';
 import Button from '@mui/material/Button';
 
 export default function Page() {
   const [message, setMessage] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [modifiedValue, setModifiedValue] = useState('');
+  const [language, setLanguage] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+  };
+
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
   };
 
   const handleSearchClick = () => {
@@ -20,13 +27,18 @@ export default function Page() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ keywords: inputValue })
+      body: JSON.stringify({
+        keywords: inputValue,
+        language: language,
+        startDate: startDate,
+        endDate: endDate
+      })
     })
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      setMessage(data.message);  // Display the response message
-      setModifiedValue(data.modified);  // Set and display the modified value
+      setMessage(data.message);
+      setModifiedValue(data.modified);
     })
     .catch(error => console.error('Error:', error));
   };
@@ -36,18 +48,25 @@ export default function Page() {
       <div className="max-w-3xl w-full">
         <div className="flex flex-col md:flex-row md:space-x-4">
           <div className="w-full md:w-5/9">
-            <Textfield />
+            <Textfield value={inputValue} onChange={handleInputChange}/>
           </div>
           <div className="w-full md:w-4/9">
             <div className="w-full mb-4">
-              <LanguageSelector />
+              <LanguageSelector value={language} onChange={handleLanguageChange}/>
             </div>
             <div className="w-full">
-              <DateSelector />
+              <DateSelector
+                startValue={startDate}
+                onChangeStartValue={setStartDate}
+                endValue={endDate}
+                onChangeEndValue={setEndDate}
+              />
             </div>
           </div>
         </div>
-        <Button variant="contained" className="mt-4 bg-gray-800 hover:bg-gray-700 text-white">Search</Button>
+        <Button variant="contained" className="mt-4 bg-gray-800 hover:bg-gray-700 text-white" onClick={handleSearchClick}>Search</Button>
+        {message && <p className="text-dark">{message}</p>}
+        {modifiedValue && <p className="text-dark">Modified: {modifiedValue}</p>}
       </div>
     </div>
   );

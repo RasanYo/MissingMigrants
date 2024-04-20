@@ -1,52 +1,55 @@
 import * as React from 'react';
-import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { languages } from './languages'; // Import the languages array
 
-const LanguageSelector = () => {
-  const [language, setLanguage] = React.useState('');
+interface LanguageSelectorProps {
+  value: string; // Current value for the select
+  onChange: (event: SelectChangeEvent) => void; // Function to call on value change
+}
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-  };
+class LanguageSelector extends React.Component<LanguageSelectorProps> {
+  render() {
+    const { value, onChange } = this.props;
 
-  return (
-    <Box>
-      <FormControl fullWidth>
-        <InputLabel id="language-label" style={{ color: '#fff' }}>Select Language</InputLabel>
-        <Select
-          labelId="language-label"
-          id="language-select"
-          value={language}
-          label="Select Language"
-          onChange={handleChange}
-          style={{ backgroundColor: '#1f2937', color: '#fff' }} // Adjust background and text color
-          MenuProps={{
-            PaperProps: {
-              style: {
-                backgroundColor: '#374151', // Background color of the dropdown list
-              },
-            },
-            MenuListProps: {
-              style: {
-                '&::-webkit-scrollbar': {
-                  width: '0.5em', // Width of the scrollbar
-                },
-                '&::-webkit-scrollbar-thumb': {
-                  backgroundColor: '#1f2937', // Color of the scrollbar thumb
+    return (
+      <Box>
+        <FormControl fullWidth>
+          <InputLabel id="language-label" style={{ color: '#fff' }}>Select Language</InputLabel>
+          <Select
+            labelId="language-label"
+            id="language-select"
+            value={value}
+            onChange={onChange}
+            label="Select Language"
+            style={{ backgroundColor: '#1f2937', color: '#fff' }}
+            MenuProps={{
+              PaperProps: {
+                style: {
+                  backgroundColor: '#374151',
                 },
               },
-            },
-          }}
-        >
-          {languages.map((lang) => (
-            <MenuItem key={lang.value} value={lang.value} style={{ backgroundColor: '#374151', color: '#fff' }}>
-              {lang.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </Box>
-  );
+              MenuListProps: {
+                style: {
+                  '&::-webkit-scrollbar': {
+                    width: '0.5em',
+                  },
+                  '&::-webkit-scrollbar-thumb': {
+                    backgroundColor: '#1f2937',
+                  },
+                },
+              },
+            }}
+          >
+            {languages.map((lang) => (
+              <MenuItem key={lang.value} value={lang.value} style={{ backgroundColor: '#374151', color: '#fff' }}>
+                {lang.label}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
+    );
+  }
 }
 
 export default LanguageSelector;
