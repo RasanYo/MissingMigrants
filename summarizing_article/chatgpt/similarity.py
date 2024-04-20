@@ -8,7 +8,7 @@ class DocumentSimilarity:
 
     def check_document_coherence(self, doc1, doc2):
         response = self.client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo-0125",
             messages=[
                 {"role": "system", "content": "You are to analyze the coherence between two documents."},
                 {"role": "user", "content": f"Document 1: {doc1}"},
