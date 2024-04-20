@@ -7,6 +7,7 @@ const DateSelector = ({
   endValue,
   onChangeEndValue,
   opacity,
+  disabled, // Add disabled prop
   ...otherProps
 }) => {
     const inputStyle = {
@@ -15,6 +16,7 @@ const DateSelector = ({
       borderRadius: '8px',
       marginRight: '10px',
     };
+    const labelColor = disabled ? 'rgb(31 41 55)' : '#fff'; // Adjust label color based on disabled prop
 
   return (
     <div>
@@ -30,7 +32,7 @@ const DateSelector = ({
         {...otherProps}
         InputLabelProps={{
           style: {
-            color: '#fff',
+            color: labelColor, // Apply label color
           },
           shrink: true,
         }}
@@ -51,7 +53,7 @@ const DateSelector = ({
         {...otherProps}
         InputLabelProps={{
           style: {
-            color: '#fff',
+            color: labelColor, // Apply label color
           },
           shrink: true,
         }}
