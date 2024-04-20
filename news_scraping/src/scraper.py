@@ -24,6 +24,13 @@ class Scraper:
             return resp
         except:
             return None
+        
+    def get_article_by_url(self, url):
+        try:
+            article = self.google_news.get_full_article(url) 
+            return article
+        except:
+            return None
     
     def get_articles(self, resps):
         articles = []
