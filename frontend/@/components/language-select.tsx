@@ -21,7 +21,7 @@ class LanguageSelector extends React.Component<LanguageSelectorProps> {
             value={value}
             onChange={onChange}
             label="Select Language"
-            style={{ backgroundColor: '#1f2937', color: '#fff' }}
+            style={{ backgroundColor: 'rgba(31, 41, 55, 0.9)', color: '#fff' }}
             MenuProps={{
               PaperProps: {
                 style: {
@@ -30,10 +30,7 @@ class LanguageSelector extends React.Component<LanguageSelectorProps> {
               },
               MenuListProps: {
                 style: {
-                  '&::-webkit-scrollbar': {
-                    width: '0.5em',
-                  },
-                  '&::-webkit-scrollbar-thumb': {
+                  '::WebkitScrollbarThumb': {
                     backgroundColor: '#1f2937',
                   },
                 },

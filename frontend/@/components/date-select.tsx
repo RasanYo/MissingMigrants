@@ -1,6 +1,13 @@
 import React from 'react';
 import { TextField } from '@mui/material';
 
+const inputStyle = {
+  backgroundColor: 'rgba(31, 41, 55, 0.9)', // Apply opacity here
+  color: '#fff',
+  borderRadius: '8px',
+  marginRight: '10px',
+};
+
 const DateSelector = ({
   startValue,
   onChangeStartValue,
@@ -16,12 +23,7 @@ const DateSelector = ({
         value={startValue}  // Use startValue passed from the parent
         onChange={(e) => onChangeStartValue(e.target.value)}  // Use onChangeStartValue passed from the parent
         InputProps={{
-          style: {
-            backgroundColor: '#1f2937',
-            color: '#fff',
-            borderRadius: '8px',
-            marginRight: '10px', // Margin to the right
-          },
+          style: inputStyle,
         }}
         InputLabelProps={{
           style: {
@@ -38,11 +40,9 @@ const DateSelector = ({
         onChange={(e) => onChangeEndValue(e.target.value)}  // Use onChangeEndValue passed from the parent
         InputProps={{
           style: {
-            backgroundColor: '#1f2937',
-            color: '#fff',
-            borderRadius: '8px',
+            ...inputStyle,
             textAlign: 'right',
-            marginLeft: '10px', // Margin to the left
+            marginLeft: '10px', // Add margin to the left
           },
         }}
         InputLabelProps={{
