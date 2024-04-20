@@ -30,32 +30,38 @@ export default function Page() {
     setLanguage(event.target.value);
   };
 
-  const transformData = (data) => {
-    const transformedItems = [];
-    Object.keys(data).forEach(language => {
-      Object.keys(data[language]).forEach(category => {
-        data[language][category].forEach(item => {
-          transformedItems.push({
-            title: item.title,
-            description: item.description,
-            publishedDate: item['published date'],
-            url: item.url,
-            language,
-            publisher: {
-              href: item.publisher.href,
-              title: item.publisher.title
-            },
-            article: {
-              title: item.article.title,
-              text: item.article.text
-            }
-          });
+  const transformDataToItems = (data) => {
+    let items = [];  // This will hold arrays of items from each category.
+  
+    for (let category in data) {
+      let categoryItems = [];  // Array to store items for the current category.
+  
+      for (let article in data[category]) {
+        let item = data[category][article];  // Reference the article item directly.
+  
+        categoryItems.push({  // Push each item object into the current category's array.
+          title: item.title,
+          description: item.description,
+          publishedDate: item["published date"],  // Make sure keys match JSON structure.
+          url: item.url,
+          publisher: {
+            href: item.publisher.href,
+            title: item.publisher.title
+          },
+          article: {
+            title: item.article.title,
+            text: item.article.text
+          },
+          country: item.vector["Country of Incident"]
         });
-      });
-    });
-    return transformedItems;
+      }
+  
+      items.push(categoryItems);  // Add the current category's items array to the main items array.
+    }
+  
+    return items;
   };
-
+  
 
   const handleSearchClick = () => {
     console.log('data');
@@ -78,39 +84,16 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
-      let items = [];  // This will hold arrays of items from each category.
 
-      for (let category in data) {
-        let categoryItems = [];  // Array to store items for the current category.
+     
     
-        for (let article in data[category]) {
-          let item = data[category][article];  // Reference the article item directly.
-    
-          categoryItems.push({  // Push each item object into the current category's array.
-            title: item.title,
-            description: item.description,
-            publishedDate: item["published date"],  // Make sure keys match JSON structure.
-            url: item.url,
-            publisher: {
-              href: item.publisher.href,
-              title: item.publisher.title
-            },
-            article: {
-              title: item.article.title,
-              text: item.article.text
-            },
-            country: item.vector["Country of Incident"]
+      const transformedItems = transformDataToItems(data);
 
-          });
-        }
     
-        items.push(categoryItems);  // Add the current category's items array to the main items array.
-      }
-    
-      console.log(items); 
+      console.log(transformedItems); 
       
       setButtonClicked(true); // Set button clicked to true
-      setItems(items);
+      setItems(transformedItems);
       setLoading(false); // Set loading to false
       setProgressState('3');
 
