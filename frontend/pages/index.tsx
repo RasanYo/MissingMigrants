@@ -168,7 +168,7 @@ export default function Page() {
                 </Button>
               )
             )}
-            <div className="mt-5">
+            <div className="my-5">
                 <ListContainer
                     items={items}
                     searchPressed={buttonClicked}
