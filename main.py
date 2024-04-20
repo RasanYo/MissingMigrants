@@ -1,8 +1,11 @@
+import os
 from openai import OpenAI
 from query_generation.query_generation import QueryGenerator
 from news_scraping.src.scraper import Scraper
 from summarizing_article.chatgpt.similarity import DocumentSimilarity
 import json
+
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 def main():
@@ -80,7 +83,7 @@ def process_data(data, available_languages, initial_prompt,max_results=1, start_
             print(f"Scraping for language: {lang}, query key: {key}, query: {query}")
             
             # Scrape the query and store the data
-            scraped_data = scraper.scrape_for_query(query)
+            scraped_data = scraper.scrape_for_query(query)                
             lang_scraped_data[query] = scraped_data
         
         # Add the language-specific results to the main dictionary
