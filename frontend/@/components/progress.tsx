@@ -26,7 +26,7 @@ export default function Progress({
         </div>
         <div className="mt-2 hidden grid-cols-4 text-sm font-medium sm:grid">
           {textColors.map((color, index) => (
-            <div key={index} style={{ color }}>{getTextByIndex(index)}</div>
+            <div key={index} className={index === 3 ? "text-right" : index === 1 || index === 2 ? "text-center" : ""} style={{ color }}>{getTextByIndex(index)}</div>
           ))}
         </div>
       </div>
