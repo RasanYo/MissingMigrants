@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Progress from '@/components/progress';
 import ListContainer from '@/components/list-container'
 import CircularProgress from '@mui/material/CircularProgress'; // Import CircularProgress
+import Head from 'next/head'
 
 export default function Page() {
   const [message, setMessage] = useState('');
@@ -16,11 +17,10 @@ export default function Page() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [opacity, setOpacity] = useState('0.9');
-  const [items, setItems] = useState('');
+  const [items, setItems] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
   const [loading, setLoading] = useState(false); // State to track loading state
-
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -30,11 +30,49 @@ export default function Page() {
     setLanguage(event.target.value);
   };
 
+  const transformDataToItems = (data) => {
+    let items = [];  // This will hold arrays of items from each category.
+  
+    for (let category in data) {
+      let categoryItems = [];  // Array to store items for the current category.
+  
+      for (let article in data[category]) {
+        let item = data[category][article];  // Reference the article item directly.
+  
+        categoryItems.push({  // Push each item object into the current category's array.
+          title: item.title,
+          description: item.description,
+          publishedDate: item["published date"],  // Make sure keys match JSON structure.
+          url: item.url,
+          publisher: {
+            href: item.publisher.href,
+            title: item.publisher.title
+          },
+          article: {
+            title: item.article.title,
+            text: item.article.text
+          },
+          country: item.vector["Country of Incident"],
+          deads:item.vector["Number of Dead"],
+          missing: item.vector["Minimum Estimated Number of Missing"],
+          cause_death: item.vector["Cause of Death"],
+          country_origin: item.vector["Country of Origin"]
+        });
+      }
+  
+      items.push(categoryItems);  // Add the current category's items array to the main items array.
+    }
+  
+    return items;
+  };
+  
+
   const handleSearchClick = () => {
     console.log('data');
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
+    setProgressState('1');
 
     fetch('/api/search', {
       method: 'POST',
@@ -50,24 +88,35 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+
+      
+    
+      const transformedItems = transformDataToItems(data);
+
+    
+      console.log(transformedItems); 
+      
       setButtonClicked(true); // Set button clicked to true
-      setProgressState('2');
-      setItems([{
-              'id' : '2'
-      }]);
+      setItems(transformedItems);
       setLoading(false); // Set loading to false
+      setProgressState('3');
+
     })
    .catch((error) => {
      console.error('Error:', error);
      setProgressState('0');
      setLoading(false); // Set loading to false even in case of error
+     setOpacity('0.9');
    });
   };
 
   return (
-    <div className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/bg-1.png)' }}>
-      <div className="flex flex-col justify-center items-center ">
+    <div>
+      <Head>
+        <link rel="icon" href="/images/logo.ico" />
+      </Head>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/bg-1.png)' }}>
+        <div className="flex flex-col justify-center items-center ">
           <div className="max-w-3xl w-full">
             <Progress state={progressState} />
             <div className="flex flex-col md:flex-row md:space-x-4">
@@ -102,13 +151,14 @@ export default function Page() {
                 </Button>
               )
             )}
-            <div className="mt-5">
+            <div className="my-5">
                 <ListContainer
                     items={items}
                     searchPressed={buttonClicked}
                 />
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
