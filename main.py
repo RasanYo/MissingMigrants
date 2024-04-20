@@ -1,6 +1,7 @@
 from openai import OpenAI
 from query_generation.query_generation import QueryGenerator
 from news_scraping.src.scraper import Scraper
+from summarizing_article.chatgpt.similarity import DocumentSimilarity
 import json
 
 
@@ -17,21 +18,51 @@ def main():
     'bengali': 'bn', 'tamil': 'ta', 'telugu': 'te', 'malyalam': 'ml', 'thai': 'th', 'chinese simplified': 'zh-Hans',
     'chinese traditional': 'zh-Hant', 'japanese': 'ja', 'korean': 'ko'}
 
-    number_of_queries_per_language = 1
-
+    number_of_queries_per_language = 5
     # Generate queries
     print("Generating queries...")
     query_gen = QueryGenerator(open_ai_client)
-    initial_prompt = "Migrants dead italy"
-    queries = query_gen.generate_queries(initial_prompt, interested_languages, number_of_queries_per_language)
+    article_title = "Mueren hombre y mujer dominicanos tras naufragio de yola en Puerto Rico"
+    # article_title = "Migrants dead trying to cross the Mediterranean Sea in Italy"
+    article_content = """Dos mujeres y un hombre fallecieron durante naufragio de una embarcación en la costa de Puerto Rico, el hecho ha causado consternación en las comunidades del Bajo Yuna.
+        Las víctimas, fueron identificadas como Jacqueline Hiciano, Diana Carolina Lopez Rosario y Raudy Antigua Durán, residentes en El Mango de Las Coles, La Reforma y Guaraguao, respectivamente.
+        Según informaciones suministradas, en el lugar hasta el momento no cuentan con más detalles de las autoridades a pesar de que los sobrevivientes fueron detenidos y otra parte repatriados hacia Santo Domingo."""
+
+
+    queries = query_gen.generate_queries(article_title, interested_languages, number_of_queries_per_language)
     queries = json.loads(queries)
     # print(type(queries))
-    print(f"Generated queries: {queries}")
+    # print(f"Generated queries: {queries}")
 
-    max_results = 5
-    start_date = (2022, 5, 1)
-    end_date = (2022, 5, 20)
-    process_data(queries, available_languages, initial_prompt, max_results, start_date, end_date)
+    max_results = 3
+    start_date = (2021, 1, 1)
+    end_date = (2024, 4, 20)
+    data = process_data(queries, available_languages, article_title, max_results, start_date, end_date)
+
+    # Get all the articles' text
+    all_articles_text = get_all_articles_text(data)
+    # print(f"all_articles_text: {all_articles_text}")
+
+    similarity_checker = DocumentSimilarity(open_ai_client)
+    good_articles, bad_articles = similarity_checker.check_list_documents(article_content, all_articles_text)
+    print(len(good_articles), len(bad_articles))
+    
+def get_all_articles_text(data):
+    texts = []
+    for language in data:
+        for query in data[language]:
+            for article in data[language][query]:
+                texts.append(article['article']['text'])
+    return texts
+
+
+def scrape_original_data(max_results=1, start_date=(2022, 5, 1), end_date=(2022, 5, 20), lang='en'):
+    scraper = Scraper(max_results=1, start_date=start_date, end_date=end_date, language=lang)
+    scraper.get_article_by_url("https://archive.fo/X6n4Z")
+            
+
+# def filter_relevant_articles(openai_client, original_article, articles):
+
 
 
 
@@ -60,12 +91,15 @@ def process_data(data, available_languages, initial_prompt,max_results=1, start_
     
     # Write the aggregated scraped data to file
     result = write_json_to_file(all_scraped_data, filename)
+
     
     # Print the result
     if result:
         print(f"Saved all query results in {filename}")
     else:
         print(f"Failed to save query results in {filename}")
+
+    return all_scraped_data
 
 # Note: Ensure that the Scraper class and write_json_to_file function are defined and implement the actual functionality.
  

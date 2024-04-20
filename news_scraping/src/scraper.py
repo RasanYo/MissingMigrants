@@ -14,7 +14,6 @@ class Scraper:
     def get_query_response(self, query):
         return self.google_news.get_news(query) 
 
-
     def get_article(self, resp):
         try:
             article = self.google_news.get_full_article(resp['url']) 
@@ -25,20 +24,27 @@ class Scraper:
             return resp
         except:
             return None
+        
+    def get_article_by_url(self, url):
+        try:
+            article = self.google_news.get_full_article(url) 
+            return article
+        except:
+            return None
     
     def get_articles(self, resps):
         articles = []
         print("Reading articles:")
         for i, resp in enumerate(resps):
-            print(f"{i+1}) {resp["title"]}")
+            # print(f"{i+1}) {resp["title"]}")
             article = self.get_article(resp)
             if article: articles.append(article)
         return articles
     
     def scrape_for_query(self, query):
-        print(f"Looking up articles relating [ {query} ] ...")
+        # print(f"Looking up articles relating [ {query} ] ...")
         resps = self.get_query_response(query)
-        print(f"{len(resps)} matches")
+        # print(f"{len(resps)} matches")
         return self.get_articles(resps)
         
 
