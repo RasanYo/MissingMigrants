@@ -11,7 +11,7 @@ const LanguageSelector = () => {
 
   return (
     <Box>
-      <FormControl>
+      <FormControl fullWidth>
         <InputLabel id="language-label" style={{ color: '#fff' }}>Select Language</InputLabel>
         <Select
           labelId="language-label"
@@ -19,14 +19,27 @@ const LanguageSelector = () => {
           value={language}
           label="Select Language"
           onChange={handleChange}
-          sx={{
-            '& .MuiSelect-icon': { color: '#fff' }, // Set color of the select icon
-            '& .MuiListItem-root': { color: '#1f2937' }, // Set color of the list items
-            '& .MuiList-root': { backgroundColor: '#1f2937' }, // Set background color of the dropdown menu
+          style={{ backgroundColor: '#1f2937', color: '#fff' }} // Adjust background and text color
+          MenuProps={{
+            PaperProps: {
+              style: {
+                backgroundColor: '#374151', // Background color of the dropdown list
+              },
+            },
+            MenuListProps: {
+              style: {
+                '&::-webkit-scrollbar': {
+                  width: '0.5em', // Width of the scrollbar
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: '#1f2937', // Color of the scrollbar thumb
+                },
+              },
+            },
           }}
         >
           {languages.map((lang) => (
-            <MenuItem key={lang.value} value={lang.value}>
+            <MenuItem key={lang.value} value={lang.value} style={{ backgroundColor: '#374151', color: '#fff' }}>
               {lang.label}
             </MenuItem>
           ))}

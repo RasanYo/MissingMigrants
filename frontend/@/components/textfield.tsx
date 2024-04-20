@@ -20,7 +20,7 @@ const Textfield = () => {
           id="filled-multiline-static"
           label="Keywords"
           multiline
-          rows={4}
+          rows={3}
           placeholder="Give in the keywords you want to search on"
           variant="filled"
         />
