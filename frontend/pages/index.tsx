@@ -31,16 +31,24 @@ export default function Page() {
   };
 
   const transformData = (data) => {
-    const transformedItems = [];
+    const transformedItems = {};
     Object.keys(data).forEach(language => {
+      // Assuming each language has categories which are the keys in the data object
       Object.keys(data[language]).forEach(category => {
-        data[language][category].forEach(item => {
-          transformedItems.push({
+        // Ensure the category list exists
+        if (!transformedItems[category]) {
+          transformedItems[category] = [];
+        }
+  
+        // Access the 'data' array under each category
+        data[language][category].data.forEach(item => {
+          transformedItems[category].push({
             title: item.title,
             description: item.description,
             publishedDate: item['published date'],
             url: item.url,
-            language,
+            language: language, // Assuming you still want to track language
+            query: data[language][category].query, // Store the query associated with the category
             publisher: {
               href: item.publisher.href,
               title: item.publisher.title
@@ -53,8 +61,11 @@ export default function Page() {
         });
       });
     });
-    return transformedItems;
+  
+    // Convert the object to a list of lists
+    return Object.values(transformedItems);
   };
+  
 
 
   const handleSearchClick = () => {
@@ -77,7 +88,7 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      console.log(transformData(data));
       setButtonClicked(true); // Set button clicked to true
       //setProgressState('2');
       setItems(transformData(data));
