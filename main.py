@@ -4,6 +4,7 @@ from news_scraping.src.scraper import Scraper
 from summarizing_article.chatgpt.similarity import DocumentSimilarity
 import json
 
+
 import os
 os.environ["OPENAI_API_KEY"] = "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"
 
