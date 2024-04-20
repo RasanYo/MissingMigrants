@@ -1,9 +1,11 @@
-const items = [
-  { id: 1 },
-  // More items...
-]
+import React from 'react';
 
-export default function ListContainer() {
+export default function ListContainer({ items, searchPressed }) {
+  // Return null if search is not pressed or items are not provided
+  if (!searchPressed || !items || items.length === 0) {
+    return null;
+  }
+
   return (
     <ul role="list" className="space-y-3">
       {items.map((item) => (
@@ -12,5 +14,5 @@ export default function ListContainer() {
         </li>
       ))}
     </ul>
-  )
+  );
 }

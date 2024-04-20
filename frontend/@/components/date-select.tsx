@@ -12,7 +12,8 @@ const DateSelector = ({
   startValue,
   onChangeStartValue,
   endValue,
-  onChangeEndValue
+  onChangeEndValue,
+  ...otherProps
 }) => {
   return (
     <div>
@@ -25,6 +26,7 @@ const DateSelector = ({
         InputProps={{
           style: inputStyle,
         }}
+        {...otherProps}
         InputLabelProps={{
           style: {
             color: '#fff',
@@ -45,6 +47,7 @@ const DateSelector = ({
             marginLeft: '10px', // Add margin to the left
           },
         }}
+        {...otherProps}
         InputLabelProps={{
           style: {
             color: '#fff',
