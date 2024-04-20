@@ -10,7 +10,7 @@ class QueryGenerator:
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": f"You are a journalist who wants to find similar news articles on Google News. Here is the news report: {news_report}"},
-            {"role": "user", "content": f"{prompt}. What are some queries I can use to find similar news articles on Google News? Please return the information in JSON format. For example: {{'query1': 'query1_text', 'query2': 'query2_text'}}"},
+            {"role": "user", "content": f"{prompt}. What are some queries I can use to find similar news articles on Google News? Please return the information in JSON format. Generate a list of 5 queries for each of this languages : English, Spanish and French. The Json should look like this : {{'French' : {{'1': 'query1_text', '2': 'query2_text'}}}}" },
         ],
         max_tokens=1000,
         response_format={"type": "json_object"}
