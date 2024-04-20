@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-def categorize_entries(data, date_range_days):
+def categorize_entries(data):
     categories = defaultdict(list)
     for lang, item in data.items():
         for i in item['data']:
@@ -11,12 +11,13 @@ def categorize_entries(data, date_range_days):
             i["query"] = item['query']
             
             found = False
+            date_range_days = 3
 
             # Iterate over existing keys to see if this should be grouped with them
             for existing_key in list(categories.keys()):
                 existing_date, existing_country = existing_key
                 # Check if the country matches and the date is within the specified range
-                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], date_range_days):
+                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], ):
                     categories[existing_key].append(i)
                     found = True
                     break
