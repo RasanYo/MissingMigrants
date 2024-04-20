@@ -30,10 +30,8 @@ def run(article_title, start_date, end_date, max_results=5, number_of_queries_pe
     query_gen = QueryGenerator(open_ai_client)
     queries = query_gen.generate_queries(article_title, interested_languages, number_of_queries_per_language)
     queries = json.loads(queries)
-    similarity_checker = DocumentSimilarity(open_ai_client)
     return process_data(queries, available_languages, article_title, max_results, start_date, end_date)
-
-
+    
 def get_all_articles_text(data):
     texts = []
     titles = []
@@ -68,8 +66,9 @@ def process_data(data, available_languages, initial_prompt, max_results=1, start
             # Scrape the query and store the data
             scraped_data = scraper.scrape_for_query(query)
             # scraped_data["article"]["Relevant"] = similarity_checker.check_document_coherence(scraped_data["article"]["text"], article_content)
-            lang_scraped_data[query] = scraped_data
-
+            lang_scraped_data['query'] = query
+            lang_scraped_data['data'] = scraped_data
+        
         # Add the language-specific results to the main dictionary
         all_scraped_data[lang] = lang_scraped_data
 
@@ -79,6 +78,7 @@ def process_data(data, available_languages, initial_prompt, max_results=1, start
     # Write the aggregated scraped data to file
     result = write_json_to_file(all_scraped_data, filename)
 
+    
     # Print the result
     if result:
         print(f"Saved all query results in {filename}")
