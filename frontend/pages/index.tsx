@@ -14,6 +14,7 @@ export default function Page() {
   const [language, setLanguage] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [opacity, setOpacity] = useState('0.9');
   const [items, setItems] = useState('');
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
@@ -30,6 +31,7 @@ export default function Page() {
     console.log('data');
     setButtonClicked(true); // Set button clicked to true
     setProgressState('1'); // Set progress state to 1
+    setOpacity('0.6');
 
     fetch('/api/search', {
       method: 'POST',
@@ -64,11 +66,11 @@ export default function Page() {
             <Progress state={progressState} />
             <div className="flex flex-col md:flex-row md:space-x-4">
               <div className="w-full md:w-5/9">
-                <Textfield value={inputValue} onChange={handleInputChange} disabled={buttonClicked} />
+                <Textfield value={inputValue} onChange={handleInputChange} disabled={buttonClicked} opacity={opacity}/>
               </div>
               <div className="w-full md:w-4/9">
                 <div className="w-full mb-4">
-                  <LanguageSelector value={language} onChange={handleLanguageChange} disabled={buttonClicked} />
+                  <LanguageSelector value={language} onChange={handleLanguageChange} disabled={buttonClicked} opacity={opacity}/>
                 </div>
                 <div className="w-full">
                   <DateSelector
@@ -77,6 +79,7 @@ export default function Page() {
                     endValue={endDate}
                     onChangeEndValue={setEndDate}
                     disabled={buttonClicked}
+                    opacity={opacity}
                   />
                 </div>
               </div>
