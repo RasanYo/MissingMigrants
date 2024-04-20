@@ -1,53 +1,28 @@
 import json
+from collections import defaultdict
 
-def group_by_criteria(queries):
-    # Dictionary to hold the categories based on 'published date' and 'Country of Incident'
-    categories = {}
+def categorize_entries(data):
+    categories = defaultdict(list)
+    for lang, item in data.items():
+        for i in item['data']:
+            key = (i['published date'], i['vector']['Country of Incident'])
+            i["language"] = lang
+            i["query"] = item['query']
+            categories[key].append(i)
 
-    # Iterate through each key in the dictionary of queries
-    for language, data in queries.items():
-        print(type(data))
-        for article in data:
-            print(article)
-            # Extract the key criteria
-            published_date = article['published date']
-            country_of_incident = article['vector']['Country of Incident']
-
-            # Create a unique key for each category
-            category_key = (published_date, country_of_incident)
-            
-            if category_key not in categories:
-                categories[category_key] = {
-                    'query': []
-                }
-            
-            # Modify entry to include the language key
-            data_with_language = article
-            data_with_language['language'] = language
-            
-            # Append the item to the correct category
-            categories[category_key]['query'].append(data_with_language)
-
-    # Create the final structured output
-    output = {
-        'category': {}
-    }
+    for (date, country), items in categories.items():
+        print(len(items))
+        # print(categories[(date, country)])
+    # print(categories)
     
-    # Assign each category to output with a key or to unknown/mixed
-    unknown_mixed = {'query': []}
-    for key, value in categories.items():
-        if key[0] and key[1]:  # Both published date and country of incident are present
-            output['category'][f'{key[0]}_{key[1]}'] = value
-        else:
-            unknown_mixed['query'].extend(value['query'])
+    new_data = {}
+    for (date, country), items in categories.items():
+        new_data[f"({date}, {country})"] = items
+        # for item in items:
+        #     item['language'] = ""  # assuming the language needs to be filled or modified
+        #     new_data['category']['data'].append(item)
     
-    # Include unknown/mixed category if there are any such items
-    if unknown_mixed['query']:
-        output['category']['unknown/mixed'] = unknown_mixed
-    
-    return output
-
-
+    return new_data
 
 # Example usage:
 # Assuming `input_json` is your JSON string read from a file or other source
@@ -56,5 +31,6 @@ if __name__ == "__main__":
         input_json = json.load(f)
 
     # print(input_json)
-    transformed_json = group_by_criteria(input_json)
-    print(transformed_json)
+    transformed_json = categorize_entries(input_json)
+    with open('./transformed.json', 'w') as f:
+        json.dump(transformed_json, f, indent=4)

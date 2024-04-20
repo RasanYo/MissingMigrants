@@ -60,6 +60,7 @@ export default function Page() {
     })
    .catch((error) => {
      console.error('Error:', error);
+     setProgressState('0');
      setLoading(false); // Set loading to false even in case of error
    });
   };
