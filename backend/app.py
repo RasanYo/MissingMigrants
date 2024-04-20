@@ -14,7 +14,7 @@ def search():
     search_keywords = data.get('keywords')  # Assuming 'keywords' is what you're sending
     # Here, you can add logic to process these keywords
     modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get('startDate')+ "  end date:" + data.get('endDate')
-    
+    print(345)
 
     return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
 

@@ -12,6 +12,13 @@
 
 @layer base {
 :root {
+    /* CSS HEX */
+    --egyptian-blue: #0035A0ff;
+    --jasper: #D25A49ff;
+    --selective-yellow: #FFB91Dff;
+    --powder-blue: #BCCFFD;
+    --delft-blue: #2C3D68ff;
+
   --background: 0 0% 100%;
   --foreground: 20 14.3% 4.1%;
 

@@ -12,10 +12,10 @@ const Textfield: React.FC<TextfieldProps> = ({ value, onChange, ...otherProps })
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { width: '100%', backgroundColor: '#1f2937', color: '#fff', borderRadius: 2},
-        '& .MuiFilledInput-underline:before': { borderBottom: 'none' },
-        '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' },
-        '& .MuiFormLabel-root': { color: '#fff' }
+        '& .MuiTextField-root': { width: '100%', backgroundColor: 'rgba(31, 41, 55, 0.9)', color: '#fff', borderRadius: 2}, // Set width to 100% and adjust colors
+        '& .MuiFilledInput-underline:before': { borderBottom: 'none' }, // Remove underline
+        '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' }, // Adjust input padding and set text color to white
+        '& .MuiFormLabel-root': { color: '#fff' } // Set label color to white
       }}
       noValidate
       autoComplete="on"
@@ -27,7 +27,7 @@ const Textfield: React.FC<TextfieldProps> = ({ value, onChange, ...otherProps })
           id="filled-multiline-static"
           label="Keywords"
           multiline
-          rows={4}
+          rows={3}
           placeholder="Give in the keywords you want to search on"
           variant="filled"
           value={value}
