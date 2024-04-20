@@ -31,24 +31,16 @@ export default function Page() {
   };
 
   const transformData = (data) => {
-    const transformedItems = {};
+    const transformedItems = [];
     Object.keys(data).forEach(language => {
-      // Assuming each language has categories which are the keys in the data object
       Object.keys(data[language]).forEach(category => {
-        // Ensure the category list exists
-        if (!transformedItems[category]) {
-          transformedItems[category] = [];
-        }
-  
-        // Access the 'data' array under each category
-        data[language][category].data.forEach(item => {
-          transformedItems[category].push({
+        data[language][category].forEach(item => {
+          transformedItems.push({
             title: item.title,
             description: item.description,
             publishedDate: item['published date'],
             url: item.url,
-            language: language, // Assuming you still want to track language
-            query: data[language][category].query, // Store the query associated with the category
+            language,
             publisher: {
               href: item.publisher.href,
               title: item.publisher.title
@@ -61,11 +53,8 @@ export default function Page() {
         });
       });
     });
-  
-    // Convert the object to a list of lists
-    return Object.values(transformedItems);
+    return transformedItems;
   };
-  
 
 
   const handleSearchClick = () => {
@@ -73,6 +62,7 @@ export default function Page() {
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
+    setProgressState('2');
 
     fetch('/api/search', {
       method: 'POST',
@@ -88,11 +78,42 @@ export default function Page() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(transformData(data));
+      let items = [];  // This will hold arrays of items from each category.
+
+      for (let category in data) {
+        let categoryItems = [];  // Array to store items for the current category.
+    
+        for (let article in data[category]) {
+          let item = data[category][article];  // Reference the article item directly.
+    
+          categoryItems.push({  // Push each item object into the current category's array.
+            title: item.title,
+            description: item.description,
+            publishedDate: item["published date"],  // Make sure keys match JSON structure.
+            url: item.url,
+            publisher: {
+              href: item.publisher.href,
+              title: item.publisher.title
+            },
+            article: {
+              title: item.article.title,
+              text: item.article.text
+            },
+            country: item.vector["Country of Incident"]
+
+          });
+        }
+    
+        items.push(categoryItems);  // Add the current category's items array to the main items array.
+      }
+    
+      console.log(items); 
+      
       setButtonClicked(true); // Set button clicked to true
-      //setProgressState('2');
-      setItems(transformData(data));
+      setItems(items);
       setLoading(false); // Set loading to false
+      setProgressState('3');
+
     })
    .catch((error) => {
      console.error('Error:', error);

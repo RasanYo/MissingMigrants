@@ -6,6 +6,25 @@ app = Flask(__name__)
 
 
 
+def transform_json(original_json):
+    items = []
+    
+    # Loop through each category in the original JSON
+    for language in original_json.values():
+        print(language)
+        for category, articles in language.items():
+            # Process each article
+            for article in articles:
+                # Extract necessary details
+                item = {
+                    "title": article.get("title"),
+                    "description": article.get("article", {}).get("text"),
+                    "url": article.get("url")
+                }
+                # Add the item to the list
+                items.append(item)
+
+
 
     
 @app.route("/")
