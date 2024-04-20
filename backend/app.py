@@ -1,3 +1,4 @@
+import time
 from flask import Flask, jsonify, request
 import json
 import os
@@ -30,12 +31,22 @@ def transform_json(original_json):
 def home():
     return "Hello, World!"
 
+
 @app.route("/api/search", methods=["POST"])
 def search():
     data = request.json  # This will contain the data sent from the frontend
     search_keywords = data.get('keywords')  # Assuming 'keywords' is what you're sending
+
+    # Simulating a delay of 2 seconds
+    time.sleep(2)
+
     # Here, you can add logic to process these keywords
+<<<<<<< HEAD
     modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get('startDate')+ "  end date:" + data.get('endDate')
+=======
+    modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get(
+        'startDate') + "  end date:" + data.get('endDate')
+>>>>>>> 78440f4fc4f2bb9af976530f7dccc77e120d14c1
 
     #return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
     json_path = "/Users/eliotullmo/Documents/ETHZ/datathon/MissingMigrants/backend/data/Migrants dead trying to cross the Mediterranean Sea in Italy_all_languages.json"
@@ -52,12 +63,12 @@ def search():
     return migrants_data
 
 
+
 @app.route("/api/healthchecker", methods=["GET"])
 def healthchecker():
 
     return {"status": "success", "message": "Integrate Flask Framework with Next.js"}
 
- 
+
 if __name__ == "__main__":
     app.run(debug=False)
- 
