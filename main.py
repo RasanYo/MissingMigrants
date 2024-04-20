@@ -2,6 +2,7 @@ from openai import OpenAI
 from query_generation.query_generation import QueryGenerator
 from news_scraping.src.scraper import Scraper
 from summarizing_article.chatgpt.similarity import DocumentSimilarity
+from jsontransformer.jsonTransformer import categorize_entries
 import json
 
 
@@ -64,6 +65,7 @@ def process_data(queries, available_languages, initial_prompt, max_results=1, st
     # Define the filename
     filename = f"./data/{initial_prompt}_all_languages.json"
 
+    all_scraped_data = categorize_entries(all_scraped_data)
     # Write the aggregated scraped data to file
     result = write_json_to_file(all_scraped_data, filename)
 

@@ -5,26 +5,27 @@ from collections import defaultdict
 def categorize_entries(data):
     categories = defaultdict(list)
     for lang, item in data.items():
-        for i in item['data']:
-            new_key = (i['published date'], i['vector']['Country of Incident'])
-            i["language"] = lang
-            i["query"] = item['query']
-            
-            found = False
-            date_range_days = 3
+        for elem in item['queries']:
+            for i in elem['data']:
+                new_key = (i['published date'], i['vector']['Country of Incident'])
+                i["language"] = lang
+                i["query"] = elem['query']
+                
+                found = False
+                date_range_days = 3
 
-            # Iterate over existing keys to see if this should be grouped with them
-            for existing_key in list(categories.keys()):
-                existing_date, existing_country = existing_key
-                # Check if the country matches and the date is within the specified range
-                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], date_range_days):
-                    categories[existing_key].append(i)
-                    found = True
-                    break
+                # Iterate over existing keys to see if this should be grouped with them
+                for existing_key in list(categories.keys()):
+                    existing_date, existing_country = existing_key
+                    # Check if the country matches and the date is within the specified range
+                    if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], date_range_days):
+                        categories[existing_key].append(i)
+                        found = True
+                        break
 
-            # If no suitable existing category is found, create a new category
-            if not found:
-                categories[new_key].append(i)
+                # If no suitable existing category is found, create a new category
+                if not found:
+                    categories[new_key].append(i)
     
     # Debugging output to check the categorization
     for key, items in categories.items():
@@ -76,15 +77,8 @@ def date_in_range(original_date, new_date, num_days):
 # Example usage:
 # Assuming `input_json` is your JSON string read from a file or other source
 if __name__ == "__main__":
-    with open('./Five migrants found dead off the coast of Tunisia_all_languages.json') as f:
+    with open('./DEMO2_Five migrants found dead off the coast of Tunisia_all_languages.json') as f:
         input_json = json.load(f)
-
-    # for lang,item in input_json.items():
-    #     for i,elem in enumerate(item['data']):
-    #         input_json[lang]['data'][i]['published date'] = convert_date_format(elem['published date'])
-    
-    # with open('./Five migrants found dead off the coast of Tunisia_all_languages.json', 'w') as f:
-    #     json.dump(input_json, f, indent=4)
 
     transformed_json = categorize_entries(input_json)
     print(transformed_json)
