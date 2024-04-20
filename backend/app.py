@@ -19,8 +19,8 @@ def search():
     end_date = datetime.strptime(data.get('endDate'), date_format)
     languages = [data.get('language')]
 
-    output = run(search_keywords, start_date, end_date, interested_languages=languages)
-    print(output)
+    output = ''
+    # output = run(search_keywords, start_date, end_date, interested_languages=languages)
 
     return jsonify({"status": "success", "output": output})
 
