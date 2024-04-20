@@ -3,8 +3,8 @@ import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } fro
 import { languages } from './languages'; // Import the languages array
 
 interface LanguageSelectorProps {
-  value: string; // Current value for the select
-  onChange: (event: SelectChangeEvent) => void; // Function to call on value change
+  value: string[]; // Current value for the select must be an array of strings
+  onChange: (event: SelectChangeEvent<string[]>) => void; // Adjust the event type
   opacity: number; // Add opacity prop
   disabled?: boolean; // Add disabled prop
 }
@@ -21,6 +21,7 @@ class LanguageSelector extends React.Component<LanguageSelectorProps> {
           <Select
             labelId="language-label"
             id="language-select"
+            multiple
             value={value}
             onChange={onChange}
             label="Select Language"

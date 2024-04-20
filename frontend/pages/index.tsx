@@ -13,7 +13,7 @@ export default function Page() {
   const [message, setMessage] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [modifiedValue, setModifiedValue] = useState('');
-  const [language, setLanguage] = useState('');
+  const [language, setLanguage] = useState<string[]>([]);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [opacity, setOpacity] = useState('0.9');
@@ -27,7 +27,8 @@ export default function Page() {
   };
 
   const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
+    const value = event.target.value;
+    setLanguage(typeof value === 'string' ? value.split(',') : value);
   };
 
   const transformDataToItems = (data) => {
@@ -66,49 +67,45 @@ export default function Page() {
     return items;
   };
   
-
-  const handleSearchClick = () => {
+  const handleSearchClick = async () => {
     console.log('data');
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
-    setProgressState('1');
 
-    fetch('/api/search', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        keywords: inputValue,
-        language: language,
-        startDate: startDate,
-        endDate: endDate
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
+    try {
+        const response = await fetch('/api/search', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                keywords: inputValue,
+                language: language,
+                startDate: startDate,
+                endDate: endDate
+            })
+        });
 
-      
-    
-      const transformedItems = transformDataToItems(data);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    
-      console.log(transformedItems); 
-      
-      setButtonClicked(true); // Set button clicked to true
-      setItems(transformedItems);
-      setLoading(false); // Set loading to false
-      setProgressState('3');
+        const data = await response.json();
+        const transformedItems = transformDataToItems(data);
+        console.log(transformedItems);
 
-    })
-   .catch((error) => {
-     console.error('Error:', error);
-     setProgressState('0');
-     setLoading(false); // Set loading to false even in case of error
-     setOpacity('0.9');
-   });
-  };
+        setButtonClicked(true); // Set button clicked to true
+        setItems(transformedItems);
+        setProgressState('3');
+    } catch (error) {
+        console.error('Error:', error);
+        setProgressState('0');
+    } finally {
+        setLoading(false); // Set loading to false
+        setOpacity('0.9');
+    }
+};
 
   return (
     <div>
