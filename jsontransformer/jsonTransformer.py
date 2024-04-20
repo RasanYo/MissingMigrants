@@ -10,8 +10,8 @@ def categorize_entries(data):
             i["query"] = item['query']
             categories[key].append(i)
 
-    for (date, country), items in categories.items():
-        print(len(items))
+    # for (date, country), items in categories.items():
+    #     print(len(items))
         # print(categories[(date, country)])
     # print(categories)
     
