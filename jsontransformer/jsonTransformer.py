@@ -1,19 +1,34 @@
 import json
+from datetime import datetime, timedelta
 from collections import defaultdict
 
-def categorize_entries(data):
+def categorize_entries(data, date_range_days):
     categories = defaultdict(list)
     for lang, item in data.items():
         for i in item['data']:
-            key = (i['published date'], i['vector']['Country of Incident'])
+            new_key = (i['published date'], i['vector']['Country of Incident'])
             i["language"] = lang
             i["query"] = item['query']
-            categories[key].append(i)
+            
+            found = False
 
-    # for (date, country), items in categories.items():
-    #     print(len(items))
-        # print(categories[(date, country)])
-    # print(categories)
+            # Iterate over existing keys to see if this should be grouped with them
+            for existing_key in list(categories.keys()):
+                existing_date, existing_country = existing_key
+                # Check if the country matches and the date is within the specified range
+                if existing_country == new_key[1] and date_in_range(existing_date, new_key[0], date_range_days):
+                    categories[existing_key].append(i)
+                    found = True
+                    break
+
+            # If no suitable existing category is found, create a new category
+            if not found:
+                categories[new_key].append(i)
+    
+    # Debugging output to check the categorization
+    for key, items in categories.items():
+        print(f"Key: {key}, Entries: {len(items)}")
+
     
     new_data = {}
     for (date, country), items in categories.items():
@@ -23,6 +38,32 @@ def categorize_entries(data):
         #     new_data['category']['data'].append(item)
     
     return new_data
+
+def date_in_range(original_date, new_date, num_days):
+    """
+    Check if the 'new_date' is within 'num_days' of 'original_date'
+    - original_date: 'DD/MM/YYYY'
+    - new_date: 'DD/MM/YYYY'
+    - num_days: int 
+    
+    return: bool
+    """
+    # Format for parsing the dates
+    date_format = "%d/%m/%Y"
+
+    try:
+        # Convert the string dates to datetime objects
+        original_datetime = datetime.strptime(original_date, date_format)
+        new_datetime = datetime.strptime(new_date, date_format)
+    except ValueError:
+        # This exception handles cases where the date format is incorrect
+        raise ValueError("Incorrect date format, should be DD/MM/YYYY")
+
+    # Calculate the difference in days between the two dates
+    date_difference = abs((new_datetime - original_datetime).days)
+
+    # Check if the difference is within the allowed number of days
+    return date_difference <= num_days
 
 # Example usage:
 # Assuming `input_json` is your JSON string read from a file or other source
