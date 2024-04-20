@@ -39,15 +39,12 @@ class Scraper:
 
 
 def write_json_to_file(data, filename):
-    """
-    Write a JSON object to a file.
-
-    Args:
-    data (dict): The JSON object to write (Python dictionary).
-    filename (str): The name of the file to write the JSON object to.
-    """
-    with open(filename, 'w') as file:
-        json.dump(data, file, indent=4)
+    try:
+        with open(filename, 'w') as file:
+            json.dump(data, file, indent=4)
+        return True
+    except:
+        return False
 
 if __name__ == '__main__':
     print("Launching...")
