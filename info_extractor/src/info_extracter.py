@@ -56,7 +56,7 @@ class OpenAIInfoExtractor:
             response_dict[key] = value
 
         # Convert dictionary to JSON string if needed
-        return json.dumps(response_dict, indent=4)
+        return response_dict
         
     def run(self, article):
         response = self.read_article(article)

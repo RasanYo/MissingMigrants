@@ -1,12 +1,14 @@
 from gnews import GNews
 import json
+import sys
 
-APIFY_API_KEY = 'apify_api_SsXrbMedr8qm11DLb7394OISl7kFAz0oKzMw'
+from info_extractor.src.info_extracter import OpenAIInfoExtractor
 
 class Scraper:
     
     def __init__(self, **kargs):
         self.google_news = GNews(**kargs)
+        self.extractor = OpenAIInfoExtractor()
 
     def set_gnews(self, gnews):
         self.google_news = gnews
@@ -17,10 +19,12 @@ class Scraper:
     def get_article(self, resp):
         try:
             article = self.google_news.get_full_article(resp['url']) 
+            vector = self.extractor.run(article.text)
             resp["article"] = {
                 'title': article.title,
                 'text': article.text
             }
+            resp["vector"] = vector
             return resp
         except:
             return None

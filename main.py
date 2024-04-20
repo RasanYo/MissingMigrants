@@ -1,16 +1,15 @@
-import os
 from openai import OpenAI
 from query_generation.query_generation import QueryGenerator
 from news_scraping.src.scraper import Scraper
 from summarizing_article.chatgpt.similarity import DocumentSimilarity
 import json
 
+import os
 os.environ["OPENAI_API_KEY"] = "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"
 
-
 def main():
-    api_key = "sk-proj-JxNRrTY9BtNpc3cApG7yT3BlbkFJkM8D8DSoUYlZab72orVX"
-    open_ai_client = OpenAI(api_key=api_key)
+    # api_key = "sk-proj-JxNRrTY9BtNpc3cApG7yT3BlbkFJkM8D8DSoUYlZab72orVX"
+    open_ai_client = OpenAI()
 
     interested_languages = ["english", "spanish", "french", "arabic", "italian", "greek"]
     available_languages = {'english': 'en', 'indonesian': 'id', 'czech': 'cs', 'german': 'de', 'spanish': 'es-419', 'french': 'fr',
@@ -118,7 +117,7 @@ def process_data(data, available_languages, initial_prompt,max_results=1, start_
             
             # Scrape the query and store the data
             scraped_data = scraper.scrape_for_query(query)
-            scraped_data["article"]["Relevant"] = similarity_checker.check_document_coherence(scraped_data["article"]["text"], article_content)
+            # scraped_data["article"]["Relevant"] = similarity_checker.check_document_coherence(scraped_data["article"]["text"], article_content)
             lang_scraped_data[query] = scraped_data
         
         # Add the language-specific results to the main dictionary
