@@ -6,8 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
-import DeleteIcon from '@mui/icons-material/Delete'; // Import the delete icon
+import DeleteIcon from '@mui/icons-material/Delete';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -23,7 +22,7 @@ import MissingIcon from '@mui/icons-material/HelpOutline';
 import CauseIcon from '@mui/icons-material/ReportProblem';
 import OriginIcon from '@mui/icons-material/Flag';
 
-export default function AccordionArticle({ articles }) {
+export default function AccordionArticle({ articles, setArticles }) {
   const [open, setOpen] = useState(false);
   const [deletedArticles, setDeletedArticles] = useState([]);
 
