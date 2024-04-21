@@ -25,7 +25,7 @@ available_languages = {'english': 'en', 'indonesian': 'id', 'czech': 'cs', 'germ
                        'chinese traditional': 'zh-Hant', 'japanese': 'ja', 'korean': 'ko'}
 
 
-def run(article_title, start_date, end_date, max_results=5, number_of_queries_per_language=2,
+def run(article_title, start_date, end_date, max_results=2, number_of_queries_per_language=2,
         interested_languages=["english"]):
     open_ai_client = OpenAI()
     print("Generating queries...")
