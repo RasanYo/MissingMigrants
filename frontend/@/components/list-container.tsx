@@ -103,7 +103,7 @@ export default function ListContainer({ items, searchPressed }) {
                 {/* Add onClick event to open the popup */}
                 <InfoIcon style={{ color: 'white', cursor: 'pointer' }} onClick={() => openPopup(item)} />
               </div>
-              <AccordionArticle articles={item} />
+              <AccordionArticle articles={item} setArticles={setArticles} />
             </li>
           );
         })}
