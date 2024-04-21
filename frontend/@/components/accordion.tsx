@@ -25,66 +25,61 @@ import OriginIcon from '@mui/icons-material/Flag';
 
 export default function AccordionArticle({ articles }) {
   const [open, setOpen] = useState(false);
-  const [selectedArticles, setSelectedArticles] = useState([]);
-
-  const handleClickOpen = (article) => {
-    setOpen(true);
-    setSelectedArticles((prevSelectedArticles) => [...prevSelectedArticles, article]);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedArticles([]);
-  };
+  const [deletedArticles, setDeletedArticles] = useState([]);
 
   const handleDelete = () => {
     setOpen(false);
-    setSelectedArticles([]);
   };
 
-  const handleDeleteArticle = (article) => {
-    setSelectedArticles((prevSelectedArticles) =>
-      prevSelectedArticles.filter((selectedArticle) => selectedArticle !== article)
-    );
-  };
+    const handleDeleteArticle = (article) => {
+      setDeletedArticles((prevDeletedArticles) => [...prevDeletedArticles, article]);
+    };
+
 
   return (
-    <div>
-      {articles.map((article, index) => (
-        <Accordion key={index} sx={{ backgroundColor: '#374151', color: '#fff' }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
-            aria-controls={`panel-content-${index}`}
-            id={`panel-header-${index}`}
-            sx={{ backgroundColor: '#4b5563' }}
-          >
-            <Typography>{article.title}</Typography>
-            {/* Add delete button */}
-            <IconButton
-              onClick={(e) => {
-                e.stopPropagation(); // Prevent the click event from propagating to the AccordionSummary
-                handleDeleteArticle(article); // Call the handleDeleteArticle function to remove the article from selectedArticles
-              }}
-              color="inherit"
-              edge="end"
-              size="small"
-              sx={{ marginLeft: 'auto' }}
-            >
-              <DeleteIcon />
-            </IconButton>
-          </AccordionSummary>
-          <AccordionDetails sx={{ flexDirection: 'column', color: '#E5E7EB' }}>
-            <Typography variant="subtitle1">
-              Description: {article.description}
-            </Typography>
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              Published: {new Date(article.publishedDate).toLocaleDateString()}
-            </Typography>
-            <Link href={article.url} color="secondary" target="_blank" rel="noopener" sx={{ mt: 1 }}>
-              Read more
-            </Link>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-
+    <>
+      {articles.map((article, index) => {
+        if (!deletedArticles.includes(article)) {
+          return (
+            <Accordion key={index} sx={{ backgroundColor: '#374151', color: '#fff' }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
+                aria-controls={`panel-content-${index}`}
+                id={`panel-header-${index}`}
+                sx={{ backgroundColor: '#4b5563' }}
+              >
+                <Typography>{article.title}</Typography>
+                {/* Add delete button */}
+                <IconButton
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent the click event from propagating to the AccordionSummary
+                    handleDeleteArticle(article); // Call the handleDeleteArticle function to remove the article from selectedArticles
+                  }}
+                  color="inherit"
+                  edge="end"
+                  size="small"
+                  sx={{ marginLeft: 'auto' }}
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </AccordionSummary>
+              <AccordionDetails sx={{ flexDirection: 'column', color: '#E5E7EB' }}>
+                <Typography variant="subtitle1">
+                  Description: {article.description}
+                </Typography>
+                <Typography variant="body2" sx={{ mt: 1 }}>
+                  Published: {new Date(article.publishedDate).toLocaleDateString()}
+                </Typography>
+                <Link href={article.url} color="secondary" target="_blank" rel="noopener" sx={{ mt: 1 }}>
+                  Read more
+                </Link>
+              </AccordionDetails>
+            </Accordion>
+          );
+        } else {
+          return null; // Don't render the article if it's in the deletedArticles array
+        }
+      })}
+    </>
+  );
 }
