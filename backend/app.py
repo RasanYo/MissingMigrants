@@ -18,22 +18,8 @@ def search():
     date_format = "%Y-%m-%d"
     start_date = datetime.strptime(data.get('startDate'), date_format)
     end_date = datetime.strptime(data.get('endDate'), date_format)
+    language = data.get('language')
 
-    print(start_date)
-    
-    language= data.get('language')
-    print(language)
-    #start_date = datetime.strptime(data.get('startDate'), date_format)
-    #end_date = datetime.strptime(data.get('endDate'), date_format)
-    #languages = [data.get('language')]
-
-    # Simulating a delay of 2 seconds
-
-    # Here, you can add logic to process these keywords
-    #modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get(
-      #  'startDate') + "  end date:" + data.get('endDate')
-
-    #return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
     json_path = "../data/DEMO2_transformed.json"
 
     try:
@@ -43,13 +29,10 @@ def search():
         # Log the exception message
         print(f"Error loading JSON data: {str(e)}")
         return jsonify({"status": "error", "message": f"Error loading data: {str(e)}"}), 500
-    # print(transform_json(migrants_data))
-    # Return the loaded JSON data
 
-    # migrants_data= run(query, start_date,end_date,max_results=5, number_of_queries_per_language=2,
+    # migrants_data = run(query, start_date,end_date,max_results=5, number_of_queries_per_language=2,
     #     interested_languages=language)
     return migrants_data
-
 
 
 @app.route("/api/healthchecker", methods=["GET"])
