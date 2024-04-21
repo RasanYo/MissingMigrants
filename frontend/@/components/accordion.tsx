@@ -56,14 +56,12 @@ export default function AccordionArticle({ articles }) {
               <InfoIcon />
             </IconButton>
           </AccordionSummary>
-          <AccordionDetails sx={{ flexDirection: 'column' }}>
-            <Typography variant="subtitle1" color="#E5E7EB">
-              {article.description}
-            </Typography>
-            <Typography variant="body2" color="#E5E7EB" sx={{ mt: 1 }}>
+          <AccordionDetails sx={{ flexDirection: 'column', color: '#E5E7EB' }}>
+            <Typography variant="subtitle1">{article.description}</Typography>
+            <Typography variant="body2" sx={{ mt: 1 }}>
               Published: {new Date(article.publishedDate).toLocaleDateString()}
             </Typography>
-            <Link href={article.url} color="secondary" target="_blank" rel="noopener" sx={{ mb: 2 }}>
+            <Link href={article.url} color="secondary" target="_blank" rel="noopener" sx={{ mt: 1 }}>
               Read more
             </Link>
           </AccordionDetails>
@@ -71,16 +69,15 @@ export default function AccordionArticle({ articles }) {
       ))}
       {selectedArticle && (
         <Dialog open={open} onClose={handleClose} aria-labelledby="dialog-title" aria-describedby="dialog-description">
-          <DialogTitle id="dialog-title">Detailed Information</DialogTitle>
-          <DialogContent>
-            
+          <DialogTitle id="dialog-title" sx={{ backgroundColor: '#374151', color: '#fff' }}>Detailed Information</DialogTitle>
+          <DialogContent sx={{ backgroundColor: '#4b5563', color: '#E5E7EB' }}>
             <Divider sx={{ my: 2 }} />
             <List dense>
               <ListItem>
                 <ListItemIcon>
                   <DeathIcon />
                 </ListItemIcon>
-                <ListItemText primary="Deaths" secondary={selectedArticle.deads  || "N/A"} />
+                <ListItemText primary="Deaths" secondary={selectedArticle.deads || "N/A"} />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
@@ -102,7 +99,7 @@ export default function AccordionArticle({ articles }) {
               </ListItem>
             </List>
           </DialogContent>
-          <DialogActions>
+          <DialogActions sx={{ backgroundColor: '#374151' }}>
             <Button onClick={handleClose} color="primary">
               Close
             </Button>

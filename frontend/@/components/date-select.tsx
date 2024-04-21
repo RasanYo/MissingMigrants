@@ -29,6 +29,7 @@ const DateSelector = ({
         InputProps={{
           style: inputStyle,
         }}
+        disabled={disabled}
         {...otherProps}
         InputLabelProps={{
           style: {
@@ -50,6 +51,7 @@ const DateSelector = ({
             marginLeft: '10px',
           },
         }}
+        disabled={disabled}
         {...otherProps}
         InputLabelProps={{
           style: {

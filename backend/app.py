@@ -1,5 +1,4 @@
 from datetime import datetime
-import time
 from flask import Flask, jsonify, request
 import json
 from main import run
@@ -15,43 +14,22 @@ def home():
 @app.route("/api/search", methods=["POST"])
 def search():
     data = request.json  # This will contain the data sent from the frontend
-    query = data.get('keywords')  # Assuming 'keywords' is what you're sending
+    search_keywords = data.get('keywords')  # Assuming 'keywords' is what you're sending
     date_format = "%Y-%m-%d"
-
     start_date = datetime.strptime(data.get('startDate'), date_format)
     end_date = datetime.strptime(data.get('endDate'), date_format)
+    languages = data.get('language')
 
-    print(start_date)
-    
-    language= data.get('language')
-    print(language)
-    #start_date = datetime.strptime(data.get('startDate'), date_format)
-    #end_date = datetime.strptime(data.get('endDate'), date_format)
-    #languages = [data.get('language')]
+    # Specify the path to your JSON file
+    json_file_path = "./../data/message.json"
 
-    # Simulating a delay of 2 seconds
+    # Open the JSON file and load its contents
+    with open(json_file_path, "r", encoding="utf-8") as json_file:
+        data = json.load(json_file)
+    output = data
+    # output = run(search_keywords, start_date, end_date, interested_languages=languages)
 
-    # Here, you can add logic to process these keywords
-    #modified_keywords = search_keywords + "  language:" + data.get('language') + "  start date:" + data.get(
-      #  'startDate') + "  end date:" + data.get('endDate')
-
-    #return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
-    # json_path = "/Users/eliotullmo/Documents/ETHZ/datathon/MissingMigrants/backend/data/Migrants dead trying to cross the Mediterranean Sea in Italy_all_languages.json"
-
-    # try:
-    #     with open(json_path, 'r') as file:
-    #         migrants_data = json.load(file)
-    # except Exception as e:
-    #     # Log the exception message
-    #     print(f"Error loading JSON data: {str(e)}")
-    #     return jsonify({"status": "error", "message": f"Error loading data: {str(e)}"}), 500
-    #print(transform_json(migrants_data))
-    # Return the loaded JSON data
-
-    migrants_data= run(query, start_date,end_date,max_results=5, number_of_queries_per_language=2,
-        interested_languages=language)
-    return migrants_data
-
+    return output
 
 
 @app.route("/api/healthchecker", methods=["GET"])

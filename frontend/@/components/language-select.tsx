@@ -12,7 +12,7 @@ interface LanguageSelectorProps {
 class LanguageSelector extends React.Component<LanguageSelectorProps> {
   render() {
     const { value, onChange, opacity, disabled, ...otherProps } = this.props;
-    const labelColor = disabled ? 'rgb(31 41 55)' : '#fff'; // Adjust label color based on disabled prop
+    const labelColor = disabled ? 'rgb(31, 41, 55)' : '#fff'; // Adjust label color based on disabled prop
 
     return (
       <Box>

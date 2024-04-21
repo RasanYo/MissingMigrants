@@ -33,13 +33,13 @@ export default function Page() {
 
   const transformDataToItems = (data) => {
     let items = [];  // This will hold arrays of items from each category.
-  
+
     for (let category in data) {
       let categoryItems = [];  // Array to store items for the current category.
-  
+
       for (let article in data[category]) {
         let item = data[category][article];  // Reference the article item directly.
-  
+
         categoryItems.push({  // Push each item object into the current category's array.
           title: item.title,
           description: item.description,
@@ -60,57 +60,54 @@ export default function Page() {
           country_origin: item.vector["Country of Origin"]
         });
       }
-  
+
       items.push(categoryItems);  // Add the current category's items array to the main items array.
     }
-  
+
     return items;
   };
-  
-  const handleSearchClick = async () => {
+
+  const handleSearchClick = () => {
     console.log('data');
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
+    setProgressState('1');
 
-    try {
-        const response = await fetch('/api/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                keywords: inputValue,
-                language: language,
-                startDate: startDate,
-                endDate: endDate
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const transformedItems = transformDataToItems(data);
-        console.log(transformedItems);
-
-        setButtonClicked(true); // Set button clicked to true
-        setItems(transformedItems);
-        setProgressState('3');
-    } catch (error) {
-        console.error('Error:', error);
-        setProgressState('0');
-    } finally {
-        setLoading(false); // Set loading to false
-        setOpacity('0.9');
-    }
-};
+    fetch('/api/search', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        keywords: inputValue,
+        language: language,
+        startDate: startDate,
+        endDate: endDate
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      setProgressState('2');
+      setButtonClicked(true); // Set button clicked to true
+      setItems(transformDataToItems(data));
+      setLoading(false); // Set loading to false
+      setProgressState('3');
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      setProgressState('0');
+      setLoading(false); // Set loading to false even in case of error
+      setOpacity('0.9');
+    });
+  };
 
   return (
     <div>
       <Head>
         <link rel="icon" href="/images/logo.ico" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
       </Head>
       <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/bg-1.png)' }}>
         <div className="flex flex-col justify-center items-center ">
@@ -149,10 +146,10 @@ export default function Page() {
               )
             )}
             <div className="my-5">
-                <ListContainer
-                    items={items}
-                    searchPressed={buttonClicked}
-                />
+              <ListContainer
+                items={items}
+                searchPressed={buttonClicked}
+              />
             </div>
           </div>
         </div>
