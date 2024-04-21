@@ -31,6 +31,29 @@ export default function Page() {
     setLanguage(typeof value === 'string' ? value.split(',') : value);
   };
 
+  const fetchWithTimeout = (url, options, timeout = 30000000) => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    setTimeout(() => controller.abort(), timeout);
+  
+    return fetch(url, { ...options, signal });
+  };
+  
+  const retryFetch = async (url, options, n = 5) => {
+    for (let i = 0; i < n; i++) {
+      try {
+        const response = await fetchWithTimeout(url, options);
+        if (!response.ok) throw new Error('Failed to fetch');
+        return response.json();  // Return the JSON data
+      } catch (err) {
+        if (i === n - 1) throw err;
+        const delay = Math.pow(2, i) * 1000;  // Exponential backoff formula
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
+  };
+  
+
   const transformDataToItems = (data) => {
     let items = [];  // This will hold arrays of items from each category.
   
@@ -67,45 +90,42 @@ export default function Page() {
     return items;
   };
   
-  const handleSearchClick = async () => {
-    console.log('data');
-    setProgressState('1'); // Set progress state to 1
+
+  const handleSearchClick = () => {
+    console.log('Searching...');
+    setProgressState('1');
     setOpacity('0.6');
-    setLoading(true); // Set loading to true
-
-    try {
-        const response = await fetch('/api/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                keywords: inputValue,
-                language: language,
-                startDate: startDate,
-                endDate: endDate
-            })
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
+    setLoading(true);
+    const body = JSON.stringify({
+      keywords: inputValue,
+      language: language,
+      startDate: startDate,
+      endDate: endDate
+    });
+  
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: body
+    };
+  
+    retryFetch('/api/search', requestOptions)
+      .then(data => {
         const transformedItems = transformDataToItems(data);
         console.log(transformedItems);
-
-        setButtonClicked(true); // Set button clicked to true
+        setButtonClicked(true);
         setItems(transformedItems);
+        setLoading(false);
         setProgressState('3');
-    } catch (error) {
+        setOpacity('0.9');
+      })
+      .catch(error => {
         console.error('Error:', error);
         setProgressState('0');
-    } finally {
-        setLoading(false); // Set loading to false
+        setLoading(false);
         setOpacity('0.9');
-    }
-};
+      });
+  };
 
   return (
     <div>
