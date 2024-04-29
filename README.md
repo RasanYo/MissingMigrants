@@ -45,6 +45,6 @@ npm run dev
 ## Technology Stack
 
 - React.js for frontend web application
-- Node.js for backend services
+- Flask for backend services
 - Open AI api for LLM generated content
 - Google News api for web scraping
