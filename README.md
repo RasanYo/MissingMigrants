@@ -6,7 +6,7 @@ This project, the Global News Verification Platform, is an AI-driven tool design
 
 The platform features an innovative pipeline that automates the search and synthesis of news articles from around the world, clustering similar events based on user-provided themes, such as migrant incidents.
 
-![Global News Verification Platform Pipeline](Screenshot_2024-04-28_at_19.33.58.png)
+<img width="706" alt="Screenshot 2024-04-29 at 11 08 25" src="https://github.com/RasanYo/MissingMigrants/assets/25123133/cf5effb9-bb91-4e8c-a664-881acc297820">
 
 ## Features
 
