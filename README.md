@@ -39,7 +39,7 @@ cd MissingMigrants
 npm install
 
 # Start the development server
-npm start
+npm run dev
 ```
 
 ## Technology Stack
