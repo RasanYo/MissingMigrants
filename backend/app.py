@@ -34,20 +34,23 @@ def search():
       #  'startDate') + "  end date:" + data.get('endDate')
 
     #return jsonify({"status": "success", "original": search_keywords, "modified": modified_keywords})
-    json_path = "../data/DEMO2_transformed.json"
+    
+    # Return a predfined JSON data (for demo purposes)
+    # json_path = "../data/DEMO2_transformed.json"
 
-    try:
-        with open(json_path, 'r') as file:
-            migrants_data = json.load(file)
-    except Exception as e:
-        # Log the exception message
-        print(f"Error loading JSON data: {str(e)}")
-        return jsonify({"status": "error", "message": f"Error loading data: {str(e)}"}), 500
+    # try:
+    #     with open(json_path, 'r') as file:
+    #         migrants_data = json.load(file)
+    # except Exception as e:
+    #     # Log the exception message
+    #     print(f"Error loading JSON data: {str(e)}")
+    #     return jsonify({"status": "error", "message": f"Error loading data: {str(e)}"}), 500
     # print(transform_json(migrants_data))
     # Return the loaded JSON data
 
-    # migrants_data= run(query, start_date,end_date,max_results=5, number_of_queries_per_language=2,
-    #     interested_languages=language)
+    query = search_keywords
+    migrants_data= run(query, start_date, end_date, max_results=2, number_of_queries_per_language=2,
+        interested_languages=language)
     return migrants_data
 
 
