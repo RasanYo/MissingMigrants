@@ -8,10 +8,14 @@ import Progress from '@/components/progress';
 import ListContainer from '@/components/list-container'
 import CircularProgress from '@mui/material/CircularProgress'; // Import CircularProgress
 import Head from 'next/head'
+import { TextField } from '@mui/material';
+import { set } from 'react-hook-form';
+
 
 export default function Page() {
   const [message, setMessage] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [openAIkeyInput, setOpenAIkeyInput] = useState(''); // State to store OpenAI key input
   const [modifiedValue, setModifiedValue] = useState('');
   const [language, setLanguage] = useState<string[]>([]);
   const [startDate, setStartDate] = useState('');
@@ -21,10 +25,15 @@ export default function Page() {
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [progressState, setProgressState] = useState('0'); // Initialize progress state
   const [loading, setLoading] = useState(false); // State to track loading state
+  const [warning, setWarning] = useState('');
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+
+  const handleOpenAIKeyChange = (event) => {
+    setOpenAIkeyInput(event.target.value);
+  }
 
   const handleLanguageChange = (event) => {
     const value = event.target.value;
@@ -68,11 +77,17 @@ export default function Page() {
   };
 
   const handleSearchClick = () => {
-    console.log('data');
     setProgressState('1'); // Set progress state to 1
     setOpacity('0.6');
     setLoading(true); // Set loading to true
     setProgressState('1');
+    setWarning(''); // Clear any previous warning messages
+    console.log('keywords', inputValue)
+    console.log('language', language)
+    console.log('startDate', startDate)
+    console.log('endDate', endDate)
+    console.log('openAIkey', openAIkeyInput)
+
 
     fetch('/api/search', {
       method: 'POST',
@@ -83,7 +98,8 @@ export default function Page() {
         keywords: inputValue,
         language: language,
         startDate: startDate,
-        endDate: endDate
+        endDate: endDate,
+        openAIkey: openAIkeyInput
       })
     })
     .then(response => response.json())
@@ -100,6 +116,7 @@ export default function Page() {
       setProgressState('0');
       setLoading(false); // Set loading to false even in case of error
       setOpacity('0.9');
+      setWarning(`There was an error: ${error.message}`);
     });
   };
 
@@ -132,7 +149,37 @@ export default function Page() {
                   />
                 </div>
               </div>
+              
             </div>
+            <div className="w-full md:w-2/9 pt-4">
+              <TextField
+                required
+                fullWidth
+                id="outlined-required"
+                label="OpenAI Key"
+                multiline
+                rows={1}
+                placeholder="Your Open AI key here"
+                variant="outlined"
+                value={openAIkeyInput}
+                onChange={handleOpenAIKeyChange}
+                disabled={buttonClicked} // Pass the disabled prop to TextField
+                sx={{
+                  '& .MuiTextField-root': {
+                    width: '100%',
+                    backgroundColor: `rgba(31, 41, 55, ${opacity})`, // Use template literal for dynamic opacity
+                    color: '#fff',
+                    borderRadius: 2
+                  },
+                  '& .MuiFilledInput-underline:before': { borderBottom: 'none' },
+                  '& .MuiFilledInput-input': { padding: '14px 18px', color: '#fff' },
+                  '& .MuiFormLabel-root': {
+                    color: buttonClicked ? 'rgb(31 41 55)' : '#fff' // Adjust label color based on disabled prop
+                  }
+                }}
+              />
+              </div>
+
             {!buttonClicked && (
               loading ? ( // Render loading indicator if loading is true
                 <div className="p-3 mt-4 bg-gray-800 text-white opacity-90 inline-block rounded-2xl">
@@ -150,6 +197,9 @@ export default function Page() {
                 items={items}
                 searchPressed={buttonClicked}
               />
+            </div>
+            <div className="my-5">
+              <p className="text-center text-red-500">{warning}</p>
             </div>
           </div>
         </div>

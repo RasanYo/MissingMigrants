@@ -23,6 +23,9 @@ def search():
     
     language= data.get('language')
     print(language)
+    open_ai_key = data.get('openAIkey')
+    print(open_ai_key)
+    print("JUST AFTER PRINTING OPEN AI KEY")
     #start_date = datetime.strptime(data.get('startDate'), date_format)
     #end_date = datetime.strptime(data.get('endDate'), date_format)
     #languages = [data.get('language')]
@@ -49,7 +52,7 @@ def search():
     # Return the loaded JSON data
 
     query = search_keywords
-    migrants_data= run(query, start_date, end_date, max_results=2, number_of_queries_per_language=2,
+    migrants_data= run(query, start_date, end_date, open_ai_key, max_results=2, number_of_queries_per_language=2,
         interested_languages=language)
     return migrants_data
 

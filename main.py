@@ -8,7 +8,6 @@ import json
 
 import os
 
-os.environ["OPENAI_API_KEY"] = "your-api-key"
 
 available_languages = {'english': 'en', 'indonesian': 'id', 'czech': 'cs', 'german': 'de', 'spanish': 'es-419',
                        'french': 'fr',
@@ -25,8 +24,9 @@ available_languages = {'english': 'en', 'indonesian': 'id', 'czech': 'cs', 'germ
                        'chinese traditional': 'zh-Hant', 'japanese': 'ja', 'korean': 'ko'}
 
 
-def run(article_title, start_date, end_date, max_results=2, number_of_queries_per_language=2,
+def run(article_title, start_date, end_date, open_ai_key, max_results=2, number_of_queries_per_language=2,
         interested_languages=["english"]):
+    os.environ["OPENAI_API_KEY"] = open_ai_key
     open_ai_client = OpenAI()
     print("Generating queries...")
     query_gen = QueryGenerator(open_ai_client)
