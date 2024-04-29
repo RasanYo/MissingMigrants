@@ -54,7 +54,6 @@ def search():
     return migrants_data
 
 
-
 @app.route("/api/healthchecker", methods=["GET"])
 def healthchecker():
     return {"status": "success", "message": "Integrate Flask Framework with Next.js"}

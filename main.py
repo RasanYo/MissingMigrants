@@ -8,7 +8,7 @@ import json
 
 import os
 
-os.environ["OPENAI_API_KEY"] = "sk-proj-siVGbCg9JcqWYNE8AryjT3BlbkFJZ3yi2Sxn67N0RYMULXyo"
+os.environ["OPENAI_API_KEY"] = "your-api-key"
 
 available_languages = {'english': 'en', 'indonesian': 'id', 'czech': 'cs', 'german': 'de', 'spanish': 'es-419',
                        'french': 'fr',

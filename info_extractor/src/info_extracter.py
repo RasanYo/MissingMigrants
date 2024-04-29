@@ -5,7 +5,7 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 import json
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "your-api-key"
 
 TEMPLATE = """
 Input News Article: {article}
