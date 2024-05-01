@@ -1,6 +1,6 @@
 .idea
-frontend/node_modules
-frontend/.next
+src/node_modules
+src/.next
 backend/__pycache__/
 **__pycache__/
 node_modules
