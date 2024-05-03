@@ -24,9 +24,7 @@ The platform features an innovative pipeline that automates the search and synth
 4. Submit the query to initiate the pipeline.
 5. Review the visualized results, which consolidate similar news events into a coherent summary.
 
-The page should look like this
-![Screenshot 2024-04-29 at 13 47 29](https://github.com/RasanYo/MissingMigrants/assets/25123133/3c9ec1ce-10df-4b84-b991-c2820746fddb)
-
+Here's a small demo of what you should be able to do after launching the web app :
 
 https://github.com/RasanYo/MissingMigrants/assets/25123133/999c0f99-aa28-4932-9937-c876b9c1f19a
 
